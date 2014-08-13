@@ -1,0 +1,32 @@
+
+<header class="jumbotron subhead" id="overview">
+  <div class="container">
+    <h1>__</h1>    
+  </div>
+</header>
+  <div class="container">    
+    <div class="row"> 
+    <div class="span1"></div>     
+      <div class="span10">
+        <section id="download-bootstrap">
+          <div class="page-header">
+            <h1>Projects</h1>
+          </div>
+			<div ng-repeat="project in projects">
+				<h4 class="project-title">{{project.title}}</h4>        
+				<p>{{project.type}}</p>
+        <h5 ng-if="project.responsibilities.length">Responsibilities:</h5>
+        
+				<ul ng-repeat="responsibility in project.responsibilities">
+					<li class="help-block">{{responsibility}}</li>
+				</ul >
+        <a href="{{project.link}}" target="_blank">link</a>
+			</div>
+     <div class="row"> 
+      <div id="typed-cursor" class="blinking">▮</div>
+    </div> 
+    </section>
+  </div>
+  
+</div>
+</div>

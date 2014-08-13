@@ -1,0 +1,31 @@
+
+<header class="jumbotron subhead" id="overview">
+  <div class="container">
+    <h1>__</h1>    
+  </div>
+</header>
+  <div class="container">    
+    <div class="row"> 
+    <div class="span1"></div>     
+      <div class="span10">
+        <section id="download-bootstrap">
+          <div class="page-header">
+            <h1>CV</h1>
+
+          </div>
+          <a  href="http://buele.github.io/RAFFAELE_BUA_CV.pdf" class="btn btn-primary btn-large">Download pdf</a>
+			<div ng-repeat="experience in experiences">
+				<h4>{{experience.title}}</h4>
+				<p>{{experience.company}}<br/>{{experience.time}}</p>
+				<ul ng-repeat="skill in experience.skills">
+					<li class="help-block">{{skill}}</li>
+				</ul >
+			</div>
+     <div class="row"> 
+      <div id="typed-cursor" class="blinking">▮</div>
+    </div> 
+    </section>
+  </div>
+  
+</div>
+</div>
