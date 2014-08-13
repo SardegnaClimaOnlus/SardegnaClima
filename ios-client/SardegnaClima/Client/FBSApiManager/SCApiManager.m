@@ -52,21 +52,27 @@ static SCApiManager *sharedSingleton_      = nil;
 
 #pragma mark FBSApiManagerDelegate protocol implementation
 -(void)getStationsForDelegate:(id)aDelegate{
-    static  NSString * _stationsUrl = @"http://";
+    static  NSString * _stationsUrl = @"http://www.sardegna-clima.it/stazioni/public_html/index.php/v1/stations";
     if(!aDelegate)return;
     [self sendRequestWithUrl:[NSURL URLWithString:_stationsUrl]  andAction:SCActionStations andTarget:aDelegate forKey:nil];
 }
 
 -(void)getSummaryForDelegate:(id)aDelegate{
-    static  NSString * _summaryUrl = @"http://";
+    static  NSString * _summaryUrl = @"http://www.sardegna-clima.it/stazioni/public_html/index.php/v1/summary";
     if(!aDelegate)return;
     [self sendRequestWithUrl:[NSURL URLWithString:_summaryUrl]  andAction:SCActionSummary andTarget:aDelegate forKey:nil];
 }
 
--(void)getStationDetailById:(NSString * )anId delegate:(id)aDelegate{
-    static NSString * _stationDetailUrl = @"http://";
+-(void)getStationById:(NSString * )anId delegate:(id)aDelegate{
+     NSString * _stationDetailUrl =[NSString stringWithFormat:@"http://www.sardegna-clima.it/stazioni/public_html/index.php/v1/stations/%@",anId] ;
     if(!anId || !aDelegate) return;
     [self sendRequestWithUrl:[NSURL URLWithString:_stationDetailUrl]  andAction:SCActionStationDetail andTarget:aDelegate forKey:anId];
+}
+
+-(void)getLastStationMeasureByStationId:(NSString * )aStationId delegate:(id)aDelegate{
+    NSString * _stationDetailUrl =[NSString stringWithFormat:@"http://www.sardegna-clima.it/stazioni/public_html/index.php/v1/stations/%@/measure",aStationId] ;
+    if(!aStationId || !aDelegate) return;
+    [self sendRequestWithUrl:[NSURL URLWithString:_stationDetailUrl]  andAction:SCActionStationDetail andTarget:aDelegate forKey:aStationId];
 }
 
 
@@ -77,22 +83,7 @@ static SCApiManager *sharedSingleton_      = nil;
     NSDictionary * json = [NSJSONSerialization JSONObjectWithData:data
                                                           options:kNilOptions
                                                             error:&jsonError];
-    NSDictionary * error = [json objectForKey:@"error"];
-    if(error){
-        NSArray * errors = [error objectForKey:@"errors"];
-        NSString * reason = nil;
-        if(errors && [errors count] > 0)
-            reason = [[self firstErrorWithErrors:errors] objectForKey:@"reason"];
-        switch ([[error objectForKey:@"code"] intValue]) {
-            case BadRequestHttpStatus:
-                break;
-            case InternalServerErrorHttpStatus:
-                
-                break;
-            default:
-                break;
-        }
-    }
+
     return json;
 }
 
@@ -142,13 +133,14 @@ static SCApiManager *sharedSingleton_      = nil;
             case SCActionStationDetail:
                 [apiRequest.target stationDetailDidReceived:[self dataToJson:response]  forKey:apiRequest.key];
                 break;
+            case SCActionLastStationMeasure:
+                [apiRequest.target lastStationMeasureDidReceived:[self dataToJson:response]  forKey:apiRequest.key];
+                break;
             default:
             break;
         }
    [requests removeObjectForKey:aRequestId];
 }
-
-
 
 @end
 

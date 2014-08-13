@@ -1,4 +1,6 @@
 //
+//  FBSApiActions.h
+//  FreebaseBookSpider
 //
 //  Created by Raffaele Bua on 01/04/14.
 //  Copyright (c) 2014 Buele. All rights reserved.
@@ -26,15 +28,12 @@
  THE SOFTWARE.
  *****************************************************************************/
 
-#ifndef FreebaseBookSpider_FBSApiActions_h
-#define FreebaseBookSpider_FBSApiActions_h
+#ifndef FreebaseBookSpider_FBSNodeTypes_h
+#define FreebaseBookSpider_FBSNodeTypes_h
 
 typedef enum{
-    SCActionNoOperation,
-    SCActionStations,
-    SCActionSummary,
-    SCActionStationDetail,
-    SCActionLastStationMeasure
-}SCApiAction;
+    FBSNodeBookType,
+    FBSNodeAuthorType
+}FBSNodeTypes;
 
 #endif

@@ -1,8 +1,9 @@
 //
+//  FBSNodeManager.h
+//  FreebaseBookSpider
 //
-//  Created by Raffaele Bua on 01/04/14.
-//  Copyright (c) 2014 Buele. All rights reserved.
-//
+//  Created by Raffaele Bua on 14/04/14.
+
 /*****************************************************************************
  The MIT License (MIT)
  
@@ -26,15 +27,32 @@
  THE SOFTWARE.
  *****************************************************************************/
 
-#ifndef FreebaseBookSpider_FBSApiActions_h
-#define FreebaseBookSpider_FBSApiActions_h
+#import <Foundation/Foundation.h>
+#import "SCApiManager.h"
+#import "SCStation.h"
+#import "SCMeasure.h"
 
-typedef enum{
-    SCActionNoOperation,
-    SCActionStations,
-    SCActionSummary,
-    SCActionStationDetail,
-    SCActionLastStationMeasure
-}SCApiAction;
 
-#endif
+@protocol SCEntityManagerDelegate
+-(void)stationsDidReceived:(NSArray * )stations;
+-(void)summaryDidReceived:(NSArray *)summary;
+-(void)stationDetailDidReceived:(SCStation* ) aStation forId:(NSString* )anId;
+-(void)lastMeasure:(SCMeasure *) aMeasure forStationWithId:(NSString * )aStationId;
+    
+
+@end
+
+@interface SCEntityManager : NSObject < SCStationsRequiring>
+{
+    NSMutableDictionary * pendingLastStationMeasureRequests;
+}
+-(id)initWithDelegate:(id)aDelegate;
+
+@property(nonatomic, retain)id delegate;
+-(void)stations;
+-(void)summary;
+-(void)stationDetailById:(NSString *)anId;
+-(void)lastStationMeasureByStationId:(NSString *) aStationId;
+
+
+@end

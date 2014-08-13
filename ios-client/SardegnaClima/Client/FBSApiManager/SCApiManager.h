@@ -38,8 +38,10 @@ typedef enum {
 
 @protocol SCStationsRequiring
 -(void)summaryDidReceived:(NSDictionary *)aSummary;
--(void)stationsDidReceived:(NSDictionary *)aStation;
+-(void)stationsDidReceived:(NSDictionary *)stations;
 -(void)stationDetailDidReceived:(NSDictionary *)aDetails forKey:(NSString* )aKey;
+-(void)lastStationMeasureDidReceived:(NSDictionary *)aDetails forKey:(NSString* )aKey;
+
 @end
 
 @interface SCApiManager : NSObject {
@@ -49,6 +51,12 @@ typedef enum {
 @property(nonatomic,retain)NSNumber * requestCounter;
 + (SCApiManager *) getSharedInstance;
 #pragma mark main protocol
+#pragma mark FBSApiManagerDelegate protocol implementation
+-(void)getStationsForDelegate:(id)aDelegate;
+-(void)getSummaryForDelegate:(id)aDelegate;
+-(void)getStationById:(NSString * )anId delegate:(id)aDelegate;
+-(void)getLastStationMeasureByStationId:(NSString * )aStationId delegate:(id)aDelegate;
+
 
 
 @end

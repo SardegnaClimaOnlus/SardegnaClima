@@ -11,7 +11,7 @@
 #import "Client/SardegnaClimaViewController.h"
 #import "Client/SardegnaClimaView.h"
 #import "Client/SCTabBarController.h"
-
+#import "SCEntityManager.h"
 
 #import "AppDelegate.h"
 
@@ -38,59 +38,37 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:a]
 @synthesize tabBarController;
 
 
-/*
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-    return YES;
-}
- */
+
+
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [GMSServices provideAPIKey:kAPIKey];
-    // ---- bof tab controller test -- //
-    
-    
-    
     tabBarController = [[SCTabBarController alloc]init];
-    
-    
-    //[self.window addSubview:self.tabBarController.view];
-    
-    // ---- eof tab controller test -- //
-    
-    
-
-    
-   // MapViewController * master = [[MapViewController alloc]init];
-    //master.appDelegate = self;
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:self.tabBarController];
     [self.navigationController.navigationBar setBarTintColor:UIColorFromRGBWithAlpha(0x4183D7, 1.0f)];
     [self.navigationController.navigationBar setTintColor:[UIColor blackColor]];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor blackColor]}];
     self.navigationController.navigationBar.translucent = NO;
     self.window.rootViewController = self.navigationController;
-    
-    //-- test //
-    
     self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     self.navigationController.navigationBar.translucent = YES;
     
-    //
+    // -- testing api -- //
+    SCEntityManager * em = [[SCEntityManager alloc]initWithDelegate:self];
+    [em stations];
     
-    //[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
-
-    
+    // ----------------- //
     [self.window makeKeyAndVisible];
     return YES;
+}
+-(void)stationsDidReceived:(NSArray * )stations{
+    
+    //TODO: kill me!
 }
 
 

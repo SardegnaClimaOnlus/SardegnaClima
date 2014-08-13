@@ -156,8 +156,7 @@ static const float TOOL_BAR_HEIGHT = 56.0f;
 -(void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.view setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
-    [self.view setAutoresizesSubviews:YES];
+  
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
     [[NSNotificationCenter defaultCenter]
      addObserver:self selector:@selector(orientationChanged:)
@@ -174,52 +173,11 @@ static const float TOOL_BAR_HEIGHT = 56.0f;
     static const float SHARE_BUTTON_MARGIN = 20.0f;
     static const float SHARE_BUTTON_SIDE_SIZE = 25.0f;
     [shareButton setFrame:CGRectMake(self.view.frame.size.width - SHARE_BUTTON_SIDE_SIZE - SHARE_BUTTON_MARGIN, SHARE_BUTTON_MARGIN, SHARE_BUTTON_SIDE_SIZE, SHARE_BUTTON_SIDE_SIZE)];
-    // ------ bof toolbar ----- //
-    /*
-     
-    UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:[self toolBarFrame]];
-    toolbar.tintColor = [UIColor blackColor];
-    [toolbar setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleWidth];
-    // map button
-    UIButton *MapBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 25.0, 25.0)];
-    [MapBtn setBackgroundImage:[UIImage imageNamed:@"map-25"] forState:UIControlStateNormal];
-    MapBtn.showsTouchWhenHighlighted = YES;
-    UIBarButtonItem *MapBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:MapBtn];
     
-    // sardegna clima button
-    UIButton *SardegnaClimaButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 25.0, 25.0)];
-    [SardegnaClimaButton setBackgroundImage:[UIImage imageNamed:@"partly_cloudy_day-25"] forState:UIControlStateNormal];
-    SardegnaClimaButton.showsTouchWhenHighlighted = YES;
-    UIBarButtonItem *SardegnaClimaBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:SardegnaClimaButton];
-    [SardegnaClimaButton addTarget:self action:@selector(sardegnaClimaButtonDidClicked) forControlEvents:UIControlEventTouchUpInside];
-    
-    // Share button
-    UIButton * ShareButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 25.0, 25.0)];
-    [ShareButton setBackgroundImage:[UIImage imageNamed:@"share-25"] forState:UIControlStateNormal];
-    ShareButton.showsTouchWhenHighlighted = YES;
-    UIBarButtonItem *ShareBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:ShareButton];
-    [ShareButton addTarget:self action:@selector(shareButtonDidClicked) forControlEvents:UIControlEventTouchUpInside];
-    
-    // Credits button
-    UIButton * CreditsButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 25.0, 25.0)];
-    [CreditsButton setBackgroundImage:[UIImage imageNamed:@"info-25"] forState:UIControlStateNormal];
-    CreditsButton.showsTouchWhenHighlighted = YES;
-    UIBarButtonItem *CreditsBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:CreditsButton];
-    
-    // spacer button
-    UIBarButtonItem *flexibleSpace =  [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-    NSArray *toolbarItems = [NSArray arrayWithObjects:flexibleSpace,MapBarButtonItem,flexibleSpace,SardegnaClimaBarButtonItem ,flexibleSpace ,ShareBarButtonItem,flexibleSpace,  CreditsBarButtonItem,flexibleSpace, nil];
-    [toolbar setItems:toolbarItems animated:YES];
-    
-    [self.view addSubview:toolbar];
-     */
-    
-    // ------ eof toolbar ----- //
     
     [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
     [super viewDidLoad];
-    //self.title = NSLocalizedString(@"Fonni", @"Fonni");
-    //self.title = [NSString stringWithFormat:@"%@: %@", self.title, @"35 °C"];
+
     self.view.autoresizingMask =
     UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:40.120878
@@ -229,8 +187,6 @@ static const float TOOL_BAR_HEIGHT = 56.0f;
     _mapView = [GMSMapView mapWithFrame:[self mapFrame] camera:camera];
     _mapView.mapType = kGMSTypeTerrain;
     
-    //_mapView.layer.borderWidth =2;
-    //_mapView.layer.borderColor = [UIColor purpleColor].CGColor;
     
     [_mapView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
     [self createContentView];
