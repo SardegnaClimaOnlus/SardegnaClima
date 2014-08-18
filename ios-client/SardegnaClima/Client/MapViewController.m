@@ -32,7 +32,7 @@ static const float TOOL_BAR_HEIGHT = 56.0f;
     self = [super init];
     if(self){
 
-        self.title = @"Map view";
+        self.title = @"Map";
         self.tabBarItem.image = [UIImage imageNamed:@"map-25.png"];
         shareButton = [[UIButton alloc]init];
         [shareButton setBackgroundImage:[UIImage imageNamed:@"logo.png"] forState:UIControlStateNormal];
@@ -115,7 +115,11 @@ static const float TOOL_BAR_HEIGHT = 56.0f;
 
 
 -(void)shareButtonDidClicked{
+    SardegnaClimaViewController * sardegnaClimaViewController = [[SardegnaClimaViewController alloc]init] ;
+	[self.navigationController pushViewController:sardegnaClimaViewController animated:YES];
+    
     // TODO: generate object to share
+    /*
     UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:@[@"hello"] applicationActivities:nil];
     
     NSArray *excludedActivities = @[//UIActivityTypePostToTwitter,
@@ -134,6 +138,7 @@ static const float TOOL_BAR_HEIGHT = 56.0f;
     controller.excludedActivityTypes = excludedActivities;
     
     [self presentViewController:controller animated:YES completion:nil];
+     */
 }
 -(void)sardegnaClimaButtonDidClicked{
     SardegnaClimaViewController * sardegnaClimaViewController = [[SardegnaClimaViewController alloc]init] ;
@@ -186,18 +191,11 @@ static const float TOOL_BAR_HEIGHT = 56.0f;
     
     [self.view addSubview:_mapView];
     
-    //////////
-    // GMSMapview itself is wired in storyboard, just set delegate
-
-    
     // Lat/long limits (bounding box)
     leftLong = 8.1;
     rightLong = 10.1;
     bottomLat  = 38.8;
     topLat  = 41.3;
-    
-    
-
     
     // coordinates based on coordinate limits for bounding box drawn as polyline
     topLeft     = CLLocationCoordinate2DMake(topLat, leftLong);
