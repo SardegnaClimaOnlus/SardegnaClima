@@ -204,20 +204,6 @@ static const float TOOL_BAR_HEIGHT = 56.0f;
     topRight    = CLLocationCoordinate2DMake(topLat, rightLong);
     bottomLeft  = CLLocationCoordinate2DMake(bottomLat, leftLong);
     bottomRight = CLLocationCoordinate2DMake(bottomLat, rightLong);
-    
-    
-    // Create visual bounding box with fat polyline
-    //GMSMutablePath *path = [[GMSMutablePath alloc] init];
-    //[path addCoordinate:topLeft];
-    //[path addCoordinate:topRight];
-    //[path addCoordinate:bottomRight];
-    //[path addCoordinate:bottomLeft];
-    //[path addCoordinate:topLeft];
-    
-   // GMSPolyline *polyLine = [GMSPolyline polylineWithPath:path];
-    //polyLine.strokeWidth = 10.0;
-    //polyLine.map = _mapView;
-
 }
 -(CGRect)mapFrame{
     CGRect screenBounds = self.view.bounds;
