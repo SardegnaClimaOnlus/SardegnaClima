@@ -53,18 +53,21 @@ static SCApiManager *sharedSingleton_      = nil;
 #pragma mark FBSApiManagerDelegate protocol implementation
 -(void)getStationsForDelegate:(id)aDelegate{
     static  NSString * _stationsUrl = @"http://www.sardegna-clima.it/stazioni/public_html/index.php/v1/stations";
+    //static  NSString * _stationsUrl = @"http://www.sardegna-clima.it/stazioni/public_html/index.php/v1/stations";
     if(!aDelegate)return;
     [self sendRequestWithUrl:[NSURL URLWithString:_stationsUrl]  andAction:SCActionStations andTarget:aDelegate forKey:nil];
 }
 
 -(void)getSummaryForDelegate:(id)aDelegate{
     static  NSString * _summaryUrl = @"http://www.sardegna-clima.it/stazioni/public_html/index.php/v1/summary";
+    //static  NSString * _summaryUrl = @"http://localhost:8888/sardegna_clima/public_html/index.php/v1/summary";
     if(!aDelegate)return;
     [self sendRequestWithUrl:[NSURL URLWithString:_summaryUrl]  andAction:SCActionSummary andTarget:aDelegate forKey:nil];
 }
 
 -(void)getStationById:(NSString * )anId delegate:(id)aDelegate{
-     NSString * _stationDetailUrl =[NSString stringWithFormat:@"http://www.sardegna-clima.it/stazioni/public_html/index.php/v1/stations/%@",anId] ;
+//    NSString * _stationDetailUrl =[NSString stringWithFormat:@"http://www.sardegna-clima.it/stazioni/public_html/index.php/v1/stations/%@",anId] ;
+    NSString * _stationDetailUrl =[NSString stringWithFormat:@"http://www.sardegna-clima.it/stazioni/public_html/index.php/v1/stations/%@",anId] ;
     if(!anId || !aDelegate) return;
     [self sendRequestWithUrl:[NSURL URLWithString:_stationDetailUrl]  andAction:SCActionStationDetail andTarget:aDelegate forKey:anId];
 }

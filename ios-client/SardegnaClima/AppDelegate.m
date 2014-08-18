@@ -35,19 +35,13 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:a]
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 @synthesize window = _window;
 @synthesize navigationController;
-@synthesize tabBarController;
-
-
-
-
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [GMSServices provideAPIKey:kAPIKey];
-    tabBarController = [[SCTabBarController alloc]init];
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:self.tabBarController];
+    mapViewController  = [[MapViewController alloc] init];
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:mapViewController];
     [self.navigationController.navigationBar setBarTintColor:UIColorFromRGBWithAlpha(0x4183D7, 1.0f)];
     [self.navigationController.navigationBar setTintColor:[UIColor blackColor]];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor blackColor]}];
@@ -57,20 +51,18 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:a]
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     self.navigationController.navigationBar.translucent = YES;
-    
-    // -- testing api -- //
-    SCEntityManager * em = [[SCEntityManager alloc]initWithDelegate:self];
-    [em stations];
-    
-    // ----------------- //
+    em = [[SCEntityManager alloc]initWithDelegate:self];
+    [em summary];
     [self.window makeKeyAndVisible];
     return YES;
 }
 -(void)stationsDidReceived:(NSArray * )stations{
-    
-    //TODO: kill me!
+    [mapViewController setStations:stations];
+    [em summary];
 }
-
+-(void)summaryDidReceived:(NSArray *)summary{
+    [mapViewController setStations:summary];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

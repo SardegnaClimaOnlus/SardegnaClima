@@ -9,8 +9,13 @@
 #import <UIKit/UIKit.h>
 
 #import "Client/SCTabBarController.h"
+#import "SCEntityManager.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+{
+    SCEntityManager * em ;
+    MapViewController * mapViewController;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 
@@ -18,12 +23,7 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
-// --- bof toolbar test --- //
 
-
-@property(strong, nonatomic)SCTabBarController * tabBarController;
-
-// --- eof toolbar test ---//
 
 @property(strong, nonatomic) UINavigationController *navigationController;
 

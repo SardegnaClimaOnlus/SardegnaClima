@@ -17,5 +17,5 @@
 @property(strong, nonatomic)NSString * name;
 @property(strong, nonatomic)SCMeasure * lastMeasure;
 
--(id)initWithId:(NSNumber *)anId latitude:(NSNumber *)aLatitude longitude:(NSNumber *)aLongitude name:(NSString *)aName;
+-(id)initWithId:(NSNumber *)anId latitude:(NSNumber *)aLatitude longitude:(NSNumber *)aLongitude name:(NSString *)aName measure:(SCMeasure *)aMeasure;
 @end

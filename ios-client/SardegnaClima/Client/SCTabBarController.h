@@ -16,4 +16,5 @@
 @property(strong, nonatomic)SardegnaClimaViewController * sardegnaClimaViewController;
 @property(strong, nonatomic)MapViewController * mapViewController;
 @property(strong, nonatomic)CreditsViewController * creditsViewController;
+@property(strong, nonatomic)NSArray * stations;
 @end

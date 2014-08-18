@@ -37,8 +37,8 @@ typedef enum {
 }HttpStatus;
 
 @protocol SCStationsRequiring
--(void)summaryDidReceived:(NSDictionary *)aSummary;
--(void)stationsDidReceived:(NSDictionary *)stations;
+-(void)summaryDidReceived:(NSArray *)aSummary;
+-(void)stationsDidReceived:(NSArray *)stations;
 -(void)stationDetailDidReceived:(NSDictionary *)aDetails forKey:(NSString* )aKey;
 -(void)lastStationMeasureDidReceived:(NSDictionary *)aDetails forKey:(NSString* )aKey;
 

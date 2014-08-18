@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5636AC431997FD0A00723F3D /* CreditsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5636AC421997FD0A00723F3D /* CreditsViewController.m */; };
 		5673F4BE199772FA0081AC88 /* SCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5673F4BD199772FA0081AC88 /* SCTabBarController.m */; };
+		568CE2AB19A28E7800E6C8FD /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 568CE2AA19A28E7800E6C8FD /* logo.png */; };
 		56B15802198F86E0008F0170 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B15801198F86E0008F0170 /* Foundation.framework */; };
 		56B15804198F86E0008F0170 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B15803198F86E0008F0170 /* CoreGraphics.framework */; };
 		56B15806198F86E0008F0170 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B15805198F86E0008F0170 /* UIKit.framework */; };
@@ -46,12 +47,17 @@
 		56DEBA4A1992217C00431AE1 /* UINavigationControllerCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DEBA491992217C00431AE1 /* UINavigationControllerCategory.m */; };
 		56DEBA4D1992889900431AE1 /* SardegnaClimaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DEBA4C1992889900431AE1 /* SardegnaClimaViewController.m */; };
 		56DEBA5019928BB700431AE1 /* SardegnaClimaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DEBA4F19928BB700431AE1 /* SardegnaClimaView.m */; };
+		56DF2EB9199E156E006CEA9B /* SCMarkerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DF2EB8199E156E006CEA9B /* SCMarkerLabel.m */; };
+		56DF2EBC199E1842006CEA9B /* SCMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DF2EBB199E1842006CEA9B /* SCMarker.m */; };
+		56DF2EBF199F8325006CEA9B /* SCStationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DF2EBE199F8325006CEA9B /* SCStationViewController.m */; };
 		56FD45F9199BBEBD00C8EE4F /* SCApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FD45F2199BBEBD00C8EE4F /* SCApiManager.m */; };
 		56FD45FA199BBEBD00C8EE4F /* SCApiPendingRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FD45F4199BBEBD00C8EE4F /* SCApiPendingRequest.m */; };
 		56FD45FC199BBEBD00C8EE4F /* SCURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FD45F8199BBEBD00C8EE4F /* SCURLConnection.m */; };
 		56FD4610199BF12900C8EE4F /* SCEntityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FD4603199BF12900C8EE4F /* SCEntityManager.m */; };
 		56FD4617199C239C00C8EE4F /* SCStation.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FD4616199C239C00C8EE4F /* SCStation.m */; };
 		56FD461A199C23BE00C8EE4F /* SCMeasure.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FD4619199C23BE00C8EE4F /* SCMeasure.m */; };
+		56FD4620199C9C7A00C8EE4F /* SCMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FD461F199C9C7A00C8EE4F /* SCMapView.m */; };
+		56FD4626199C9FF300C8EE4F /* SCStationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FD4625199C9FF300C8EE4F /* SCStationView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +75,7 @@
 		5636AC421997FD0A00723F3D /* CreditsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditsViewController.m; sourceTree = "<group>"; };
 		5673F4BC199772FA0081AC88 /* SCTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTabBarController.h; sourceTree = "<group>"; };
 		5673F4BD199772FA0081AC88 /* SCTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTabBarController.m; sourceTree = "<group>"; };
+		568CE2AA19A28E7800E6C8FD /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		56B157FE198F86E0008F0170 /* SardegnaClima.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SardegnaClima.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56B15801198F86E0008F0170 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		56B15803198F86E0008F0170 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -115,6 +122,12 @@
 		56DEBA4C1992889900431AE1 /* SardegnaClimaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SardegnaClimaViewController.m; sourceTree = "<group>"; };
 		56DEBA4E19928BB700431AE1 /* SardegnaClimaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SardegnaClimaView.h; sourceTree = "<group>"; };
 		56DEBA4F19928BB700431AE1 /* SardegnaClimaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SardegnaClimaView.m; sourceTree = "<group>"; };
+		56DF2EB7199E156E006CEA9B /* SCMarkerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMarkerLabel.h; sourceTree = "<group>"; };
+		56DF2EB8199E156E006CEA9B /* SCMarkerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMarkerLabel.m; sourceTree = "<group>"; };
+		56DF2EBA199E1842006CEA9B /* SCMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMarker.h; sourceTree = "<group>"; };
+		56DF2EBB199E1842006CEA9B /* SCMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMarker.m; sourceTree = "<group>"; };
+		56DF2EBD199F8325006CEA9B /* SCStationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCStationViewController.h; sourceTree = "<group>"; };
+		56DF2EBE199F8325006CEA9B /* SCStationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCStationViewController.m; sourceTree = "<group>"; };
 		56FD45F0199BBEBD00C8EE4F /* SCApiActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCApiActions.h; sourceTree = "<group>"; };
 		56FD45F1199BBEBD00C8EE4F /* SCApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCApiManager.h; sourceTree = "<group>"; };
 		56FD45F2199BBEBD00C8EE4F /* SCApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCApiManager.m; sourceTree = "<group>"; };
@@ -128,6 +141,10 @@
 		56FD4616199C239C00C8EE4F /* SCStation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCStation.m; sourceTree = "<group>"; };
 		56FD4618199C23BE00C8EE4F /* SCMeasure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMeasure.h; sourceTree = "<group>"; };
 		56FD4619199C23BE00C8EE4F /* SCMeasure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMeasure.m; sourceTree = "<group>"; };
+		56FD461E199C9C7A00C8EE4F /* SCMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMapView.h; sourceTree = "<group>"; };
+		56FD461F199C9C7A00C8EE4F /* SCMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMapView.m; sourceTree = "<group>"; };
+		56FD4624199C9FF300C8EE4F /* SCStationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCStationView.h; path = ../SCStationView.h; sourceTree = "<group>"; };
+		56FD4625199C9FF300C8EE4F /* SCStationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCStationView.m; path = ../SCStationView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +250,12 @@
 				56FD4616199C239C00C8EE4F /* SCStation.m */,
 				56FD4618199C23BE00C8EE4F /* SCMeasure.h */,
 				56FD4619199C23BE00C8EE4F /* SCMeasure.m */,
+				56FD461E199C9C7A00C8EE4F /* SCMapView.h */,
+				56FD461F199C9C7A00C8EE4F /* SCMapView.m */,
+				56DF2EB7199E156E006CEA9B /* SCMarkerLabel.h */,
+				56DF2EB8199E156E006CEA9B /* SCMarkerLabel.m */,
+				56DF2EBA199E1842006CEA9B /* SCMarker.h */,
+				56DF2EBB199E1842006CEA9B /* SCMarker.m */,
 			);
 			path = SardegnaClima;
 			sourceTree = "<group>";
@@ -269,6 +292,8 @@
 		56B1583A198F8789008F0170 /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				56FD4624199C9FF300C8EE4F /* SCStationView.h */,
+				56FD4625199C9FF300C8EE4F /* SCStationView.m */,
 				56B1583B198F8789008F0170 /* MapViewController.h */,
 				56B1583C198F8789008F0170 /* MapViewController.m */,
 				56DEBA4B1992889900431AE1 /* SardegnaClimaViewController.h */,
@@ -279,6 +304,8 @@
 				5673F4BD199772FA0081AC88 /* SCTabBarController.m */,
 				5636AC411997FD0A00723F3D /* CreditsViewController.h */,
 				5636AC421997FD0A00723F3D /* CreditsViewController.m */,
+				56DF2EBD199F8325006CEA9B /* SCStationViewController.h */,
+				56DF2EBE199F8325006CEA9B /* SCStationViewController.m */,
 			);
 			path = Client;
 			sourceTree = "<group>";
@@ -286,6 +313,7 @@
 		56B1585C198F9EE4008F0170 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				568CE2AA19A28E7800E6C8FD /* logo.png */,
 				56DEBA4619921EEA00431AE1 /* share-25.png */,
 				56DEBA4419921E2100431AE1 /* info-25.png */,
 				56DEBA4219921C7E00431AE1 /* partly_cloudy_day-25.png */,
@@ -397,6 +425,7 @@
 				56DEBA4319921C7E00431AE1 /* partly_cloudy_day-25.png in Resources */,
 				56B1580E198F86E0008F0170 /* InfoPlist.strings in Resources */,
 				56DEBA4719921EEA00431AE1 /* share-25.png in Resources */,
+				568CE2AB19A28E7800E6C8FD /* logo.png in Resources */,
 				56B15819198F86E0008F0170 /* Images.xcassets in Resources */,
 				56DEBA4519921E2100431AE1 /* info-25.png in Resources */,
 				56DEBA4119921AD900431AE1 /* map-25.png in Resources */,
@@ -419,19 +448,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				56FD4610199BF12900C8EE4F /* SCEntityManager.m in Sources */,
+				56DF2EBC199E1842006CEA9B /* SCMarker.m in Sources */,
 				56DEBA4D1992889900431AE1 /* SardegnaClimaViewController.m in Sources */,
 				5636AC431997FD0A00723F3D /* CreditsViewController.m in Sources */,
 				5673F4BE199772FA0081AC88 /* SCTabBarController.m in Sources */,
 				56B15814198F86E0008F0170 /* AppDelegate.m in Sources */,
+				56DF2EBF199F8325006CEA9B /* SCStationViewController.m in Sources */,
 				56FD45FA199BBEBD00C8EE4F /* SCApiPendingRequest.m in Sources */,
 				56B15810198F86E0008F0170 /* main.m in Sources */,
 				56FD45F9199BBEBD00C8EE4F /* SCApiManager.m in Sources */,
 				56FD45FC199BBEBD00C8EE4F /* SCURLConnection.m in Sources */,
 				56B15817198F86E0008F0170 /* SardegnaClima.xcdatamodeld in Sources */,
 				56FD4617199C239C00C8EE4F /* SCStation.m in Sources */,
+				56FD4626199C9FF300C8EE4F /* SCStationView.m in Sources */,
 				56DEBA5019928BB700431AE1 /* SardegnaClimaView.m in Sources */,
+				56FD4620199C9C7A00C8EE4F /* SCMapView.m in Sources */,
 				56B1585B198F8F8A008F0170 /* Utils.m in Sources */,
 				56DEBA4A1992217C00431AE1 /* UINavigationControllerCategory.m in Sources */,
+				56DF2EB9199E156E006CEA9B /* SCMarkerLabel.m in Sources */,
 				56FD461A199C23BE00C8EE4F /* SCMeasure.m in Sources */,
 				56B1583D198F8789008F0170 /* MapViewController.m in Sources */,
 			);

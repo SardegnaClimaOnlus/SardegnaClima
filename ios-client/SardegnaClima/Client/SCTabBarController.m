@@ -21,6 +21,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:a]
 
 @implementation SCTabBarController
 @synthesize mapViewController, sardegnaClimaViewController, creditsViewController;
+@synthesize stations;
 
 -(id)init{
     self = [super init];
@@ -42,6 +43,10 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:a]
     return self;
 }
 
+-(void)setStations:(NSArray *)aStations{
+    stations = aStations;
+    [mapViewController setStations:stations];
+}
 
 - (NSUInteger)supportedInterfaceOrientations
 {
