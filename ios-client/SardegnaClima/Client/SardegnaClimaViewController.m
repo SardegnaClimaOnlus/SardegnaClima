@@ -58,8 +58,7 @@
     [self.view addSubview:sardegnaClimaView];
     [self.view setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleWidth];
     [sardegnaClimaView setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleWidth];
-    NSLog(@" view height: %f", self.view.frame.size.height);
-    NSLog(@" sardegnaClimaView height: %f", sardegnaClimaView.frame.size.height);
+   
 }
 
 - (void)didReceiveMemoryWarning

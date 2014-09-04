@@ -23,10 +23,41 @@
     return self;
 }
 
+
+-(id)initWithStation:(SCStation * )aStation{
+    self =[super init];
+    if(self){
+        stationView = [[SCStationView alloc]initWithStation:aStation];
+        station = aStation;
+        self.title = aStation.name;
+    }
+    
+    return self;
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self.view setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
+    [self.view setAutoresizesSubviews:YES];
+    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self selector:@selector(orientationChanged:)
+     name:UIDeviceOrientationDidChangeNotification
+     object:[UIDevice currentDevice]];
+    self.view.autoresizingMask =
+    UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
+    [self.view setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleWidth];
+    [stationView setFrame:self.view.frame];
+    
+    [self.view addSubview:stationView];
+    [self.view setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleWidth];
+    [stationView setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleWidth];
+    CGFloat verticalOffset = 6.5f;
+    [[UINavigationBar appearance] setTitleVerticalPositionAdjustment:verticalOffset forBarMetrics:UIBarMetricsDefault];
+
+    
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,6 +65,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 /*
 #pragma mark - Navigation

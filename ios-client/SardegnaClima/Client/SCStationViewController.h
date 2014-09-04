@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SCStationView.h"
+#import "SCStation.h"
 
-@interface SCStationViewController : UIViewController
+@interface SCStationViewController : UIViewController{
+    SCStationView * stationView;
+    SCStation * station;
+}
+
+-(id)initWithStation:(SCStation * )aStation;
+
 
 @end

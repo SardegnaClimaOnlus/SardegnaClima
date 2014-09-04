@@ -1,8 +1,8 @@
 //
-//  SCMarkerContentView.h
+//  SCStationView.h
 //  SardegnaClima
 //
-//  Created by Raffaele Bua on 14/08/14.
+//  Created by Raffaele Bua on 19/08/14.
 //  Copyright (c) 2014 Buele. All rights reserved.
 //
 
@@ -14,6 +14,8 @@
     UILabel * title;
     UIButton * button;
     SCStation * station;
+    BOOL showBorders;
+    NSDictionary * windDirections;
 }
 
 -(id)initWithStation:(SCStation *)aStation;

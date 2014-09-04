@@ -41,8 +41,10 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:a]
 }
 
 -(void)addMarkerWithStation:(SCStation *)aStation{
-    SCMarker * marker  = [[SCMarker alloc] initWithStation:(SCStation *)aStation];
-    marker.map = self;
+    if(aStation.lastMeasure.temp){
+        SCMarker * marker  = [[SCMarker alloc] initWithStation:(SCStation *)aStation];
+        marker.map = self;
+    }
 }
 
 

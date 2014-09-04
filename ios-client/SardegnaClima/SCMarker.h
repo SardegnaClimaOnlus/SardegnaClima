@@ -9,6 +9,9 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import "SCStation.h"
 @interface SCMarker : GMSMarker
+{
+    NSDictionary * temperatureColors ;
+}
 
 -(id)initWithStation:(SCStation *)aStation;
 @property(strong, nonatomic)SCStation * station;

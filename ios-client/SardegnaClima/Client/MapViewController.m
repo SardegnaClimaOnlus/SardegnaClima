@@ -6,6 +6,7 @@
 
 #import "MapViewController.h"
 #import "SardegnaClimaViewController.h"
+#import "SCStationViewController.h"
 #import "SCMapView.h"
 #import "SCMarker.h"
 
@@ -228,6 +229,7 @@ static const float TOOL_BAR_HEIGHT = 56.0f;
 
 - (UIView *)mapView:(GMSMapView *)mapView markerInfoContents:(SCMarker *)marker {
     NSLog(@"%@",marker.station.name);
+    
     return nil;
     //SCStationView * markerContentView = [[SCMarkerContentView alloc]initWithStation:marker.station];
 
@@ -238,6 +240,8 @@ static const float TOOL_BAR_HEIGHT = 56.0f;
 {
     NSLog(@"clicked marker");
     NSLog(@"station name: %@", marker.station.name );
+    SCStationViewController * stationViewController = [[SCStationViewController alloc]initWithStation:marker.station] ;
+	[self.navigationController pushViewController:stationViewController animated:YES];
     
     // push view controller here
     return YES;

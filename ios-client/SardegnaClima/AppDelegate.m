@@ -42,16 +42,35 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:a]
     [GMSServices provideAPIKey:kAPIKey];
     mapViewController  = [[MapViewController alloc] init];
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:mapViewController];
-    [self.navigationController.navigationBar setBarTintColor:UIColorFromRGBWithAlpha(0x4183D7, 1.0f)];
-    [self.navigationController.navigationBar setTintColor:[UIColor blackColor]];
+    [self.navigationController.navigationBar setBarTintColor:UIColorFromRGBWithAlpha(0xffffff, 0.5f)];
+    [self.navigationController.navigationBar setTintColor:UIColorFromRGBWithAlpha(0xffffff, 0.5f)];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor blackColor]}];
-    self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.navigationBar.translucent = YES;
     self.window.rootViewController = self.navigationController;
-    self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
+    self.navigationController.navigationBar.barTintColor = UIColorFromRGBWithAlpha(0xffffff, 0.5f);
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     self.navigationController.navigationBar.translucent = YES;
     em = [[SCEntityManager alloc]initWithDelegate:self];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+                             forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    self.navigationController.navigationBar.translucent = YES;
+    
+    
+    [[UINavigationBar appearance] setTitleTextAttributes: @{
+                                                            NSForegroundColorAttributeName: [UIColor whiteColor],
+                                                            NSFontAttributeName: [UIFont fontWithName:@"AppleSDGothicNeo-Light" size:25.0f]
+                                                            }];
+    [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil]
+     setTitleTextAttributes:
+     @{NSForegroundColorAttributeName:[UIColor whiteColor],
+       NSFontAttributeName: [UIFont fontWithName:@"AppleSDGothicNeo-Light" size:0.0f]
+       }
+     forState:UIControlStateNormal];
+   
+
+
     [em summary];
     [self.window makeKeyAndVisible];
     return YES;

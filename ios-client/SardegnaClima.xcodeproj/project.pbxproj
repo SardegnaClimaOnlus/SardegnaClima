@@ -7,9 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		561FA2A119A9E4FF000CE4DF /* rain-256.png in Resources */ = {isa = PBXBuildFile; fileRef = 561FA29F19A9E4FF000CE4DF /* rain-256.png */; };
+		561FA2A219A9E4FF000CE4DF /* wet-256.png in Resources */ = {isa = PBXBuildFile; fileRef = 561FA2A019A9E4FF000CE4DF /* wet-256.png */; };
+		561FA2A419AA1524000CE4DF /* rain.png in Resources */ = {isa = PBXBuildFile; fileRef = 561FA2A319AA1524000CE4DF /* rain.png */; };
+		561FA2A619AA1E4D000CE4DF /* termometer.png in Resources */ = {isa = PBXBuildFile; fileRef = 561FA2A519AA1E4D000CE4DF /* termometer.png */; };
+		561FA2A819AA3409000CE4DF /* raindrops1.png in Resources */ = {isa = PBXBuildFile; fileRef = 561FA2A719AA3409000CE4DF /* raindrops1.png */; };
+		561FA2AA19AA3556000CE4DF /* umbrella11.png in Resources */ = {isa = PBXBuildFile; fileRef = 561FA2A919AA3556000CE4DF /* umbrella11.png */; };
+		561FA2B019AA372A000CE4DF /* rain2.png in Resources */ = {isa = PBXBuildFile; fileRef = 561FA2AB19AA372A000CE4DF /* rain2.png */; };
+		561FA2B119AA372A000CE4DF /* rain14.png in Resources */ = {isa = PBXBuildFile; fileRef = 561FA2AC19AA372A000CE4DF /* rain14.png */; };
+		561FA2B219AA372A000CE4DF /* pressure.png in Resources */ = {isa = PBXBuildFile; fileRef = 561FA2AD19AA372A000CE4DF /* pressure.png */; };
+		561FA2B319AA372A000CE4DF /* wind28.png in Resources */ = {isa = PBXBuildFile; fileRef = 561FA2AE19AA372A000CE4DF /* wind28.png */; };
+		561FA2B419AA372A000CE4DF /* windy4.png in Resources */ = {isa = PBXBuildFile; fileRef = 561FA2AF19AA372A000CE4DF /* windy4.png */; };
+		561FA2B619AA3BE7000CE4DF /* address8.png in Resources */ = {isa = PBXBuildFile; fileRef = 561FA2B519AA3BE7000CE4DF /* address8.png */; };
+		561FA2B819AC8FD9000CE4DF /* wind_turbine-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 561FA2B719AC8FD9000CE4DF /* wind_turbine-512.png */; };
+		561FA2BA19AC9379000CE4DF /* pressure-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 561FA2B919AC9379000CE4DF /* pressure-512.png */; };
+		561FA2BC19AC9426000CE4DF /* umbrella-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 561FA2BB19AC9426000CE4DF /* umbrella-512.png */; };
+		561FA2BE19AC9489000CE4DF /* water-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 561FA2BD19AC9489000CE4DF /* water-512.png */; };
 		5636AC431997FD0A00723F3D /* CreditsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5636AC421997FD0A00723F3D /* CreditsViewController.m */; };
 		5673F4BE199772FA0081AC88 /* SCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5673F4BD199772FA0081AC88 /* SCTabBarController.m */; };
 		568CE2AB19A28E7800E6C8FD /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 568CE2AA19A28E7800E6C8FD /* logo.png */; };
+		56921FE219A2C05500F4DC34 /* SCStationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56921FE119A2C05500F4DC34 /* SCStationView.m */; };
 		56B15802198F86E0008F0170 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B15801198F86E0008F0170 /* Foundation.framework */; };
 		56B15804198F86E0008F0170 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B15803198F86E0008F0170 /* CoreGraphics.framework */; };
 		56B15806198F86E0008F0170 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B15805198F86E0008F0170 /* UIKit.framework */; };
@@ -57,7 +74,6 @@
 		56FD4617199C239C00C8EE4F /* SCStation.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FD4616199C239C00C8EE4F /* SCStation.m */; };
 		56FD461A199C23BE00C8EE4F /* SCMeasure.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FD4619199C23BE00C8EE4F /* SCMeasure.m */; };
 		56FD4620199C9C7A00C8EE4F /* SCMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FD461F199C9C7A00C8EE4F /* SCMapView.m */; };
-		56FD4626199C9FF300C8EE4F /* SCStationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FD4625199C9FF300C8EE4F /* SCStationView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,11 +87,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		561FA29F19A9E4FF000CE4DF /* rain-256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rain-256.png"; sourceTree = "<group>"; };
+		561FA2A019A9E4FF000CE4DF /* wet-256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wet-256.png"; sourceTree = "<group>"; };
+		561FA2A319AA1524000CE4DF /* rain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rain.png; sourceTree = "<group>"; };
+		561FA2A519AA1E4D000CE4DF /* termometer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = termometer.png; sourceTree = "<group>"; };
+		561FA2A719AA3409000CE4DF /* raindrops1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = raindrops1.png; sourceTree = "<group>"; };
+		561FA2A919AA3556000CE4DF /* umbrella11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = umbrella11.png; sourceTree = "<group>"; };
+		561FA2AB19AA372A000CE4DF /* rain2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rain2.png; sourceTree = "<group>"; };
+		561FA2AC19AA372A000CE4DF /* rain14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rain14.png; sourceTree = "<group>"; };
+		561FA2AD19AA372A000CE4DF /* pressure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pressure.png; sourceTree = "<group>"; };
+		561FA2AE19AA372A000CE4DF /* wind28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wind28.png; sourceTree = "<group>"; };
+		561FA2AF19AA372A000CE4DF /* windy4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = windy4.png; sourceTree = "<group>"; };
+		561FA2B519AA3BE7000CE4DF /* address8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = address8.png; sourceTree = "<group>"; };
+		561FA2B719AC8FD9000CE4DF /* wind_turbine-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wind_turbine-512.png"; sourceTree = "<group>"; };
+		561FA2B919AC9379000CE4DF /* pressure-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pressure-512.png"; sourceTree = "<group>"; };
+		561FA2BB19AC9426000CE4DF /* umbrella-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "umbrella-512.png"; sourceTree = "<group>"; };
+		561FA2BD19AC9489000CE4DF /* water-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "water-512.png"; sourceTree = "<group>"; };
 		5636AC411997FD0A00723F3D /* CreditsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditsViewController.h; sourceTree = "<group>"; };
 		5636AC421997FD0A00723F3D /* CreditsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditsViewController.m; sourceTree = "<group>"; };
 		5673F4BC199772FA0081AC88 /* SCTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTabBarController.h; sourceTree = "<group>"; };
 		5673F4BD199772FA0081AC88 /* SCTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTabBarController.m; sourceTree = "<group>"; };
 		568CE2AA19A28E7800E6C8FD /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		56921FE019A2C05500F4DC34 /* SCStationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCStationView.h; sourceTree = "<group>"; };
+		56921FE119A2C05500F4DC34 /* SCStationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCStationView.m; sourceTree = "<group>"; };
 		56B157FE198F86E0008F0170 /* SardegnaClima.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SardegnaClima.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56B15801198F86E0008F0170 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		56B15803198F86E0008F0170 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -143,8 +177,6 @@
 		56FD4619199C23BE00C8EE4F /* SCMeasure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMeasure.m; sourceTree = "<group>"; };
 		56FD461E199C9C7A00C8EE4F /* SCMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMapView.h; sourceTree = "<group>"; };
 		56FD461F199C9C7A00C8EE4F /* SCMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMapView.m; sourceTree = "<group>"; };
-		56FD4624199C9FF300C8EE4F /* SCStationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCStationView.h; path = ../SCStationView.h; sourceTree = "<group>"; };
-		56FD4625199C9FF300C8EE4F /* SCStationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCStationView.m; path = ../SCStationView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -292,8 +324,6 @@
 		56B1583A198F8789008F0170 /* Client */ = {
 			isa = PBXGroup;
 			children = (
-				56FD4624199C9FF300C8EE4F /* SCStationView.h */,
-				56FD4625199C9FF300C8EE4F /* SCStationView.m */,
 				56B1583B198F8789008F0170 /* MapViewController.h */,
 				56B1583C198F8789008F0170 /* MapViewController.m */,
 				56DEBA4B1992889900431AE1 /* SardegnaClimaViewController.h */,
@@ -306,6 +336,8 @@
 				5636AC421997FD0A00723F3D /* CreditsViewController.m */,
 				56DF2EBD199F8325006CEA9B /* SCStationViewController.h */,
 				56DF2EBE199F8325006CEA9B /* SCStationViewController.m */,
+				56921FE019A2C05500F4DC34 /* SCStationView.h */,
+				56921FE119A2C05500F4DC34 /* SCStationView.m */,
 			);
 			path = Client;
 			sourceTree = "<group>";
@@ -313,6 +345,22 @@
 		56B1585C198F9EE4008F0170 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				561FA2BD19AC9489000CE4DF /* water-512.png */,
+				561FA2BB19AC9426000CE4DF /* umbrella-512.png */,
+				561FA2B919AC9379000CE4DF /* pressure-512.png */,
+				561FA2B719AC8FD9000CE4DF /* wind_turbine-512.png */,
+				561FA2B519AA3BE7000CE4DF /* address8.png */,
+				561FA2AB19AA372A000CE4DF /* rain2.png */,
+				561FA2AC19AA372A000CE4DF /* rain14.png */,
+				561FA2AD19AA372A000CE4DF /* pressure.png */,
+				561FA2AE19AA372A000CE4DF /* wind28.png */,
+				561FA2AF19AA372A000CE4DF /* windy4.png */,
+				561FA2A919AA3556000CE4DF /* umbrella11.png */,
+				561FA2A719AA3409000CE4DF /* raindrops1.png */,
+				561FA2A519AA1E4D000CE4DF /* termometer.png */,
+				561FA2A319AA1524000CE4DF /* rain.png */,
+				561FA29F19A9E4FF000CE4DF /* rain-256.png */,
+				561FA2A019A9E4FF000CE4DF /* wet-256.png */,
 				568CE2AA19A28E7800E6C8FD /* logo.png */,
 				56DEBA4619921EEA00431AE1 /* share-25.png */,
 				56DEBA4419921E2100431AE1 /* info-25.png */,
@@ -421,13 +469,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				561FA2B419AA372A000CE4DF /* windy4.png in Resources */,
+				561FA2A119A9E4FF000CE4DF /* rain-256.png in Resources */,
+				561FA2AA19AA3556000CE4DF /* umbrella11.png in Resources */,
 				56B15858198F8AF7008F0170 /* GoogleMaps.bundle in Resources */,
+				561FA2BC19AC9426000CE4DF /* umbrella-512.png in Resources */,
+				561FA2A219A9E4FF000CE4DF /* wet-256.png in Resources */,
+				561FA2A819AA3409000CE4DF /* raindrops1.png in Resources */,
 				56DEBA4319921C7E00431AE1 /* partly_cloudy_day-25.png in Resources */,
+				561FA2A419AA1524000CE4DF /* rain.png in Resources */,
+				561FA2A619AA1E4D000CE4DF /* termometer.png in Resources */,
+				561FA2B619AA3BE7000CE4DF /* address8.png in Resources */,
 				56B1580E198F86E0008F0170 /* InfoPlist.strings in Resources */,
 				56DEBA4719921EEA00431AE1 /* share-25.png in Resources */,
 				568CE2AB19A28E7800E6C8FD /* logo.png in Resources */,
+				561FA2B319AA372A000CE4DF /* wind28.png in Resources */,
 				56B15819198F86E0008F0170 /* Images.xcassets in Resources */,
+				561FA2BE19AC9489000CE4DF /* water-512.png in Resources */,
+				561FA2BA19AC9379000CE4DF /* pressure-512.png in Resources */,
+				561FA2B219AA372A000CE4DF /* pressure.png in Resources */,
+				561FA2B119AA372A000CE4DF /* rain14.png in Resources */,
 				56DEBA4519921E2100431AE1 /* info-25.png in Resources */,
+				561FA2B019AA372A000CE4DF /* rain2.png in Resources */,
+				561FA2B819AC8FD9000CE4DF /* wind_turbine-512.png in Resources */,
 				56DEBA4119921AD900431AE1 /* map-25.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,6 +512,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56FD4610199BF12900C8EE4F /* SCEntityManager.m in Sources */,
+				56921FE219A2C05500F4DC34 /* SCStationView.m in Sources */,
 				56DF2EBC199E1842006CEA9B /* SCMarker.m in Sources */,
 				56DEBA4D1992889900431AE1 /* SardegnaClimaViewController.m in Sources */,
 				5636AC431997FD0A00723F3D /* CreditsViewController.m in Sources */,
@@ -460,7 +525,6 @@
 				56FD45FC199BBEBD00C8EE4F /* SCURLConnection.m in Sources */,
 				56B15817198F86E0008F0170 /* SardegnaClima.xcdatamodeld in Sources */,
 				56FD4617199C239C00C8EE4F /* SCStation.m in Sources */,
-				56FD4626199C9FF300C8EE4F /* SCStationView.m in Sources */,
 				56DEBA5019928BB700431AE1 /* SardegnaClimaView.m in Sources */,
 				56FD4620199C9C7A00C8EE4F /* SCMapView.m in Sources */,
 				56B1585B198F8F8A008F0170 /* Utils.m in Sources */,
