@@ -1,8 +1,8 @@
 <?php
 namespace StationDataParser;
-require_once "vendor/autoload.php";
+require_once __DIR__ ."/../../../vendor/autoload.php";
 
-class TagmerParser implements StationParserInterface{
+class TagmerParser  extends Parser implements StationParserInterface{
 	public function getMeasure($data_url){
 
 		$dataraw = file_get_contents($data_url);
@@ -11,8 +11,12 @@ class TagmerParser implements StationParserInterface{
 		$data = "$datagus[1]";
 
 		list($giorno, $mese, $anno) = explode("/",$data);  
-		$data = $anno . "/" . $mese . "/" . $giorno;
+		$data = "20" . $anno . "/" . $mese . "/" . $giorno;
 		$datetime = $data . ' ' . $ora;
+
+		$this->logger->info("(*) datetime string:");
+		$this->logger->info($datetime);
+
 		
 		$measure = new \Measure();
 		$measure->setTemp($datagus[2]);

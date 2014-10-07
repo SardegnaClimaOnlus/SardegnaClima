@@ -1,8 +1,8 @@
 <?php
 namespace StationDataParser;
-require_once "vendor/autoload.php";
+require_once __DIR__ ."/../../../vendor/autoload.php";
 
-class Downld02Parser implements StationParserInterface{
+class Downld02Parser extends Parser implements StationParserInterface{
 	public function getMeasure($data_url){
 		$handle = fopen("$data_url", 'r');
 		if (!$handle) {

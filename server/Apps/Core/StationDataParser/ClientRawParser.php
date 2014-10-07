@@ -1,11 +1,15 @@
 <?php
 namespace StationDataParser;
-require_once "vendor/autoload.php";
+require_once __DIR__ ."/../../../vendor/autoload.php";
 
-class ClientRawParser implements StationParserInterface{
+class ClientRawParser extends Parser implements StationParserInterface{
 
 	public function getMeasure($data_url){
 		$datarawstazione = file_get_contents($data_url);
+		if(!$datarawstazione){
+			$this->logger->error("********************** no data from: $data_url");
+			return null;
+		}
 		$datagus = explode(" ", $datarawstazione);
 
 		// date
@@ -30,6 +34,15 @@ class ClientRawParser implements StationParserInterface{
 		$measure->setRainmt($datagus[8]);
 		$measure->setRainyr($datagus[9]);
 		$dateObj = date_create($date . ' ' . $hour);
+
+		//$this->logger->info("ClientRawParser----- ------------------------------------------------");
+		//$this->logger->info("datae string");
+		//$this->logger->info($date . ' ' . $hour);
+		//$this->logger->info("RAW data: ");
+		//$this->logger->info($datarawstazione);
+		//$this->logger->info("Model:");
+		//$this->logger->info($datagus);
+
 		$measure->setDate($dateObj?$dateObj:null);	
 
 		return $measure;

@@ -1,8 +1,8 @@
 <?php
 namespace StationDataParser;
-require_once "vendor/autoload.php";
+require_once __DIR__ ."/../../../vendor/autoload.php";
 
-class LogDatParser implements StationParserInterface{
+class LogDatParser extends Parser implements StationParserInterface{
 	public function getMeasure($data_url){
 		$dataraw = file_get_contents($data_url);
 		$datagus= explode(" ", $dataraw);

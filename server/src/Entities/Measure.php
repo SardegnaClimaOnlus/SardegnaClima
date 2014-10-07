@@ -13,10 +13,10 @@ use Doctrine\ORM\Mapping AS ORM;
 class Measure
 {
 
-
+    private $logger;
     public function __construct(){
-       // date_default_timezone_set("Europe/Rome");
-       // $this->date =  date_create(date('Y-m-d H:i:s')); 
+       $this->logger = Logger::getLogger('measure');
+
     }
 
     /**
@@ -130,7 +130,12 @@ class Measure
      */
     public function setDate($date)
     {
+        
+
         $this->date = $date;
+        //$this->logger->info("setDate");
+        //$this->logger->info("date");
+        //$this->logger->info($date);
 
         return $this;
     }
@@ -153,7 +158,10 @@ class Measure
      */
     public function setTemp($temp)
     {
-        $this->temp = $temp;
+       // $this->logger->info("setTemp");
+        
+       // $this->logger->info("temp: $temp");
+        $this->temp = floatval($temp);
 
         return $this;
     }
@@ -176,7 +184,7 @@ class Measure
      */
     public function setTempmax($tempmax)
     {
-        $this->tempmax = $tempmax;
+        $this->tempmax = floatval($tempmax);
 
         return $this;
     }
@@ -199,7 +207,7 @@ class Measure
      */
     public function setTempmin($tempmin)
     {
-        $this->tempmin = $tempmin;
+        $this->tempmin = floatval($tempmin);
 
         return $this;
     }
@@ -222,7 +230,7 @@ class Measure
      */
     public function setHum($hum)
     {
-        $this->hum = $hum;
+        $this->hum = floatval($hum);
 
         return $this;
     }
@@ -245,7 +253,7 @@ class Measure
      */
     public function setDp($dp)
     {
-        $this->dp = $dp;
+        $this->dp = floatval($dp);
 
         return $this;
     }
@@ -268,7 +276,7 @@ class Measure
      */
     public function setWchill($wchill)
     {
-        $this->wchill = $wchill;
+        $this->wchill =floatval($wchill);
 
         return $this;
     }
@@ -291,7 +299,7 @@ class Measure
      */
     public function setHindex($hindex)
     {
-        $this->hindex = $hindex;
+        $this->hindex = floatval($hindex);
 
         return $this;
     }
@@ -314,7 +322,7 @@ class Measure
      */
     public function setWspeed($wspeed)
     {
-        $this->wspeed = $wspeed;
+        $this->wspeed = floatval($wspeed);
 
         return $this;
     }
@@ -360,7 +368,7 @@ class Measure
      */
     public function setBar($bar)
     {
-        $this->bar = $bar;
+        $this->bar = floatval($bar);
 
         return $this;
     }
@@ -383,7 +391,7 @@ class Measure
      */
     public function setRain($rain)
     {
-        $this->rain = $rain;
+        $this->rain = floatval($rain);
 
         return $this;
     }
@@ -406,7 +414,7 @@ class Measure
      */
     public function setRr($rr)
     {
-        $this->rr = $rr;
+        $this->rr = floatval($rr);
 
         return $this;
     }
@@ -429,7 +437,7 @@ class Measure
      */
     public function setRainmt($rainmt)
     {
-        $this->rainmt = $rainmt;
+        $this->rainmt = floatval($rainmt);
 
         return $this;
     }
@@ -452,7 +460,7 @@ class Measure
      */
     public function setRainyr($rainyr)
     {
-        $this->rainyr = $rainyr;
+        $this->rainyr = floatval($rainyr);
 
         return $this;
     }

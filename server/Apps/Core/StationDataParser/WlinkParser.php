@@ -1,8 +1,8 @@
 <?php
 namespace StationDataParser;
-require_once "vendor/autoload.php";
+require_once __DIR__ ."/../../../vendor/autoload.php";
 
-class WlinkParser implements StationParserInterface{
+class WlinkParser extends Parser implements StationParserInterface{
 	public function getMeasure($data_url){
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $data_url);

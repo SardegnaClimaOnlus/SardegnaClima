@@ -1,10 +1,10 @@
 <?php
 namespace StationDataParser;
-require_once "vendor/autoload.php";
+require_once __DIR__ ."/../../../vendor/autoload.php";
 
 
 
-class SClimaParser implements StationParserInterface{
+class SClimaParser extends Parser implements StationParserInterface{
 	public function getMeasure($data_url){
 		$dataraw = file_get_contents($data_url);
 		$databu = explode("  ", $dataraw);
@@ -25,8 +25,6 @@ class SClimaParser implements StationParserInterface{
 		$measure->setDp(trim($databu[34]));
 		$measure->setWchill(null);
 		$hindex = $databu[52];
-		echo "___SCLIMA : hindex\n";
-		echo "$hindex\n";
 		$measure->setHindex($databu[52]);
 		$measure->setWspeed(trim($databu[38]));
 		$measure->setDir(trim($databu[42]));

@@ -1,40 +1,59 @@
 <?php
 namespace StationDataParser;
-require_once "vendor/autoload.php";
+require_once __DIR__ ."/../../../vendor/autoload.php";
 
 
 
-class StationDataParser implements StationParserInterface{
+class StationDataParser extends Parser implements StationParserInterface{
 	public function getMeasure($data_url){
+
+
+		
 
 		$dataraw = file_get_contents($data_url);
 		$datagus = explode("\n", $dataraw);
 		$data = "$datagus[0]";
 		$ora = "$datagus[1]";
 		
+		$this->logger->info("StationDataParser");
+		$this->logger->info("datagus");
+		$this->logger->info($datagus);
+		
 		list($giorno, $mese, $anno) = explode("/",$data);
 		$anno = "20" . $anno;
-		$anno = date('y', strtotime($anno));
-		$ora = date('G:i', strtotime($ora));
+		$anno = date('Y', strtotime($anno));
+		$ora = date('G:i:s', strtotime($ora));
 
 		$data = $anno . "/" . $mese . "/" . $giorno;
 		$datetime = $data . ' ' . $ora;
 
+		// --- //
+
+		//$this->logger->info("StationDataParser----- ------------------------------------------------");
+		//$this->logger->info("anno: $anno");
+		//$this->logger->info("ora: $ora");
+		//$this->logger->info("data: $data");
+		//$this->logger->info("datetime: $datetime");
+
+
+		// --- //
+
+
 		$measure = new \Measure();
-		$measure->setTemp($datagus[9]);
-		$measure->setTempmax($datagus[10]);
-		$measure->setTempmin($datagus[12]);
-		$measure->setHum($datagus[18]);
-		$measure->setDp($datagus[27]);
-		$measure->setWchill($datagus[28]);
+		$measure->setTemp(floatval($datagus[9]));
+		$measure->setTempmax(floatval($datagus[10]));
+		$measure->setTempmin(floatval($datagus[12]));
+		$measure->setHum(floatval($datagus[18]));
+		$measure->setDp(floatval($datagus[27]));
+		$measure->setWchill(floatval($datagus[28]));
 		$measure->setHindex(null);
-		$measure->setWspeed($datagus[36]);
+		$measure->setWspeed(floatval($datagus[36]));
 		$measure->setDir($datagus[43]);
-		$measure->setBar($datagus[59]);
-		$measure->setRain($datagus[69]);
-		$measure->setRr($datagus[73]);
-		$measure->setRainmt($datagus[71]);
-		$measure->setRainyr($datagus[72]);
+		$measure->setBar(floatval($datagus[59]));
+		$measure->setRain(floatval($datagus[69]));
+		$measure->setRr(floatval($datagus[73]));
+		$measure->setRainmt(floatval($datagus[71]));
+		$measure->setRainyr(floatval($datagus[72]));
 		$dateObj = date_create($datetime);
 		$measure->setDate($dateObj?$dateObj:null);
 			
