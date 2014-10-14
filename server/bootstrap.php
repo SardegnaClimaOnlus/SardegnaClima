@@ -1,5 +1,5 @@
 <?php
-echo __DIR__ ;
+
 require_once __DIR__ . "/vendor/autoload.php";
 use Doctrine\ORM\Tools\Setup;
 

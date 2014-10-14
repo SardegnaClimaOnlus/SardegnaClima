@@ -6,15 +6,13 @@ class CurrDataParser extends Parser implements StationParserInterface{
 	public function getMeasure($data_url){
 
 		$dataraw = file_get_contents($data_url);
-
+        if(!$dataraw) return null;
 		$datafil = explode(" ", $dataraw);
 		$data = $datafil[0];
 		$ora = $datafil[1];
-
 		list($giorno, $mese, $anno) = explode("/",$data);
 		$data = $anno . "/" . $mese . "/" . $giorno;
 		$datetime = $data . ' ' . $ora;
-
 		$measure = new \Measure();
 		$measure->setTemp($datafil[2]);
 		$measure->setTempmax($datafil[13]);

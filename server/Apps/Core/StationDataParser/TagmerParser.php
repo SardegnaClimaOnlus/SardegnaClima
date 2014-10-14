@@ -6,18 +6,13 @@ class TagmerParser  extends Parser implements StationParserInterface{
 	public function getMeasure($data_url){
 
 		$dataraw = file_get_contents($data_url);
+        if(!$dataraw) return null;
 		$datagus= explode("|", $dataraw);
 		$ora = "$datagus[0]";
 		$data = "$datagus[1]";
-
 		list($giorno, $mese, $anno) = explode("/",$data);  
 		$data = "20" . $anno . "/" . $mese . "/" . $giorno;
 		$datetime = $data . ' ' . $ora;
-
-		$this->logger->info("(*) datetime string:");
-		$this->logger->info($datetime);
-
-		
 		$measure = new \Measure();
 		$measure->setTemp($datagus[2]);
 		$measure->setTempmax($datagus[14]);

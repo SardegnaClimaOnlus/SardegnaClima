@@ -7,13 +7,13 @@ require_once __DIR__ ."/../../../vendor/autoload.php";
 class SClimaParser extends Parser implements StationParserInterface{
 	public function getMeasure($data_url){
 		$dataraw = file_get_contents($data_url);
+        if(!$dataraw) return null;
 		$databu = explode("  ", $dataraw);
 		$datagio23b = $databu[16];
 		$giorno = substr($datagio23b, -2);
 		$mese = trim($databu[17]);
 		$anno = trim($databu[18]);
 		$ora = date('G:i:s' , strtotime("$databu[19]:$databu[20]"));
-
 		$data = $anno . "/" . $mese . "/" . $giorno;
 		$datetime = $data . ' ' . $ora;
 
@@ -25,6 +25,7 @@ class SClimaParser extends Parser implements StationParserInterface{
 		$measure->setDp(trim($databu[34]));
 		$measure->setWchill(null);
 		$hindex = $databu[52];
+        $measure->setHindex($hindex);
 		$measure->setHindex($databu[52]);
 		$measure->setWspeed(trim($databu[38]));
 		$measure->setDir(trim($databu[42]));

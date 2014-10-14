@@ -7,7 +7,7 @@ $stationId = 2;
 
 $station = $entityManager->find("Station", $stationId);
 if (!$station) {
-    echo "No station.\n";
+
     exit(1);
 }
 
@@ -32,4 +32,4 @@ $measure->setStation($station);
 $entityManager->persist($measure);
 $entityManager->flush();
 
-echo "Your new Measure Id: ".$measure->getId()."\n";
+

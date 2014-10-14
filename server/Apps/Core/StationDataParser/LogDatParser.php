@@ -5,6 +5,7 @@ require_once __DIR__ ."/../../../vendor/autoload.php";
 class LogDatParser extends Parser implements StationParserInterface{
 	public function getMeasure($data_url){
 		$dataraw = file_get_contents($data_url);
+        if(!$dataraw) return null;
 		$datagus= explode(" ", $dataraw);
 		$ora = "$datagus[0]";
 		$datagio = "$datagus[1]";

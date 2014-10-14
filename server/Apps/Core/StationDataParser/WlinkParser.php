@@ -11,6 +11,7 @@ class WlinkParser extends Parser implements StationParserInterface{
 		curl_setopt($ch, CURLOPT_BINARYTRANSFER, true);
 		$pbotte = curl_exec($ch);
 		curl_close($ch);
+        if(!$pbotte) return null;
 
 		$meteostr = $pbotte;
 		$meteostr = substr($meteostr, strpos($meteostr,"Current Conditions as of ")+25);
@@ -109,7 +110,6 @@ class WlinkParser extends Parser implements StationParserInterface{
 		$meteostr = substr($meteostr, strpos($meteostr,"summary_data")+14);
 		$pos = strpos($meteostr,"</td>");
 		$rainrateoggi500 = substr($meteostr, +0 , $pos);
-
 		$mese = date('m', strtotime($mese));
 		$data = $anno . "/" . $mese . "/" . $giorno;
 		$datetime = $data . ' ' . $ora;

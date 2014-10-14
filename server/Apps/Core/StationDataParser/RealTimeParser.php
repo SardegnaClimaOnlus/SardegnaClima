@@ -6,6 +6,7 @@ class RealTimeParser extends Parser implements StationParserInterface{
 	public function getMeasure($data_url){
 
 		$dataraw = file_get_contents($data_url);
+        if(!$dataraw ) return null;
 		$datagus= explode(" ", $dataraw);
 
 		$data = "$datagus[0]";

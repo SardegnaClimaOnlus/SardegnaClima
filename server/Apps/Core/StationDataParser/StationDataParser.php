@@ -7,37 +7,18 @@ require_once __DIR__ ."/../../../vendor/autoload.php";
 class StationDataParser extends Parser implements StationParserInterface{
 	public function getMeasure($data_url){
 
-
-		
-
 		$dataraw = file_get_contents($data_url);
+        if(!$dataraw) return null;
 		$datagus = explode("\n", $dataraw);
 		$data = "$datagus[0]";
 		$ora = "$datagus[1]";
-		
-		$this->logger->info("StationDataParser");
-		$this->logger->info("datagus");
-		$this->logger->info($datagus);
-		
+
 		list($giorno, $mese, $anno) = explode("/",$data);
 		$anno = "20" . $anno;
 		$anno = date('Y', strtotime($anno));
 		$ora = date('G:i:s', strtotime($ora));
-
 		$data = $anno . "/" . $mese . "/" . $giorno;
 		$datetime = $data . ' ' . $ora;
-
-		// --- //
-
-		//$this->logger->info("StationDataParser----- ------------------------------------------------");
-		//$this->logger->info("anno: $anno");
-		//$this->logger->info("ora: $ora");
-		//$this->logger->info("data: $data");
-		//$this->logger->info("datetime: $datetime");
-
-
-		// --- //
-
 
 		$measure = new \Measure();
 		$measure->setTemp(floatval($datagus[9]));

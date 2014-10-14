@@ -6,6 +6,7 @@ require_once __DIR__ ."/../../../vendor/autoload.php";
 class WundergroundParser extends Parser implements StationParserInterface{
 	public function getMeasure($data_url){
 		$dataraw = simplexml_load_file($data_url);
+        if(!$dataraw)return null;
 		$array_data = $dataraw->observation_time_rfc822; 
 		$array_data = explode(",", $array_data);
 		$array_data = $array_data[1];
@@ -27,8 +28,8 @@ class WundergroundParser extends Parser implements StationParserInterface{
 		// -- create measure -- //
 		$measure = new \Measure();
 		$measure->setTemp($array_temp);
-		$measure->setTempmax(null);
-		$measure->setTempmin(null);
+		$measure->setTempmax($this->em->getRepository('Measure')->getTempMaxByStation($this->station));
+		$measure->setTempmin($this->em->getRepository('Measure')->getTempMinByStation($this->station));
 		$measure->setHum($array_hum);
 		$measure->setDp($array_dp);
 		$measure->setWchill(null);
@@ -45,7 +46,23 @@ class WundergroundParser extends Parser implements StationParserInterface{
 			
 		return $measure;
 	}
+
 	private function getDirByWunderDireciton($wunderDirection){
-		return "N"; // TODO: remove dummy code
+        switch($wunderDirection){
+            case "North":
+                $wunderDirection = 'N';
+                break;
+            case "South":
+                $wunderDirection= 'S';
+                break;
+            case "East":
+                $wunderDirection= 'E';
+                break;
+            case "West":
+                $wunderDirection= 'W';
+        }
+		return $wunderDirection;
 	}
+
+
 }

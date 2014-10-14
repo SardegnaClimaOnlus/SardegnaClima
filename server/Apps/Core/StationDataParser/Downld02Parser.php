@@ -29,8 +29,8 @@ class Downld02Parser extends Parser implements StationParserInterface{
 
 			   	$measure = new \Measure();
 				$measure->setTemp($temp);
-				$measure->setTempmax($tempmax);
-				$measure->setTempmin($tempmin);
+                $measure->setTempmax($this->em->getRepository('Measure')->getTempMaxByStation($this->station));
+                $measure->setTempmin($this->em->getRepository('Measure')->getTempMinByStation($this->station));
 				$measure->setHum($hum);
 				$measure->setDp($dp);
 				$measure->setWchill($wchill);
@@ -38,7 +38,8 @@ class Downld02Parser extends Parser implements StationParserInterface{
 				$measure->setWspeed($wspeed);
 				$measure->setDir($dir);
 				$measure->setBar($bar);
-				$measure->setRain($rain);
+                $effectiveRain = $this->em->getRepository('Measure')->getLastRainDuringTheDayByStation($this->station) + $rain;
+				$measure->setRain($effectiveRain);
 				$measure->setRr($rr);
 				$measure->setRainmt(null);
 				$measure->setRainyr(null);

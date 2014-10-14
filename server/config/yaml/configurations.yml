@@ -1,0 +1,14 @@
+core:
+  measuresSnapshot:
+    attempts: 4
+    attemptsInterval: 100
+    logger:
+      rootLogger:
+        appenders:
+            - default
+        level: trace
+      appenders:
+        default:
+          class: LoggerAppenderConsole
+          layout:
+            class: LoggerLayoutSimple

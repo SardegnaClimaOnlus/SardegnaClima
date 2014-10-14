@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping AS ORM;
 /**
  * @ORM\Entity
  * @Entity @Table(name="measures")
+ * @entity(repositoryClass="MeasureRepository")
  */
 class Measure
 {
@@ -130,13 +131,9 @@ class Measure
      */
     public function setDate($date)
     {
-        
-
+        \Logger::getLogger('measure')->trace('setDate');
+        \Logger::getLogger('measure')->trace($date);
         $this->date = $date;
-        //$this->logger->info("setDate");
-        //$this->logger->info("date");
-        //$this->logger->info($date);
-
         return $this;
     }
 
@@ -158,10 +155,11 @@ class Measure
      */
     public function setTemp($temp)
     {
-       // $this->logger->info("setTemp");
-        
-       // $this->logger->info("temp: $temp");
-        $this->temp = floatval($temp);
+
+        \Logger::getLogger('measure')->trace('setTemp');
+        \Logger::getLogger('measure')->trace($temp);
+        if($temp == 'NA') $temp = null;
+        $this->temp = ($temp)? floatval($temp):null;
 
         return $this;
     }
@@ -184,7 +182,11 @@ class Measure
      */
     public function setTempmax($tempmax)
     {
-        $this->tempmax = floatval($tempmax);
+
+        \Logger::getLogger('measure')->trace('setTempmax');
+        \Logger::getLogger('measure')->trace($tempmax);
+        if($tempmax == 'NA') $tempmax = null;
+        $this->tempmax = ($tempmax)?floatval($tempmax):null;
 
         return $this;
     }
@@ -207,7 +209,11 @@ class Measure
      */
     public function setTempmin($tempmin)
     {
-        $this->tempmin = floatval($tempmin);
+
+        \Logger::getLogger('measure')->trace('setTempmin');
+        \Logger::getLogger('measure')->trace($tempmin);
+        if($tempmin == 'NA') $tempmin = null;
+        $this->tempmin = ($tempmin)?floatval($tempmin):null;
 
         return $this;
     }
@@ -230,7 +236,11 @@ class Measure
      */
     public function setHum($hum)
     {
-        $this->hum = floatval($hum);
+
+        \Logger::getLogger('measure')->trace('setHum');
+        \Logger::getLogger('measure')->trace($hum);
+        if($hum == 'NA') $hum = null;
+        $this->hum = ($hum)?floatval($hum):null;
 
         return $this;
     }
@@ -253,7 +263,11 @@ class Measure
      */
     public function setDp($dp)
     {
-        $this->dp = floatval($dp);
+
+        \Logger::getLogger('measure')->trace('setDp');
+        \Logger::getLogger('measure')->trace($dp);
+        if($dp == 'NA') $dp = null;
+        $this->dp = ($dp)?floatval($dp):null;
 
         return $this;
     }
@@ -276,7 +290,11 @@ class Measure
      */
     public function setWchill($wchill)
     {
-        $this->wchill =floatval($wchill);
+
+        \Logger::getLogger('measure')->trace('setWChill');
+        \Logger::getLogger('measure')->trace($wchill);
+        if($wchill == 'NA') $wchill = null;
+        $this->wchill =($wchill)?floatval($wchill):null;
 
         return $this;
     }
@@ -299,7 +317,11 @@ class Measure
      */
     public function setHindex($hindex)
     {
-        $this->hindex = floatval($hindex);
+
+        \Logger::getLogger('measure')->trace('setHindex');
+        \Logger::getLogger('measure')->trace($hindex);
+        if($hindex == 'NA') $hindex = null;
+        $this->hindex = ($hindex)?floatval($hindex):null;
 
         return $this;
     }
@@ -322,7 +344,10 @@ class Measure
      */
     public function setWspeed($wspeed)
     {
-        $this->wspeed = floatval($wspeed);
+        \Logger::getLogger('measure')->trace('setWspeed');
+        \Logger::getLogger('measure')->trace($wspeed);
+        if($wspeed == 'NA') $wspeed = null;
+        $this->wspeed = ($wspeed)?floatval($wspeed):null;
 
         return $this;
     }
@@ -345,7 +370,10 @@ class Measure
      */
     public function setDir($dir)
     {
-        $this->dir = $dir;
+        \Logger::getLogger('measure')->trace('setDir');
+        \Logger::getLogger('measure')->trace($dir);
+        if($dir == 'NA') $dir = null;
+        $this->dir = ($dir)?$dir:null;
 
         return $this;
     }
@@ -368,7 +396,10 @@ class Measure
      */
     public function setBar($bar)
     {
-        $this->bar = floatval($bar);
+        \Logger::getLogger('measure')->trace('setBar');
+        \Logger::getLogger('measure')->trace($bar);
+        if($bar == 'NA') $bar = null;
+        $this->bar = ($bar)?floatval($bar):null;
 
         return $this;
     }
@@ -391,7 +422,10 @@ class Measure
      */
     public function setRain($rain)
     {
-        $this->rain = floatval($rain);
+        \Logger::getLogger('measure')->trace('setRain');
+        \Logger::getLogger('measure')->trace($rain);
+        if($rain == 'NA') $rain = null;
+        $this->rain = ($rain)?floatval($rain):null;
 
         return $this;
     }
@@ -414,7 +448,10 @@ class Measure
      */
     public function setRr($rr)
     {
-        $this->rr = floatval($rr);
+        \Logger::getLogger('measure')->trace('setRr');
+        \Logger::getLogger('measure')->trace($rr);
+        if($rr == 'NA') $rr = null;
+        $this->rr = ($rr)?floatval($rr):null;
 
         return $this;
     }
@@ -437,7 +474,10 @@ class Measure
      */
     public function setRainmt($rainmt)
     {
-        $this->rainmt = floatval($rainmt);
+        \Logger::getLogger('measure')->trace('setRainmt');
+        \Logger::getLogger('measure')->trace($rainmt);
+        if($rainmt == 'NA') $rainmt = null;
+        $this->rainmt = ($rainmt)?floatval($rainmt):null;
 
         return $this;
     }
@@ -460,7 +500,10 @@ class Measure
      */
     public function setRainyr($rainyr)
     {
-        $this->rainyr = floatval($rainyr);
+        \Logger::getLogger('measure')->trace('setRainyr');
+        \Logger::getLogger('measure')->trace($rainyr);
+        if($rainyr == 'NA') $rainyr = null;
+        $this->rainyr = ($rainyr)?floatval($rainyr):null;
 
         return $this;
     }
@@ -483,6 +526,7 @@ class Measure
      */
     public function setStation(\Station $station = null)
     {
+
         $this->station = $station;
 
         return $this;
