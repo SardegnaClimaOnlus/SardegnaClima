@@ -158,8 +158,7 @@ class Measure
 
         \Logger::getLogger('measure')->trace('setTemp');
         \Logger::getLogger('measure')->trace($temp);
-        if($temp == 'NA') $temp = null;
-        $this->temp = ($temp)? floatval($temp):null;
+        $this->temp = is_numeric($temp)? floatval($temp):null;
 
         return $this;
     }
@@ -185,8 +184,7 @@ class Measure
 
         \Logger::getLogger('measure')->trace('setTempmax');
         \Logger::getLogger('measure')->trace($tempmax);
-        if($tempmax == 'NA') $tempmax = null;
-        $this->tempmax = ($tempmax)?floatval($tempmax):null;
+        $this->tempmax = is_numeric($tempmax)?floatval($tempmax):null;
 
         return $this;
     }
@@ -212,8 +210,7 @@ class Measure
 
         \Logger::getLogger('measure')->trace('setTempmin');
         \Logger::getLogger('measure')->trace($tempmin);
-        if($tempmin == 'NA') $tempmin = null;
-        $this->tempmin = ($tempmin)?floatval($tempmin):null;
+        $this->tempmin = is_numeric($tempmin)?floatval($tempmin):null;
 
         return $this;
     }
@@ -239,8 +236,7 @@ class Measure
 
         \Logger::getLogger('measure')->trace('setHum');
         \Logger::getLogger('measure')->trace($hum);
-        if($hum == 'NA') $hum = null;
-        $this->hum = ($hum)?floatval($hum):null;
+        $this->hum = is_numeric($hum)?floatval($hum):null;
 
         return $this;
     }
@@ -266,8 +262,7 @@ class Measure
 
         \Logger::getLogger('measure')->trace('setDp');
         \Logger::getLogger('measure')->trace($dp);
-        if($dp == 'NA') $dp = null;
-        $this->dp = ($dp)?floatval($dp):null;
+        $this->dp = is_numeric($dp)?floatval($dp):null;
 
         return $this;
     }
@@ -293,8 +288,7 @@ class Measure
 
         \Logger::getLogger('measure')->trace('setWChill');
         \Logger::getLogger('measure')->trace($wchill);
-        if($wchill == 'NA') $wchill = null;
-        $this->wchill =($wchill)?floatval($wchill):null;
+        $this->wchill = is_numeric($wchill)?floatval($wchill):null;
 
         return $this;
     }
@@ -320,8 +314,7 @@ class Measure
 
         \Logger::getLogger('measure')->trace('setHindex');
         \Logger::getLogger('measure')->trace($hindex);
-        if($hindex == 'NA') $hindex = null;
-        $this->hindex = ($hindex)?floatval($hindex):null;
+        $this->hindex = is_numeric($hindex)?floatval($hindex):null;
 
         return $this;
     }
@@ -346,8 +339,7 @@ class Measure
     {
         \Logger::getLogger('measure')->trace('setWspeed');
         \Logger::getLogger('measure')->trace($wspeed);
-        if($wspeed == 'NA') $wspeed = null;
-        $this->wspeed = ($wspeed)?floatval($wspeed):null;
+        $this->wspeed = is_numeric($wspeed)?floatval($wspeed):null;
 
         return $this;
     }
@@ -372,8 +364,7 @@ class Measure
     {
         \Logger::getLogger('measure')->trace('setDir');
         \Logger::getLogger('measure')->trace($dir);
-        if($dir == 'NA') $dir = null;
-        $this->dir = ($dir)?$dir:null;
+        $this->dir = is_numeric($dir)?$dir:null;
 
         return $this;
     }
@@ -398,8 +389,7 @@ class Measure
     {
         \Logger::getLogger('measure')->trace('setBar');
         \Logger::getLogger('measure')->trace($bar);
-        if($bar == 'NA') $bar = null;
-        $this->bar = ($bar)?floatval($bar):null;
+        $this->bar = is_numeric($bar)?floatval($bar):null;
 
         return $this;
     }
@@ -424,8 +414,7 @@ class Measure
     {
         \Logger::getLogger('measure')->trace('setRain');
         \Logger::getLogger('measure')->trace($rain);
-        if($rain == 'NA') $rain = null;
-        $this->rain = ($rain)?floatval($rain):null;
+        $this->rain = is_numeric($rain)?floatval($rain):null;
 
         return $this;
     }
@@ -450,8 +439,7 @@ class Measure
     {
         \Logger::getLogger('measure')->trace('setRr');
         \Logger::getLogger('measure')->trace($rr);
-        if($rr == 'NA') $rr = null;
-        $this->rr = ($rr)?floatval($rr):null;
+        $this->rr = is_numeric($rr)?floatval($rr):null;
 
         return $this;
     }
@@ -476,8 +464,7 @@ class Measure
     {
         \Logger::getLogger('measure')->trace('setRainmt');
         \Logger::getLogger('measure')->trace($rainmt);
-        if($rainmt == 'NA') $rainmt = null;
-        $this->rainmt = ($rainmt)?floatval($rainmt):null;
+        $this->rainmt = is_numeric($rainmt)?floatval($rainmt):null;
 
         return $this;
     }
@@ -502,8 +489,7 @@ class Measure
     {
         \Logger::getLogger('measure')->trace('setRainyr');
         \Logger::getLogger('measure')->trace($rainyr);
-        if($rainyr == 'NA') $rainyr = null;
-        $this->rainyr = ($rainyr)?floatval($rainyr):null;
+        $this->rainyr = is_numeric($rainyr)?floatval($rainyr):null;
 
         return $this;
     }

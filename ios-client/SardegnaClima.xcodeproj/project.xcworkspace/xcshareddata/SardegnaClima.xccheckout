@@ -10,29 +10,29 @@
 	<string>SardegnaClima</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>DEA96991-5CF4-4124-8A59-669915B6A948</key>
+		<key>FA63883F3581F1258D109EA81FD8B04F432C7C55</key>
 		<string>https://github.com/buele/SardegnaClima.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>ios-client/SardegnaClima.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>DEA96991-5CF4-4124-8A59-669915B6A948</key>
+		<key>FA63883F3581F1258D109EA81FD8B04F432C7C55</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/buele/SardegnaClima.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>DEA96991-5CF4-4124-8A59-669915B6A948</string>
+	<string>FA63883F3581F1258D109EA81FD8B04F432C7C55</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>DEA96991-5CF4-4124-8A59-669915B6A948</string>
+			<string>FA63883F3581F1258D109EA81FD8B04F432C7C55</string>
 			<key>IDESourceControlWCCName</key>
 			<string>SardegnaClima</string>
 		</dict>

@@ -3,25 +3,9 @@
 require_once __DIR__ ."/../../bootstrap.php";
 
 use StationDataParser\StationDataParserContext;
-use Symfony\Component\Yaml\Exception\ParseException;
-use Symfony\Component\Yaml\Parser;
 
-$time_start = microtime(true);
-
-
-
-// get configurations
-$yaml = new Parser();
-try {
-    $configurations = $yaml->parse(file_get_contents(__DIR__ ."/../../config/yaml/configurations.yml"));
-} catch (ParseException $e) {
-    $this->logger->error("ERROR loading YAML config:" . $e->getMessage());
-}
-$config = $configurations['core']['measuresSnapshot'];
-
-//configuration logger
+$config = $configuration['core']['measuresSnapshot'];
 Logger::configure($config['logger']);
-
 
 //get station types filters
 \Logger::getLogger('measure_snapshot')->debug('Getting filters from user...');
@@ -51,9 +35,8 @@ foreach ($stations as $i => $station) {
     }
 }
 
-$time_end = microtime(true);
-$time = $time_end - $time_start;
-\Logger::getLogger('measure_snapshot')->debug('execution minutes: '. gmdate("H:i:s", $time));
+
+\Logger::getLogger('measure_snapshot')->debug("DONE.");
 
 
 
