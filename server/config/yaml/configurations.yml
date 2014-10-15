@@ -1,32 +1,34 @@
-
+# core applications config
 core:
   devMode: false
+  # measures snapshot config
   measuresSnapshot:
-    attempts: 5
-    attemptsInterval: 100
+    attempts: 5                   # attempts of http requests for station measure
+    attemptsInterval: 100         # microsecond between two attempts
     logger:
       rootLogger:
         appenders:
             - default
-        level: trace
+        level: trace              # level of debug, error level recommended in production
       appenders:
         default:
           class: LoggerAppenderFile
           layout:
             class: LoggerLayoutSimple
           params:
-            file: './logs/measures_snapshot.log'
-            append: false
-
+            file: './logs/measures_snapshot.log'  # relative path for log file
+            append: false        # true: append log values in the same file, false: create a new log file every execution
+# database configuration
 db:
   driver: "pdo_mysql"
   host: "127.0.0.1"
   dbname: "sardegna_stazioninew"
   user: "root"
   password: ""
-
+# doctrine proxy entities configuration
 proxy:
     custom: true
     relativePath: "/proxies"
+# doctrine base configurations
 doctrine:
     entitiesRelativePath: "/src"
