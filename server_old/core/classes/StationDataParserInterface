@@ -1,5 +1,0 @@
-<?php
-
-interface StrategyInterface{
-	public function getMeasure($data_url);
-}
