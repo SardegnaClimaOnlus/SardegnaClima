@@ -1,10 +1,9 @@
 <?php
 
-require '../slimFramework/vendor/autoload.php';
 
+require_once __DIR__ ."/../bootstrap.php";
 $app = new \Slim\Slim();
-require '../core/classes/DBManager.php';
-require '../webservices/routes/mobile_client.php';
+require '../Apps/WebServices/MapClient/MapClient.php';
 
 
 $app->run();

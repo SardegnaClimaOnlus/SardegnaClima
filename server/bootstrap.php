@@ -8,6 +8,9 @@ use Doctrine\ORM\Proxy\Autoloader;
 
 
 
+
+
+
 // get configurations
 $yaml = new Parser();
 $configuration = null;
@@ -24,7 +27,8 @@ $config = Setup::createAnnotationMetadataConfiguration(array($path), $configurat
 if($configuration['proxy']['custom']) $config->setProxyDir(__DIR__ . $configuration['proxy']['relativePath']);
 
 date_default_timezone_set("Europe/Rome");
-
+// entity manager
 $entityManager = \Doctrine\ORM\EntityManager::create($configDB, $config);
+
 
 

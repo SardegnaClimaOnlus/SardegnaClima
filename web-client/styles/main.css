@@ -1,0 +1,96 @@
+
+.buele-thumb {
+  /*position:absolute;
+  top:30px;
+  right:30px;*/
+  width: 150px;
+  height: 150px;
+  margin: 20px 0px;
+/*  border-radius: 75px;
+  -webkit-border-radius: 75px;
+  -moz-border-radius: 75px;*/
+  background: url(../images/buelethumb.png) no-repeat;
+  }
+
+.links{
+   margin: 20px 0px;
+}
+
+
+  #typed-cursor {
+    font-weight: 100;
+    font-size: 30px;
+    color: white;
+    left: 0;
+    top:0;
+    position: relative;
+    text-align: left;
+    color: #2E3D48;
+    margin: 160px 0px 0px 20px;
+
+  }
+   
+  
+
+
+
+#typed-cursor.blinking {
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes "blink" {
+  from,to {
+  color: transparent;
+}
+ 50% {
+    color: white;
+ }
+
+}
+
+@-moz-keyframes blink {
+  from,to {
+  color: transparent;
+}
+ 50% {
+   color: white;
+ }
+
+}
+
+@-webkit-keyframes "blink" {
+  from,to {
+  color: transparent;
+}
+ 50% {
+   color: white;
+ }
+
+}
+
+@-ms-keyframes "blink" {
+  from,to {
+  color: transparent;
+}
+ 50% {
+   color: white;
+ }
+
+}
+
+@-o-keyframes "blink" {
+  from,to {
+  color: transparent;
+}
+ 50% {
+   color: white;
+ }
+}
+
+.project-title{
+  margin-top:40px;
+}
