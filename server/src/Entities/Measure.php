@@ -364,7 +364,7 @@ class Measure
     {
         \Logger::getLogger('measure')->trace('setDir');
         \Logger::getLogger('measure')->trace($dir);
-        $this->dir = is_numeric($dir)?$dir:null;
+        $this->dir = ($dir)?$dir:null;
 
         return $this;
     }

@@ -54,6 +54,10 @@ angular
                 currentMapZoom : 8
             }
         };
+    }).filter('scdate', function() {
+        return function(date) {
+            return moment(date).fromNow();
+        };
     });
 
 

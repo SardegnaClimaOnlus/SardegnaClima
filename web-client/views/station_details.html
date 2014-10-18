@@ -1,2 +1,13 @@
-<a href="#/main/{{station.id}}">map</a>
-<pre>{{station | json }} </pre>
+<a href="#/main/{{station.id}}">back</a>
+
+<div class="station-detail-container">
+    <h1>{{station.name}}</h1>
+    <div>{{station.measure.date | scdate}}</div>
+    <div>{{station.measure.temp}}°</div>
+    <div>↑ {{station.measure.tempmax}}°</div>
+    <div>↓ {{station.measure.tempmin}}°</div>
+    <div>rain: {{station.measure.rain}} mm</div>
+    <div>wind: {{station.measure.dir}} {{station.measure.wspeed}} km/h</div>
+    <div>humidity: {{station.measure.hum}} %</div>
+    <div>dp: {{station.measure.dp}}°</div>
+</div>

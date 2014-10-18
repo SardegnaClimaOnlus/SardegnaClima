@@ -16,8 +16,16 @@ $app->get('/v1/summary', function () use ($app, $serializer, $entityManager)  {
                 "name" =>$stations[$i]->getName(),
                 "latitude" => $stations[$i]->getLatitude(),
                 "longitude" => $stations[$i]->getLongitude(),
-                "measure"=> array("temp" => $measure->getTemp(),
-                    "date"=>$measure->getDate()->format('Y-m-d H:i:s')
+                "measure"=> array(
+                    "temp" => $measure->getTemp(),
+                    "date"=>$measure->getDate()->format('Y-m-d H:i:s'),
+                    "tempmax"=>$measure->getTempmax(),
+                    "tempmin"=>$measure->getTempmin(),
+                    "hum"=>$measure->getHum(),
+                    "dp"=>$measure->getDp(),
+                    "rain"=>$measure->getrain(),
+                    "wspeed"=>$measure->getWspeed(),
+                    "dir"=>$measure->getDir()
                 )
             );
     }

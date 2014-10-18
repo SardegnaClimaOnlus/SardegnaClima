@@ -69,7 +69,7 @@ angular.module('sardegnaclima')
             //var lastValidCenter = bounds.getCenter();
             //Stations.map.panTo(lastValidCenter)
             google.maps.event.addListener(Stations.map, 'center_changed', function() {
-                
+
                 if (bounds.contains(Stations.map.getCenter())) {
                     //lastValidCenter = Stations.map.getCenter();
 

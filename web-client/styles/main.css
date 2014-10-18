@@ -1,9 +1,15 @@
 html, body{
     width: 100%;
     height: 100%;
+    background-color: #B3D1FF;
 }
 
 #main-view{
     width: 100%;
     height: 100%;
+}
+
+.station-detail-container{
+    padding: 30px;
+    background-color: #B3D1FF;
 }
