@@ -115,20 +115,20 @@ class WlinkParser extends Parser implements StationParserInterface{
 		$datetime = $data . ' ' . $ora;
 
 		$measure = new \Measure();
-		$measure->setTemp($temp);
-		$measure->setTempmax($tempmax);
-		$measure->setTempmin($tempmin);
-		$measure->setHum($hum);
-		$measure->setDp($dp);
+		$measure->setTemp(trim($temp));
+		$measure->setTempmax(trim($tempmax));
+		$measure->setTempmin(trim($tempmin));
+		$measure->setHum(trim($hum));
+		$measure->setDp(trim($dp));
 		$measure->setWchill(null);
 		$measure->setHindex(null);
-		$measure->setWspeed($wspeed);
-		$measure->setDir($dir3);
-		$measure->setBar($bar);
-		$measure->setRain($rain);
-		$measure->setRr($rr);
-		$measure->setRainmt($rainmt);
-		$measure->setRainyr($rainyr);
+		$measure->setWspeed(trim($wspeed));
+		$measure->setDir(trim($dir3));
+		$measure->setBar(trim($bar));
+		$measure->setRain(trim($rain));
+		$measure->setRr(trim($rr));
+		$measure->setRainmt(trim($rainmt));
+		$measure->setRainyr(trim($rainyr));
 		$dateObj = date_create($datetime);
 		$measure->setDate($dateObj?$dateObj:null);
 			

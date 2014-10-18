@@ -1,0 +1,2772 @@
+DEBUG - Getting filters from user...
+DEBUG - filters: []
+DEBUG - Getting stations list...
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Asuni(OR) - 233 mt slm, and id: 2
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 16.0
+TRACE - setTempmax
+TRACE - 16.0
+TRACE - setTempmin
+TRACE - 10.4
+TRACE - setHum
+TRACE - 76
+TRACE - setDp
+TRACE - 11.8
+TRACE - setWChill
+TRACE - 16.0
+TRACE - setHindex
+TRACE - 16.0
+TRACE - setWspeed
+TRACE - 0.4
+TRACE - setDir
+TRACE - N
+TRACE - setBar
+TRACE - 1024.4
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 10.8
+TRACE - setRainyr
+TRACE - 513.8
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:27:10.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6516
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Desulo(NU) - 945 mt slm, and id: 3
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 19.1
+TRACE - setTempmax
+TRACE - 19.1
+TRACE - setTempmin
+TRACE - 13.9
+TRACE - setHum
+TRACE - 45
+TRACE - setDp
+TRACE - 6.9
+TRACE - setWChill
+TRACE - 19.1
+TRACE - setHindex
+TRACE - 19.1
+TRACE - setWspeed
+TRACE - 0.0
+TRACE - setDir
+TRACE - NE
+TRACE - setBar
+TRACE - 1021.2
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 20.0
+TRACE - setRainyr
+TRACE - 823.0
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:27:52.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6517
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Guspini(CA) - 90 mt slm, and id: 4
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - attempt #1
+TRACE - attempt #2
+TRACE - attempt #3
+TRACE - attempt #4
+ERROR - expired measure5
+ERROR - measure invalid, for station with name: Guspini(CA) - 90 mt slm, and id: 4
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Ollolai(NU) - 950 mt slm, and id: 5
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 19.5
+TRACE - setTempmax
+TRACE - 20.6
+TRACE - setTempmin
+TRACE - 13.1
+TRACE - setHum
+TRACE - 48
+TRACE - setDp
+TRACE - 8.2
+TRACE - setWChill
+TRACE - 19.5
+TRACE - setHindex
+TRACE - 19.5
+TRACE - setWspeed
+TRACE - 0.4
+TRACE - setDir
+TRACE - ENE
+TRACE - setBar
+TRACE - 1019.4
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 5.2
+TRACE - setRainyr
+TRACE - 404.4
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:35:24.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6518
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Ozieri(SS) - 420 mt slm, and id: 6
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 18.4
+TRACE - setTempmax
+TRACE - 19.8
+TRACE - setTempmin
+TRACE - 15.1
+TRACE - setHum
+TRACE - 64
+TRACE - setDp
+TRACE - 11.5
+TRACE - setWChill
+TRACE - 18.4
+TRACE - setHindex
+TRACE - 18.4
+TRACE - setWspeed
+TRACE - 0.0
+TRACE - setDir
+TRACE - ESE
+TRACE - setBar
+TRACE - 1021.7
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 0.0
+TRACE - setRainyr
+TRACE - 359.2
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:28:29.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6519
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: San Vito(CA) - 40 mt slm, and id: 7
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 19.0
+TRACE - setTempmax
+TRACE - 22.5
+TRACE - setTempmin
+TRACE - 17.5
+TRACE - setHum
+TRACE - 64
+TRACE - setDp
+TRACE - 12.0
+TRACE - setWChill
+TRACE - 19.0
+TRACE - setHindex
+TRACE - 24.4
+TRACE - setWspeed
+TRACE - 4.3
+TRACE - setDir
+TRACE - NNE
+TRACE - setBar
+TRACE - 1017.3
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 0.7
+TRACE - setRainyr
+TRACE - 127.7
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:28:04.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6520
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Oristano - 10 mt slm, and id: 8
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 18.1
+TRACE - setTempmax
+TRACE - 18.7
+TRACE - setTempmin
+TRACE - 16.1
+TRACE - setHum
+TRACE - 91
+TRACE - setDp
+TRACE - 16.6
+TRACE - setWChill
+TRACE - 18.1
+TRACE - setHindex
+TRACE - 18.1
+TRACE - setWspeed
+TRACE - 2.0
+TRACE - setDir
+TRACE - ENE
+TRACE - setBar
+TRACE - 1021.9
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 1.2
+TRACE - setRainyr
+TRACE - 362.1
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:29:03.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6521
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Quartu S.E.(CA) - 15 mt slm, and id: 9
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 20.0
+TRACE - setTempmax
+TRACE - 21.3
+TRACE - setTempmin
+TRACE - 17.1
+TRACE - setHum
+TRACE - 68
+TRACE - setDp
+TRACE - 13.9
+TRACE - setWChill
+TRACE - 20.0
+TRACE - setHindex
+TRACE - 20.0
+TRACE - setWspeed
+TRACE - 0.0
+TRACE - setDir
+TRACE - WNW
+TRACE - setBar
+TRACE - 1021.3
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 4.6
+TRACE - setRainyr
+TRACE - 17.5
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:27:58.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6522
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Laconi(NU) - 512 mt slm, and id: 10
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 21.8
+TRACE - setTempmax
+TRACE - 22.3
+TRACE - setTempmin
+TRACE - 17.7
+TRACE - setHum
+TRACE - 54
+TRACE - setDp
+TRACE - 12.1
+TRACE - setWChill
+TRACE - 21.8
+TRACE - setHindex
+TRACE - 21.8
+TRACE - setWspeed
+TRACE - 0.0
+TRACE - setDir
+TRACE - NE
+TRACE - setBar
+TRACE - 1022.9
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 9.6
+TRACE - setRainyr
+TRACE - 419.4
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:27:43.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6523
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Iglesias(CA) - 230 mt slm, and id: 11
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 12.7
+TRACE - setTempmax
+TRACE - 12.7
+TRACE - setTempmin
+TRACE - 9.4
+TRACE - setHum
+TRACE - 61
+TRACE - setDp
+TRACE - 5.4
+TRACE - setWChill
+TRACE - 12.7
+TRACE - setHindex
+TRACE - 12.7
+TRACE - setWspeed
+TRACE - 4.9
+TRACE - setDir
+TRACE - WNW
+TRACE - setBar
+TRACE - 1018.3
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 63.9
+TRACE - setRainyr
+TRACE - 280.6
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-02-22 10:18:08.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+ERROR - expired measure1
+ERROR - measure invalid, for station with name: Iglesias(CA) - 230 mt slm, and id: 11
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Sinnai(CA) - 153 mt slm, and id: 12
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 23.6
+TRACE - setTempmax
+TRACE - 28.7
+TRACE - setTempmin
+TRACE - 15.0
+TRACE - setHum
+TRACE - 47
+TRACE - setDp
+TRACE - 11.6
+TRACE - setWChill
+TRACE - 23.6
+TRACE - setHindex
+TRACE - 23.6
+TRACE - setWspeed
+TRACE - 3.9
+TRACE - setDir
+TRACE - NW
+TRACE - setBar
+TRACE - 1018.0
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 5.4
+TRACE - setRainyr
+TRACE - 190.6
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-17 20:04:08.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+ERROR - expired measure1
+ERROR - measure invalid, for station with name: Sinnai(CA) - 153 mt slm, and id: 12
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Borore(NU) - 400 mt slm, and id: 13
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 15.1
+TRACE - setTempmax
+TRACE - 16.8
+TRACE - setTempmin
+TRACE - 12.5
+TRACE - setHum
+TRACE - 96
+TRACE - setDp
+TRACE - 14.5
+TRACE - setWChill
+TRACE - 15.1
+TRACE - setHindex
+TRACE - 15.1
+TRACE - setWspeed
+TRACE - 0.1
+TRACE - setDir
+TRACE - NW
+TRACE - setBar
+TRACE - 1022.3
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 4.0
+TRACE - setRainyr
+TRACE - 477.6
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:28:00.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6524
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Tula(SS) - 275 mt slm, and id: 14
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 21.0
+TRACE - setTempmax
+TRACE - 21.5
+TRACE - setTempmin
+TRACE - 16.3
+TRACE - setHum
+TRACE - 64
+TRACE - setDp
+TRACE - 13.9
+TRACE - setWChill
+TRACE - 21.0
+TRACE - setHindex
+TRACE - 21.0
+TRACE - setWspeed
+TRACE - 6.6
+TRACE - setDir
+TRACE - NE
+TRACE - setBar
+TRACE - 1016.1
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 1.0
+TRACE - setRainyr
+TRACE - 340.6
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-16 12:35:33.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+ERROR - expired measure1
+ERROR - measure invalid, for station with name: Tula(SS) - 275 mt slm, and id: 14
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Chia(CA) - 55 mt slm, and id: 15
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 15.9
+TRACE - setTempmax
+TRACE - 15.9
+TRACE - setTempmin
+TRACE - 13.0
+TRACE - setHum
+TRACE - 60
+TRACE - setDp
+TRACE - 8.1
+TRACE - setWChill
+TRACE - 15.9
+TRACE - setHindex
+TRACE - 15.9
+TRACE - setWspeed
+TRACE - 0.0
+TRACE - setDir
+TRACE - N
+TRACE - setBar
+TRACE - 1016.2
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 0.0
+TRACE - setRainyr
+TRACE - 129.8
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-09-21 13:05:56.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+ERROR - expired measure1
+ERROR - measure invalid, for station with name: Chia(CA) - 55 mt slm, and id: 15
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Biasi`(NU) - 150 mt slm, and id: 16
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 19.9
+TRACE - setTempmax
+TRACE - 30.4
+TRACE - setTempmin
+TRACE - 15.8
+TRACE - setHum
+TRACE - 68
+TRACE - setDp
+TRACE - 13.8
+TRACE - setWChill
+TRACE - 19.9
+TRACE - setHindex
+TRACE - 19.9
+TRACE - setWspeed
+TRACE - 0.0
+TRACE - setDir
+TRACE - S
+TRACE - setBar
+TRACE - 1023.2
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 1.0
+TRACE - setRainyr
+TRACE - 212.1
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:28:00.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6525
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Su Filariu(NU) - 1370 mt slm, and id: 17
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 18.9
+TRACE - setTempmax
+TRACE - 19.4
+TRACE - setTempmin
+TRACE - 13.6
+TRACE - setHum
+TRACE - 60
+TRACE - setDp
+TRACE - 11.0
+TRACE - setWChill
+TRACE - 18.9
+TRACE - setHindex
+TRACE - 18.9
+TRACE - setWspeed
+TRACE - 0.0
+TRACE - setDir
+TRACE - NNW
+TRACE - setBar
+TRACE - 1021.0
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 0.0
+TRACE - setRainyr
+TRACE - 479.0
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-01 12:40:25.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+ERROR - expired measure1
+ERROR - measure invalid, for station with name: Su Filariu(NU) - 1370 mt slm, and id: 17
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Nuoro - 548 mt slm, and id: 18
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 14.6
+TRACE - setTempmax
+TRACE - 15.9
+TRACE - setTempmin
+TRACE - 14.1
+TRACE - setHum
+TRACE - 77
+TRACE - setDp
+TRACE - 10.6
+TRACE - setWChill
+TRACE - 14.6
+TRACE - setHindex
+TRACE - 14.6
+TRACE - setWspeed
+TRACE - 0.0
+TRACE - setDir
+TRACE - NNW
+TRACE - setBar
+TRACE - 1018.7
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 0.0
+TRACE - setRainyr
+TRACE - 0.0
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 07:20:52.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+ERROR - expired measure1
+ERROR - measure invalid, for station with name: Nuoro - 548 mt slm, and id: 18
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Sestu(CA) - 40 mt slm, and id: 19
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 19.2
+TRACE - setTempmax
+TRACE - 19.2
+TRACE - setTempmin
+TRACE - 13.6
+TRACE - setHum
+TRACE - 86
+TRACE - setDp
+TRACE - 16.8
+TRACE - setWChill
+TRACE - 19.2
+TRACE - setHindex
+TRACE - 19.2
+TRACE - setWspeed
+TRACE - 1.6
+TRACE - setDir
+TRACE - WSW
+TRACE - setBar
+TRACE - 1021.3
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 11.3
+TRACE - setRainyr
+TRACE - 288.4
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:28:09.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6526
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Quartucciu(CA) - 15 mt slm, and id: 20
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 20.0
+TRACE - setTempmax
+TRACE - 21.3
+TRACE - setTempmin
+TRACE - 17.1
+TRACE - setHum
+TRACE - 68
+TRACE - setDp
+TRACE - 13.9
+TRACE - setWChill
+TRACE - 20.0
+TRACE - setHindex
+TRACE - 20.0
+TRACE - setWspeed
+TRACE - 0.0
+TRACE - setDir
+TRACE - WNW
+TRACE - setBar
+TRACE - 1021.3
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 4.6
+TRACE - setRainyr
+TRACE - 17.5
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:28:06.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6527
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Porto S.Paolo(SS) - 10 mt slm, and id: 21
+TRACE - processing station type: WUNDER
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 22.5
+TRACE - setTempmax
+TRACE - 20.6
+TRACE - setTempmin
+TRACE - 17.2
+TRACE - setHum
+TRACE - 61
+TRACE - setDp
+TRACE - 14.4
+TRACE - setWChill
+TRACE - 
+TRACE - setHindex
+TRACE - 
+TRACE - setWspeed
+TRACE - 14.5
+TRACE - setDir
+TRACE - WSW
+TRACE - setBar
+TRACE - 1021.9
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 
+TRACE - setRainmt
+TRACE - 
+TRACE - setRainyr
+TRACE - 
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:14:24.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6528
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Sanluri(CA) - 152 mt slm, and id: 22
+TRACE - processing station type: DATI_STAZIONE
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 20.8
+TRACE - setTempmax
+TRACE - 20.8
+TRACE - setTempmin
+TRACE - 16.8
+TRACE - setHum
+TRACE - 66
+TRACE - setDp
+TRACE - 14.2
+TRACE - setWChill
+TRACE - 15
+TRACE - setHindex
+TRACE - 
+TRACE - setWspeed
+TRACE - 0
+TRACE - setDir
+TRACE - NNW
+TRACE - setBar
+TRACE - 1026.5
+TRACE - setRain
+TRACE - 0
+TRACE - setRr
+TRACE - 0
+TRACE - setRainmt
+TRACE - 3.8
+TRACE - setRainyr
+TRACE - 475.7
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:26:00.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6529
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Bonorva(SS) - 471 mt slm, and id: 23
+TRACE - processing station type: WL_LIVEMAP
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 16.8
+TRACE - setTempmax
+TRACE - 19.8
+TRACE - setTempmin
+TRACE - 15.6
+TRACE - setHum
+TRACE - 79
+TRACE - setDp
+TRACE - 13.1
+TRACE - setWChill
+TRACE - 16.8
+TRACE - setHindex
+TRACE - 16.8
+TRACE - setWspeed
+TRACE - 0.0
+TRACE - setDir
+TRACE - E
+TRACE - setBar
+TRACE - 1022.3
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 
+TRACE - setRainmt
+TRACE - 
+TRACE - setRainyr
+TRACE - 
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:25:00.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6530
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Sadali(NU) - 763 mt slm, and id: 24
+TRACE - processing station type: WL_LIVEMAP
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 13.8
+TRACE - setTempmax
+TRACE - 13.8
+TRACE - setTempmin
+TRACE - 8.4
+TRACE - setHum
+TRACE - 70
+TRACE - setDp
+TRACE - 8.5
+TRACE - setWChill
+TRACE - 13.8
+TRACE - setHindex
+TRACE - 13.4
+TRACE - setWspeed
+TRACE - 0.0
+TRACE - setDir
+TRACE - NNW
+TRACE - setBar
+TRACE - 1023.5
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 
+TRACE - setRainmt
+TRACE - 
+TRACE - setRainyr
+TRACE - 
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:24:00.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6531
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Budduso`(SS) - 700 mt slm, and id: 25
+TRACE - processing station type: SCLIMA
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 15.4
+TRACE - setTempmax
+TRACE -  15.4
+TRACE - setTempmin
+TRACE -  15.2
+TRACE - setHum
+TRACE - 81.0
+TRACE - setDp
+TRACE - 12.2
+TRACE - setWChill
+TRACE - 
+TRACE - setHindex
+TRACE -  17.7 
+TRACE - setHindex
+TRACE -  17.7 
+TRACE - setWspeed
+TRACE - 4.0
+TRACE - setDir
+TRACE - 113
+TRACE - setBar
+TRACE - 1020.2
+TRACE - setRain
+TRACE - NA
+TRACE - setRr
+TRACE - 
+TRACE - setRainmt
+TRACE -  NA
+TRACE - setRainyr
+TRACE -  NA
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:28:00.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6532
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Orosei(NU) - 20 mt slm, and id: 26
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 22.2
+TRACE - setTempmax
+TRACE - 22.9
+TRACE - setTempmin
+TRACE - 18.2
+TRACE - setHum
+TRACE - 62
+TRACE - setDp
+TRACE - 14.6
+TRACE - setWChill
+TRACE - 22.2
+TRACE - setHindex
+TRACE - 22.2
+TRACE - setWspeed
+TRACE - 0.4
+TRACE - setDir
+TRACE - WNW
+TRACE - setBar
+TRACE - 1022.2
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 3.8
+TRACE - setRainyr
+TRACE - 250.2
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:28:14.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6533
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Lanusei(NU) - 663 mt slm, and id: 27
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 23.7
+TRACE - setTempmax
+TRACE - 23.7
+TRACE - setTempmin
+TRACE - 17.6
+TRACE - setHum
+TRACE - 51
+TRACE - setDp
+TRACE - 13.0
+TRACE - setWChill
+TRACE - 23.7
+TRACE - setHindex
+TRACE - 25.3
+TRACE - setWspeed
+TRACE - 0.0
+TRACE - setDir
+TRACE - SE
+TRACE - setBar
+TRACE - 1021.8
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 3.0
+TRACE - setRainyr
+TRACE - 275.7
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:27:22.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6534
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Tortoli`(NU) - 20 mt slm, and id: 28
+TRACE - processing station type: WUNDER
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 26.3
+TRACE - setTempmax
+TRACE - 0
+TRACE - setTempmin
+TRACE - 0
+TRACE - setHum
+TRACE - 62
+TRACE - setDp
+TRACE - 21.2
+TRACE - setWChill
+TRACE - 
+TRACE - setHindex
+TRACE - 
+TRACE - setWspeed
+TRACE - 3.2
+TRACE - setDir
+TRACE - E
+TRACE - setBar
+TRACE - 1011.1
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 
+TRACE - setRainmt
+TRACE - 
+TRACE - setRainyr
+TRACE - 
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-07-24 11:21:09.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+ERROR - expired measure1
+ERROR - measure invalid, for station with name: Tortoli`(NU) - 20 mt slm, and id: 28
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Gavoi(NU) - 740 mt slm, and id: 29
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 14.4
+TRACE - setTempmax
+TRACE - 14.4
+TRACE - setTempmin
+TRACE - 8.8
+TRACE - setHum
+TRACE - 78
+TRACE - setDp
+TRACE - 10.6
+TRACE - setWChill
+TRACE - 14.4
+TRACE - setHindex
+TRACE - 14.4
+TRACE - setWspeed
+TRACE - 0.2
+TRACE - setDir
+TRACE - NNE
+TRACE - setBar
+TRACE - 1020.8
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 0.0
+TRACE - setRainyr
+TRACE - 0.0
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:27:58.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6535
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Santa Giusta(OR) - 10 mt slm, and id: 30
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 17.8
+TRACE - setTempmax
+TRACE - 17.9
+TRACE - setTempmin
+TRACE - 17.8
+TRACE - setHum
+TRACE - 86
+TRACE - setDp
+TRACE - 15.4
+TRACE - setWChill
+TRACE - 17.8
+TRACE - setHindex
+TRACE - 17.8
+TRACE - setWspeed
+TRACE - 1.7
+TRACE - setDir
+TRACE - NE
+TRACE - setBar
+TRACE - 1019.4
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 0.0
+TRACE - setRainyr
+TRACE - 329.3
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 00:16:55.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+ERROR - expired measure1
+ERROR - measure invalid, for station with name: Santa Giusta(OR) - 10 mt slm, and id: 30
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Settimo S.Pietro(CA) - 70 mt slm, and id: 31
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 18.6
+TRACE - setTempmax
+TRACE - 24.4
+TRACE - setTempmin
+TRACE - 17.2
+TRACE - setHum
+TRACE - 79
+TRACE - setDp
+TRACE - 14.9
+TRACE - setWChill
+TRACE - 18.6
+TRACE - setHindex
+TRACE - 18.6
+TRACE - setWspeed
+TRACE - 0.0
+TRACE - setDir
+TRACE - ENE
+TRACE - setBar
+TRACE - 1011.5
+TRACE - setRain
+TRACE - 8.2
+TRACE - setRr
+TRACE - 0.120
+TRACE - setRainmt
+TRACE - 14.9
+TRACE - setRainyr
+TRACE - 205.5
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-04 17:45:30.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+ERROR - expired measure1
+ERROR - measure invalid, for station with name: Settimo S.Pietro(CA) - 70 mt slm, and id: 31
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Su Siccu(CA) - 10 mt slm, and id: 32
+TRACE - processing station type: WL_LIVEMAP
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 21.2
+TRACE - setTempmax
+TRACE - 23.0
+TRACE - setTempmin
+TRACE - 19.0
+TRACE - setHum
+TRACE - 67
+TRACE - setDp
+TRACE - 14.8
+TRACE - setWChill
+TRACE - 21.2
+TRACE - setHindex
+TRACE - 21.1
+TRACE - setWspeed
+TRACE - 0.0
+TRACE - setDir
+TRACE - SE
+TRACE - setBar
+TRACE - 1022.0
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 
+TRACE - setRainmt
+TRACE - 
+TRACE - setRainyr
+TRACE - 
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:22:00.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6536
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Austis(NU) - 800 mt slm, and id: 33
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 10.6
+TRACE - setTempmax
+TRACE - 17.1
+TRACE - setTempmin
+TRACE - 10.5
+TRACE - setHum
+TRACE - 99
+TRACE - setDp
+TRACE - 10.4
+TRACE - setWChill
+TRACE - 10.6
+TRACE - setHindex
+TRACE - 10.6
+TRACE - setWspeed
+TRACE - 4.9
+TRACE - setDir
+TRACE - S
+TRACE - setBar
+TRACE - 907.0
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 0.0
+TRACE - setRainyr
+TRACE - 128.5
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2013-11-04 22:07:34.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+ERROR - expired measure1
+ERROR - measure invalid, for station with name: Austis(NU) - 800 mt slm, and id: 33
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Monteponi(CA) - 190 mt slm, and id: 34
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 22.7
+TRACE - setTempmax
+TRACE - 22.7
+TRACE - setTempmin
+TRACE - 17.3
+TRACE - setHum
+TRACE - 61
+TRACE - setDp
+TRACE - 14.8
+TRACE - setWChill
+TRACE - 22.7
+TRACE - setHindex
+TRACE - 924.0
+TRACE - setWspeed
+TRACE - 0.0
+TRACE - setDir
+TRACE - NE
+TRACE - setBar
+TRACE - 1022.1
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 43.2
+TRACE - setRainyr
+TRACE - 560.5
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:28:14.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6537
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Assemini(CA) - 20 mt slm, and id: 35
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 26.9
+TRACE - setTempmax
+TRACE - 26.9
+TRACE - setTempmin
+TRACE - 18.3
+TRACE - setHum
+TRACE - 65
+TRACE - setDp
+TRACE - 19.8
+TRACE - setWChill
+TRACE - 26.9
+TRACE - setHindex
+TRACE - 28.4
+TRACE - setWspeed
+TRACE - 0.0
+TRACE - setDir
+TRACE - W
+TRACE - setBar
+TRACE - 1008.5
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 0.0
+TRACE - setRainyr
+TRACE - 181.8
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-08-01 10:40:43.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+ERROR - expired measure1
+ERROR - measure invalid, for station with name: Assemini(CA) - 20 mt slm, and id: 35
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: P.ta Modighina(OR) - 600 mt slm, and id: 36
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 23.3
+TRACE - setTempmax
+TRACE - 28.8
+TRACE - setTempmin
+TRACE - -7.9
+TRACE - setHum
+TRACE - 44
+TRACE - setDp
+TRACE - 10.4
+TRACE - setWChill
+TRACE - 23.3
+TRACE - setHindex
+TRACE - 25.2
+TRACE - setWspeed
+TRACE - 5.4
+TRACE - setDir
+TRACE - SSE
+TRACE - setBar
+TRACE - 948.4
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 2.5
+TRACE - setRainyr
+TRACE - 444.7
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-06-28 21:00:22.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+ERROR - expired measure1
+ERROR - measure invalid, for station with name: P.ta Modighina(OR) - 600 mt slm, and id: 36
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Padru(SS) - 164 mt slm, and id: 37
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 20.4
+TRACE - setTempmax
+TRACE - 21.1
+TRACE - setTempmin
+TRACE - 19.9
+TRACE - setHum
+TRACE - 65
+TRACE - setDp
+TRACE - 13.6
+TRACE - setWChill
+TRACE - 20.4
+TRACE - setHindex
+TRACE - 23.9
+TRACE - setWspeed
+TRACE - 2.5
+TRACE - setDir
+TRACE - SE
+TRACE - setBar
+TRACE - 1020.4
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 1.2
+TRACE - setRainyr
+TRACE - 16.6
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 00:59:45.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+ERROR - expired measure1
+ERROR - measure invalid, for station with name: Padru(SS) - 164 mt slm, and id: 37
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Porto Torres(SS) - 17 mt slm, and id: 38
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 23.9
+TRACE - setTempmax
+TRACE - 23.9
+TRACE - setTempmin
+TRACE - 18.4
+TRACE - setHum
+TRACE - 77
+TRACE - setDp
+TRACE - 19.6
+TRACE - setWChill
+TRACE - 23.9
+TRACE - setHindex
+TRACE - 24.4
+TRACE - setWspeed
+TRACE - 0.3
+TRACE - setDir
+TRACE - NNE
+TRACE - setBar
+TRACE - 1019.9
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 4.9
+TRACE - setRainyr
+TRACE - 300.6
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:27:18.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6538
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Capoterra(CA) - 10 mt slm, and id: 39
+TRACE - processing station type: WL_LIVEMAP
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 18.4
+TRACE - setTempmax
+TRACE - 20.3
+TRACE - setTempmin
+TRACE - 14.7
+TRACE - setHum
+TRACE - 78
+TRACE - setDp
+TRACE - 14.5
+TRACE - setWChill
+TRACE - 18.4
+TRACE - setHindex
+TRACE - 18.8
+TRACE - setWspeed
+TRACE - 0.0
+TRACE - setDir
+TRACE - W
+TRACE - setBar
+TRACE - 1020.9
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 
+TRACE - setRainmt
+TRACE - 
+TRACE - setRainyr
+TRACE - 
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:23:00.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6539
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Villanovatulo(NU) - 590 mt slm, and id: 40
+TRACE - processing station type: DOWNLD02
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 14.7
+TRACE - setTempmax
+TRACE - 0
+TRACE - setTempmin
+TRACE - 0
+TRACE - setHum
+TRACE - 92
+TRACE - setDp
+TRACE - 13.4
+TRACE - setWChill
+TRACE - 14.7
+TRACE - setHindex
+TRACE - 14.8
+TRACE - setWspeed
+TRACE - 3.2
+TRACE - setDir
+TRACE - NW
+TRACE - setBar
+TRACE - 1013.8
+TRACE - setRain
+TRACE - 0
+TRACE - setRr
+TRACE - 0.0
+TRACE - setRainmt
+TRACE - 
+TRACE - setRainyr
+TRACE - 
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-07-12 07:00:00.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+ERROR - expired measure1
+ERROR - measure invalid, for station with name: Villanovatulo(NU) - 590 mt slm, and id: 40
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Sant`Antioco(CA) - 37 mt slm, and id: 41
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 22.2
+TRACE - setTempmax
+TRACE - 22.2
+TRACE - setTempmin
+TRACE - 17.3
+TRACE - setHum
+TRACE - 65
+TRACE - setDp
+TRACE - 15.3
+TRACE - setWChill
+TRACE - 22.2
+TRACE - setHindex
+TRACE - 22.2
+TRACE - setWspeed
+TRACE - 0.0
+TRACE - setDir
+TRACE - ENE
+TRACE - setBar
+TRACE - 1021.6
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 21.6
+TRACE - setRainyr
+TRACE - 311.6
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:28:28.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6540
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Monte Arci(OR) - 550 mt slm, and id: 42
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 19.9
+TRACE - setTempmax
+TRACE - 19.9
+TRACE - setTempmin
+TRACE - 13.4
+TRACE - setHum
+TRACE - 68
+TRACE - setDp
+TRACE - 13.8
+TRACE - setWChill
+TRACE - 19.9
+TRACE - setHindex
+TRACE - 19.9
+TRACE - setWspeed
+TRACE - 0.0
+TRACE - setDir
+TRACE - SSW
+TRACE - setBar
+TRACE - 960.6
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 15.5
+TRACE - setRainyr
+TRACE - 442.2
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:28:16.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6541
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Calangianus(SS) - 490 mt slm, and id: 43
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 0.0
+TRACE - setTempmax
+TRACE - 0.0
+TRACE - setTempmin
+TRACE - 0.0
+TRACE - setHum
+TRACE - 0
+TRACE - setDp
+TRACE - 0.0
+TRACE - setWChill
+TRACE - 0.0
+TRACE - setHindex
+TRACE - 0.0
+TRACE - setWspeed
+TRACE - 0.4
+TRACE - setDir
+TRACE - W
+TRACE - setBar
+TRACE - 1012.0
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 1.0
+TRACE - setRainyr
+TRACE - 417.8
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-08-19 09:16:59.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+ERROR - expired measure1
+ERROR - measure invalid, for station with name: Calangianus(SS) - 490 mt slm, and id: 43
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Macchiareddu(CA) - 10 mt slm, and id: 44
+TRACE - processing station type: WL_LIVEMAP
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 18.1
+TRACE - setTempmax
+TRACE - 18.6
+TRACE - setTempmin
+TRACE - 13.6
+TRACE - setHum
+TRACE - 80
+TRACE - setDp
+TRACE - 14.6
+TRACE - setWChill
+TRACE - 18.1
+TRACE - setHindex
+TRACE - 18.4
+TRACE - setWspeed
+TRACE - 1.6
+TRACE - setDir
+TRACE - NNW
+TRACE - setBar
+TRACE - 1021.5
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 
+TRACE - setRainmt
+TRACE - 
+TRACE - setRainyr
+TRACE - 
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:22:00.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6542
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Tonara(NU) - 910 mt slm, and id: 45
+TRACE - processing station type: TAGMER
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 15.1
+TRACE - setTempmax
+TRACE - 21.1
+TRACE - setTempmin
+TRACE - 13.6
+TRACE - setHum
+TRACE - 83
+TRACE - setDp
+TRACE - 12.2
+TRACE - setWChill
+TRACE - 15.1
+TRACE - setHindex
+TRACE - 15.0
+TRACE - setWspeed
+TRACE - 0.0
+TRACE - setDir
+TRACE - SSW
+TRACE - setBar
+TRACE - 1012.4
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.00
+TRACE - setRainmt
+TRACE - 1.0
+TRACE - setRainyr
+TRACE - 571.0
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-15 20:23:00.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+ERROR - expired measure1
+ERROR - measure invalid, for station with name: Tonara(NU) - 910 mt slm, and id: 45
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Villasor(CA) - 30 mt slm, and id: 46
+TRACE - processing station type: TAGMER
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 16.2
+TRACE - setTempmax
+TRACE - 19.3
+TRACE - setTempmin
+TRACE - 14.1
+TRACE - setHum
+TRACE - 86
+TRACE - setDp
+TRACE - 13.9
+TRACE - setWChill
+TRACE - 16.2
+TRACE - setHindex
+TRACE - 16.2
+TRACE - setWspeed
+TRACE - <!--wind10Avg-->
+TRACE - setDir
+TRACE - W
+TRACE - setBar
+TRACE - 1021.3
+TRACE - setRain
+TRACE - 0.00
+TRACE - setRr
+TRACE - <!--dailyEt-->
+TRACE - setRainmt
+TRACE - 11.94
+TRACE - setRainyr
+TRACE - 1408.18
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:28:00.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6543
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Vallermosa(CA) - 70 mt slm, and id: 47
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 18.5
+TRACE - setTempmax
+TRACE - 18.5
+TRACE - setTempmin
+TRACE - 12.8
+TRACE - setHum
+TRACE - 74
+TRACE - setDp
+TRACE - 13.8
+TRACE - setWChill
+TRACE - 18.5
+TRACE - setHindex
+TRACE - 18.5
+TRACE - setWspeed
+TRACE - 0.0
+TRACE - setDir
+TRACE - NNE
+TRACE - setBar
+TRACE - 1016.1
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 4.0
+TRACE - setRainyr
+TRACE - 263.8
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:28:29.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6544
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Seui(NU) - 820 mt slm, and id: 48
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 20.1
+TRACE - setTempmax
+TRACE - 20.1
+TRACE - setTempmin
+TRACE - 15.3
+TRACE - setHum
+TRACE - 36
+TRACE - setDp
+TRACE - 4.6
+TRACE - setWChill
+TRACE - 20.1
+TRACE - setHindex
+TRACE - 25.0
+TRACE - setWspeed
+TRACE - 0.0
+TRACE - setDir
+TRACE - NNE
+TRACE - setBar
+TRACE - 1023.1
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 5.6
+TRACE - setRainyr
+TRACE - 399.0
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:24:45.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6545
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Decimoputzu(CA) - 40 mt slm, and id: 49
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 25.6
+TRACE - setTempmax
+TRACE - 25.6
+TRACE - setTempmin
+TRACE - 25.6
+TRACE - setHum
+TRACE - 71
+TRACE - setDp
+TRACE - 19.9
+TRACE - setWChill
+TRACE - 25.6
+TRACE - setHindex
+TRACE - 25.6
+TRACE - setWspeed
+TRACE - 3.1
+TRACE - setDir
+TRACE - W
+TRACE - setBar
+TRACE - 1010.7
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 0.0
+TRACE - setRainyr
+TRACE - 247.3
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-09-23 00:17:10.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+ERROR - expired measure1
+ERROR - measure invalid, for station with name: Decimoputzu(CA) - 40 mt slm, and id: 49
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Separadorgiu(NU) - 1460 mt slm, and id: 50
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 15.3
+TRACE - setTempmax
+TRACE - 16.6
+TRACE - setTempmin
+TRACE - 11.3
+TRACE - setHum
+TRACE - 57
+TRACE - setDp
+TRACE - 6.8
+TRACE - setWChill
+TRACE - 15.3
+TRACE - setHindex
+TRACE - 15.3
+TRACE - setWspeed
+TRACE - 0.0
+TRACE - setDir
+TRACE - SW
+TRACE - setBar
+TRACE - 1025.6
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 2.0
+TRACE - setRainyr
+TRACE - 203.2
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-15 09:52:55.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+ERROR - expired measure1
+ERROR - measure invalid, for station with name: Separadorgiu(NU) - 1460 mt slm, and id: 50
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Olbia(SS) - 15 mt slm, and id: 51
+TRACE - processing station type: WL_LIVEMAP
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 22.3
+TRACE - setTempmax
+TRACE - 29.7
+TRACE - setTempmin
+TRACE - 19.1
+TRACE - setHum
+TRACE - 70
+TRACE - setDp
+TRACE - 16.5
+TRACE - setWChill
+TRACE - 22.3
+TRACE - setHindex
+TRACE - 22.7
+TRACE - setWspeed
+TRACE - 3.2
+TRACE - setDir
+TRACE - SW
+TRACE - setBar
+TRACE - 1020.2
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 
+TRACE - setRainmt
+TRACE - 
+TRACE - setRainyr
+TRACE - 
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-17 23:12:00.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+ERROR - expired measure1
+ERROR - measure invalid, for station with name: Olbia(SS) - 15 mt slm, and id: 51
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Barrali(CA) - 150 mt slm, and id: 52
+TRACE - processing station type: LOGDAT
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 21.6
+TRACE - setTempmax
+TRACE - 21.8
+TRACE - setTempmin
+TRACE - 14.4
+TRACE - setHum
+TRACE - 69
+TRACE - setDp
+TRACE - 15.7
+TRACE - setWChill
+TRACE - 
+TRACE - setHindex
+TRACE - 
+TRACE - setWspeed
+TRACE - 0.0
+TRACE - setDir
+TRACE - W
+TRACE - setBar
+TRACE - 
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 
+TRACE - setRainmt
+TRACE - 0.0
+TRACE - setRainyr
+TRACE - 4264.7
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-14 09:44:22.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+ERROR - expired measure1
+ERROR - measure invalid, for station with name: Barrali(CA) - 150 mt slm, and id: 52
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Ovodda(NU) - 718 mt slm, and id: 53
+TRACE - processing station type: CURRDATA
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 12.9
+TRACE - setTempmax
+TRACE - 13.7
+TRACE - setTempmin
+TRACE - 12.1
+TRACE - setHum
+TRACE - 77
+TRACE - setDp
+TRACE - 9.0
+TRACE - setWChill
+TRACE - 12.9
+TRACE - setHindex
+TRACE - 12.9
+TRACE - setWspeed
+TRACE - 0
+TRACE - setDir
+TRACE - NNE
+TRACE - setBar
+TRACE - 1022.0
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.0
+TRACE - setRainmt
+TRACE - 3.8
+TRACE - setRainyr
+TRACE - 519.8
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 04:30:00.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+ERROR - expired measure1
+ERROR - measure invalid, for station with name: Ovodda(NU) - 718 mt slm, and id: 53
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: San Gavino(CA) - 60 mt slm, and id: 54
+TRACE - processing station type: DOWNLD02
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 17.4
+TRACE - setTempmax
+TRACE - 15.3
+TRACE - setTempmin
+TRACE - 15.1
+TRACE - setHum
+TRACE - 76
+TRACE - setDp
+TRACE - 13.2
+TRACE - setWChill
+TRACE - 17.4
+TRACE - setHindex
+TRACE - 17.5
+TRACE - setWspeed
+TRACE - 0.0
+TRACE - setDir
+TRACE - W
+TRACE - setBar
+TRACE - 21.7
+TRACE - setRain
+TRACE - 2044.5
+TRACE - setRr
+TRACE - 0.00
+TRACE - setRainmt
+TRACE - 
+TRACE - setRainyr
+TRACE - 
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:25:00.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6546
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Cagliari Genneruxi - 40 mt slm, and id: 55
+TRACE - processing station type: WUNDER
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 21.9
+TRACE - setTempmax
+TRACE - 21.3
+TRACE - setTempmin
+TRACE - 19.2
+TRACE - setHum
+TRACE - 64
+TRACE - setDp
+TRACE - 15
+TRACE - setWChill
+TRACE - 
+TRACE - setHindex
+TRACE - 
+TRACE - setWspeed
+TRACE - 0.0
+TRACE - setDir
+TRACE - W
+TRACE - setBar
+TRACE - 1020.9
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 
+TRACE - setRainmt
+TRACE - 
+TRACE - setRainyr
+TRACE - 
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:19:20.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6547
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Fonni(NU) - 990 mt slm, and id: 56
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 20.9
+TRACE - setTempmax
+TRACE - 21.0
+TRACE - setTempmin
+TRACE - 14.5
+TRACE - setHum
+TRACE - 33
+TRACE - setDp
+TRACE - 4.1
+TRACE - setWChill
+TRACE - 20.9
+TRACE - setHindex
+TRACE - 20.9
+TRACE - setWspeed
+TRACE - 0.1
+TRACE - setDir
+TRACE - S
+TRACE - setBar
+TRACE - 1024.1
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.000
+TRACE - setRainmt
+TRACE - 1.4
+TRACE - setRainyr
+TRACE - 503.2
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:28:05.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6548
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Busachi(OR) - 403 mt slm, and id: 57
+TRACE - processing station type: WL_LIVEMAP
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 20.6
+TRACE - setTempmax
+TRACE - 20.6
+TRACE - setTempmin
+TRACE - 17.3
+TRACE - setHum
+TRACE - 66
+TRACE - setDp
+TRACE - 14.0
+TRACE - setWChill
+TRACE - 20.6
+TRACE - setHindex
+TRACE - 20.6
+TRACE - setWspeed
+TRACE - 1.6
+TRACE - setDir
+TRACE - NW
+TRACE - setBar
+TRACE - 1022.0
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 
+TRACE - setRainmt
+TRACE - 
+TRACE - setRainyr
+TRACE - 
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:25:00.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6549
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Arborea(OR) - 10 mt slm, and id: 58
+TRACE - processing station type: WLINK
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 17.2
+TRACE - setTempmax
+TRACE - 17.7
+TRACE - setTempmin
+TRACE - 13.0
+TRACE - setHum
+TRACE - 95
+TRACE - setDp
+TRACE - 16.7
+TRACE - setWChill
+TRACE - 
+TRACE - setHindex
+TRACE - 
+TRACE - setWspeed
+TRACE - Calm
+TRACE - setDir
+TRACE - 360
+TRACE - setBar
+TRACE - 1022
+TRACE - setRain
+TRACE - 
+TRACE - setRr
+TRACE - 0.0
+TRACE - setRainmt
+TRACE - 
+TRACE - setRainyr
+TRACE - 
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:28:00.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6550
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Tempio(SS) - 520 mt slm, and id: 59
+TRACE - processing station type: DATI_STAZIONE
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 19.7
+TRACE - setTempmax
+TRACE - 19.7
+TRACE - setTempmin
+TRACE - 16.7
+TRACE - setHum
+TRACE - 79
+TRACE - setDp
+TRACE - 15.9
+TRACE - setWChill
+TRACE - 16.1
+TRACE - setHindex
+TRACE - 
+TRACE - setWspeed
+TRACE - 6.4
+TRACE - setDir
+TRACE - SSW
+TRACE - setBar
+TRACE - 1025.1
+TRACE - setRain
+TRACE - 0
+TRACE - setRr
+TRACE - 0
+TRACE - setRainmt
+TRACE - 6.9
+TRACE - setRainyr
+TRACE - 767.3
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:04:00.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6551
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Carbonia(CA) - 111 mt slm, and id: 60
+TRACE - processing station type: WL_LIVEMAP
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 27.6
+TRACE - setTempmax
+TRACE - 28.4
+TRACE - setTempmin
+TRACE - 16.8
+TRACE - setHum
+TRACE - 56
+TRACE - setDp
+TRACE - 18.0
+TRACE - setWChill
+TRACE - 27.6
+TRACE - setHindex
+TRACE - 28.4
+TRACE - setWspeed
+TRACE - 3.2
+TRACE - setDir
+TRACE - WSW
+TRACE - setBar
+TRACE - 1018.8
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 
+TRACE - setRainmt
+TRACE - 
+TRACE - setRainyr
+TRACE - 
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-17 17:20:00.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+ERROR - expired measure1
+ERROR - measure invalid, for station with name: Carbonia(CA) - 111 mt slm, and id: 60
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Ussana(CA) - 108 mt slm, and id: 61
+TRACE - processing station type: DOWNLD02
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 17.1
+TRACE - setTempmax
+TRACE - 15.1
+TRACE - setTempmin
+TRACE - 14.8
+TRACE - setHum
+TRACE - 78
+TRACE - setDp
+TRACE - 13.2
+TRACE - setWChill
+TRACE - 17.1
+TRACE - setHindex
+TRACE - 17.2
+TRACE - setWspeed
+TRACE - 0.0
+TRACE - setDir
+TRACE - ---
+TRACE - setBar
+TRACE - 21.2
+TRACE - setRain
+TRACE - 2046.1
+TRACE - setRr
+TRACE - 0.00
+TRACE - setRainmt
+TRACE - 
+TRACE - setRainyr
+TRACE - 
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:15:00.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6552
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Palau(SS) - 45 mt slm, and id: 62
+TRACE - processing station type: DOWNLD02
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 21.1
+TRACE - setTempmax
+TRACE - 0
+TRACE - setTempmin
+TRACE - 0
+TRACE - setHum
+TRACE - 81
+TRACE - setDp
+TRACE - 17.7
+TRACE - setWChill
+TRACE - 21.1
+TRACE - setHindex
+TRACE - 21.7
+TRACE - setWspeed
+TRACE - 4.3
+TRACE - setDir
+TRACE - W
+TRACE - setBar
+TRACE - 1019.4
+TRACE - setRain
+TRACE - 0
+TRACE - setRr
+TRACE - 0.0
+TRACE - setRainmt
+TRACE - 
+TRACE - setRainyr
+TRACE - 
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-17 22:30:00.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+ERROR - expired measure1
+ERROR - measure invalid, for station with name: Palau(SS) - 45 mt slm, and id: 62
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Villacidro(CA) - 265 mt slm, and id: 63
+TRACE - processing station type: DOWNLD02
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 21.1
+TRACE - setTempmax
+TRACE - 18.1
+TRACE - setTempmin
+TRACE - 18.1
+TRACE - setHum
+TRACE - 55
+TRACE - setDp
+TRACE - 11.7
+TRACE - setWChill
+TRACE - 21.1
+TRACE - setHindex
+TRACE - 20.4
+TRACE - setWspeed
+TRACE - 0.0
+TRACE - setDir
+TRACE - WNW
+TRACE - setBar
+TRACE - 1021.4
+TRACE - setRain
+TRACE - 0
+TRACE - setRr
+TRACE - 0.0
+TRACE - setRainmt
+TRACE - 
+TRACE - setRainyr
+TRACE - 
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:00:00.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6553
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Fenosu(OR) - 15 mt slm, and id: 64
+TRACE - processing station type: CLIENTRAW
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 18.1
+TRACE - setTempmax
+TRACE - 18.1
+TRACE - setTempmin
+TRACE - 14.7
+TRACE - setHum
+TRACE - 85
+TRACE - setDp
+TRACE - 15.5
+TRACE - setWChill
+TRACE - 18.1
+TRACE - setHindex
+TRACE - 19.6
+TRACE - setWspeed
+TRACE - 3.5
+TRACE - setDir
+TRACE - ENE
+TRACE - setBar
+TRACE - 1022.0
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.0
+TRACE - setRainmt
+TRACE - 0.0
+TRACE - setRainyr
+TRACE - 311.3
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:15:07.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6554
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Bitti(NU) - 550 mt slm, and id: 65
+TRACE - processing station type: REALTIME
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 17.3
+TRACE - setTempmax
+TRACE - 18.1
+TRACE - setTempmin
+TRACE - 16.6
+TRACE - setHum
+TRACE - 86
+TRACE - setDp
+TRACE - 
+TRACE - setWChill
+TRACE - 11.8
+TRACE - setHindex
+TRACE - 17.3
+TRACE - setWspeed
+TRACE - 14.9
+TRACE - setDir
+TRACE - SSE
+TRACE - setBar
+TRACE - 1019.4
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 0.0
+TRACE - setRainmt
+TRACE - 0.0
+TRACE - setRainyr
+TRACE - 17.9
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-17 08:35:54.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+ERROR - expired measure1
+ERROR - measure invalid, for station with name: Bitti(NU) - 550 mt slm, and id: 65
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Ossi(SS) - 340 mt slm, and id: 66
+TRACE - processing station type: DOWNLD02
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 19.8
+TRACE - setTempmax
+TRACE - 0
+TRACE - setTempmin
+TRACE - 0
+TRACE - setHum
+TRACE - 80
+TRACE - setDp
+TRACE - 16.3
+TRACE - setWChill
+TRACE - 19.8
+TRACE - setHindex
+TRACE - 20.5
+TRACE - setWspeed
+TRACE - 1.6
+TRACE - setDir
+TRACE - WSW
+TRACE - setBar
+TRACE - 1013.5
+TRACE - setRain
+TRACE - 0
+TRACE - setRr
+TRACE - 0.0
+TRACE - setRainmt
+TRACE - 
+TRACE - setRainyr
+TRACE - 
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-08-31 21:55:00.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+ERROR - expired measure1
+ERROR - measure invalid, for station with name: Ossi(SS) - 340 mt slm, and id: 66
+DEBUG - _____________________________________________________________________
+DEBUG - Processing station with name: Capoterra-T.Ulivi(CA) - 10 mt slm, and id: 67
+TRACE - processing station type: WUNDER
+TRACE - getMeasure()
+TRACE - attempt #0
+TRACE - setTemp
+TRACE - 19.1
+TRACE - setTempmax
+TRACE - 17.3
+TRACE - setTempmin
+TRACE - 15.9
+TRACE - setHum
+TRACE - 74
+TRACE - setDp
+TRACE - 14.4
+TRACE - setWChill
+TRACE - 
+TRACE - setHindex
+TRACE - 
+TRACE - setWspeed
+TRACE - 0.0
+TRACE - setDir
+TRACE - NW
+TRACE - setBar
+TRACE - 1024.3
+TRACE - setRain
+TRACE - 0.0
+TRACE - setRr
+TRACE - 
+TRACE - setRainmt
+TRACE - 
+TRACE - setRainyr
+TRACE - 
+TRACE - setDate
+TRACE - DateTime Object
+(
+    [date] => 2014-10-18 09:14:28.000000
+    [timezone_type] => 3
+    [timezone] => Europe/Rome
+)
+
+DEBUG - Persisted new measure with id: 6555
+DEBUG - DONE.

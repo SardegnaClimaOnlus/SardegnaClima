@@ -27,16 +27,17 @@ class WundergroundParser extends Parser implements StationParserInterface{
 
 		// -- create measure -- //
 		$measure = new \Measure();
-		$measure->setTemp($array_temp);
+		$measure->setTemp(floatval($array_temp));
+
 		$measure->setTempmax($this->em->getRepository('Measure')->getTempMaxByStation($this->station));
 		$measure->setTempmin($this->em->getRepository('Measure')->getTempMinByStation($this->station));
-		$measure->setHum($array_hum);
-		$measure->setDp($array_dp);
+		$measure->setHum(floatval($array_hum));
+		$measure->setDp(floatval($array_dp));
 		$measure->setWchill(null);
 		$measure->setHindex(null);
 		$measure->setWspeed($wspeed);
-		$measure->setDir($this->getDirByWunderDireciton($array_dir));
-		$measure->setBar($array_bar);
+		$measure->setDir($this->getDirByWunderDireciton(strval($array_dir)));
+		$measure->setBar(floatval($array_bar));
 		$measure->setRain($rain);
 		$measure->setRr(null);
 		$measure->setRainmt(null);

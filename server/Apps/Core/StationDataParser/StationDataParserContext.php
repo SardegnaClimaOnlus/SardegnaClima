@@ -59,7 +59,18 @@ class StationDataParserContext{
                     $measure = $this->strategy->getMeasure($data_url);
                     if(!$measure) usleep($config['attemptsInterval']);
                 }
-                return $measure;
+                // filter too old measure
+                $date = new \DateTime();
+                $date->modify('-30 minutes');
+                if($measure && $measure->getDate() > $date){
+                    return $measure;
+                }
+                else{
+                    \Logger::getLogger('parser')->error("expired measure" );
+                    return null;
+                }
+
+
             }catch(\Exception $e){
                 \Logger::getLogger('parser')->error($e->getMessage());
                 return null;
