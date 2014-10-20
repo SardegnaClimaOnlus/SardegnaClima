@@ -1,7 +1,7 @@
 html, body{
     width: 100%;
     height: 100%;
-    background-color: #B3D1FF;
+    background-color: #EEEEEE;
 }
 
 #main-view{
@@ -10,6 +10,121 @@ html, body{
 }
 
 .station-detail-container{
-    padding: 30px;
-    background-color: #B3D1FF;
+    /*padding: 51px;*/
+    background-color: #EEEEEE;
 }
+
+.app-body, .app-content{
+    background-color: #EEEEEE;
+    width: 100%;
+    height: 100%;
+}
+
+.loading-spinner{
+    top: 50%;
+    left: 50%;
+    margin-top: -7px;
+    margin-left: -7px;
+    position: fixed;
+}
+
+.app, .app-content-loading{
+    width: 100%;
+    height: 100%;
+}
+.station-detail-container{
+    padding: 5px 5px 5px 5px;
+}
+
+.station-temperature{
+    font-size: 70px;
+}
+
+.station-tempmin, .station-tempmax{
+    font-size: 25px;
+    margin-left: 5px;
+}
+.max-min-temperature-box{
+    padding: 17px 20px 25px 20px;
+    /*text-align: right;*/
+
+}
+
+.measure-time-box{
+    color: #708090;
+    margin-bottom: 50px;
+    text-align: center;
+
+}
+
+.measure-item{
+    font-size: 20px;
+}
+
+.measure-unit{
+    font-size: 10px;
+}
+
+.temperature-box{
+    margin: 0px 10px  30px 10px;
+    padding: 10px;
+}
+
+.measure-detail-values-box{
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+/* icons */
+.glyphicon{
+    margin-right: 5px !important;
+}
+
+.humidity {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/hum.png);
+    /*margin-top: 5px;*/
+}
+
+.rain{
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/rain.png);
+    /*margin-top: 5px;*/
+}
+
+.wind{
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/wind.png);
+    /*margin-top: 5px;*/
+}
+
+.measure-value{
+    margin-left: 20px !important;
+}
+
+.navbar{
+    background-color: #3A539B !important;
+    color: #EEEEEE !important;
+}
+.navbar-app .btn-navbar, .navbar-app .btn  a{
+    color: #EEEEEE !important;
+
+}
+.table > tbody > tr > td {
+    border-color: #95A5A6
+}
+.navbar-app{
+    border-color: #F9BF3B;
+}
+
+

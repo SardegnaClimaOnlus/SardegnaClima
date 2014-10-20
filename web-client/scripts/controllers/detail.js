@@ -11,5 +11,8 @@
 angular.module('sardegnaclima')
 .controller('StationDetailsCtrl', function ($scope, station) {
         $scope.station = station;
+        $scope.getWindDirectionChar = function(dir){
+            return "↖";
+        }
 
   });

@@ -3,7 +3,7 @@
 require_once __DIR__ ."/../../../bootstrap.php";
 
 #summary
-$app->get('/v1/summary', function () use ($app, $serializer, $entityManager)  {
+$app->get('/v1/summary', function () use ($app, $entityManager)  {
     $stations = $entityManager->getRepository('Station')->findAll();
     $result = array();
     for($i = 0; $i < count($stations); $i++){
@@ -25,7 +25,8 @@ $app->get('/v1/summary', function () use ($app, $serializer, $entityManager)  {
                     "dp"=>$measure->getDp(),
                     "rain"=>$measure->getrain(),
                     "wspeed"=>$measure->getWspeed(),
-                    "dir"=>$measure->getDir()
+                    "dir"=>$measure->getDir(),
+                    "bar"=>$measure->getBar()
                 )
             );
     }

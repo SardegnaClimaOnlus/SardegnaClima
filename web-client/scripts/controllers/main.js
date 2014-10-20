@@ -9,8 +9,15 @@
  */
 
 angular.module('sardegnaclima')
-.controller('MainCtrl', function ($scope, $location, $anchorScroll, MainService,MapUtilities,Stations, currentStation,App) {
+.controller('MainCtrl', function ($scope,$rootScope, $location, $anchorScroll, MainService,MapUtilities,Stations, currentStation,App) {
+        console.log("-------");
+        $rootScope.$on("$routeChangeStart", function(){
+            $rootScope.loading = true;
+        });
 
+        $rootScope.$on("$routeChangeSuccess", function(){
+            $rootScope.loading = false;
+        });
 
         var addMarker = function(station){
             var div = document.createElement('DIV');
@@ -60,12 +67,11 @@ angular.module('sardegnaclima')
                 zoom: App.configurations.currentMapZoom,
                 disableDefaultUI: true,
                 mapTypeId: google.maps.MapTypeId.TERRAIN,
-                zoomControl: true,
                 minZoom: 8
             };
             var mapElem = $("#container").find("#map")[0];
-            var map = new google.maps.Map(mapElem, mapOptions);
-            Stations.map = map;
+            Stations.map =  new google.maps.Map(mapElem, mapOptions);
+
             //var lastValidCenter = bounds.getCenter();
             //Stations.map.panTo(lastValidCenter)
             google.maps.event.addListener(Stations.map, 'center_changed', function() {
@@ -90,16 +96,18 @@ angular.module('sardegnaclima')
 
             });
         };
-
-        google.maps.event.addDomListener(window, 'load', function() {
+        console.log("hello");
+        //google.maps.event.addDomListener(window, 'load', function() {
             if(App.status == 'LOADING'){
-                App.status = 'RUNNING';
+
+
+
                 loadMapPage();
+                App.status = 'RUNNING';
             }
             initStations();
-        });
+        //});
 
         App.status != 'LOADING' && loadMapPage();
-
 
   });

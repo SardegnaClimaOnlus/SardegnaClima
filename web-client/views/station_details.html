@@ -1,13 +1,151 @@
-<a href="#/main/{{station.id}}">back</a>
 
-<div class="station-detail-container">
-    <h1>{{station.name}}</h1>
-    <div>{{station.measure.date | scdate}}</div>
-    <div>{{station.measure.temp}}°</div>
-    <div>↑ {{station.measure.tempmax}}°</div>
-    <div>↓ {{station.measure.tempmin}}°</div>
-    <div>rain: {{station.measure.rain}} mm</div>
-    <div>wind: {{station.measure.dir}} {{station.measure.wspeed}} km/h</div>
-    <div>humidity: {{station.measure.hum}} %</div>
-    <div>dp: {{station.measure.dp}}°</div>
+<div class="navbar navbar-app navbar-absolute-top">
+    <div class="navbar-brand navbar-brand-center" yield-to="title">
+        <span>Sardegna Clima</span>
+    </div>
+    <div class="navbar-brand navbar-brand-center">
+
+    </div>
+    <div class="btn-group pull-left">
+        <div class="btn btn-navbar sidebar-toggle">
+            <a href="#/main/{{station.id}}">‹ Map</a>
+        </div>
+    </div>
 </div>
+
+<div content-for="title">
+    <span>  {{station.name}}</span>
+</div>
+<div class="app-body">
+    <div class="app-content">
+        <div class="scrollable">
+            <div class="scrollable-content">
+                <div class=" station-detail-container" >
+
+                    <div class="row-fluid measure-time-box">
+                        <div class="col-xs-12 col-sm-12">{{station.measure.date | scdate}}</div>
+                    </div>
+
+                    <div class="row temperature-box">
+                        <div class="col-xs-6 col-sm-6 station-temperature nopadding">{{station.measure.temp}}°</div>
+                        <div class="col-xs-5 col-sm-5 max-min-temperature-box ">
+                            <div class="row station-tempmax">↑ {{station.measure.tempmax}}°</div>
+                            <div class="row station-tempmin">↓ {{station.measure.tempmin}}°</div>
+                        </div>
+
+                        <!-- Add the extra clearfix for only the required viewport -->
+                        <div class="clearfix visible-xs-block"></div>
+
+
+                    </div>
+
+                    <table class="table table-hover">
+                        <tr>
+                            <td>rain</td>
+                            <td>{{station.measure.rain}} <span class="measure-unit">mm</span></td>
+                        </tr>
+                        <tr>
+                            <td>wind</td>
+                            <td>{{station.measure.wspeed}} <span class="measure-unit">{{getWindDirectionChar(station.measure.dir)}} km/h</span></td>
+                        </tr>
+                        <tr>
+                            <td>dp</td>
+                            <td>{{station.measure.dp}}°</td>
+                        </tr>
+                        <tr>
+                            <td>humidity</td>
+                            <td>{{station.measure.hum}}<span class="measure-unit">%</span></td>
+                        </tr>
+                        <tr>
+                            <td>pressure</td>
+                            <td>{{station.measure.bar}}<span class="measure-unit">mb</span></td>
+                        </tr>
+                        <!-- -->
+                        <tr>
+                            <td>rain</td>
+                            <td>{{station.measure.rain}} <span class="measure-unit">mm</span></td>
+                        </tr>
+                        <tr>
+                            <td>wind</td>
+                            <td>{{station.measure.wspeed}} <span class="measure-unit">{{getWindDirectionChar(station.measure.dir)}} km/h</span></td>
+                        </tr>
+                        <tr>
+                            <td>dp</td>
+                            <td>{{station.measure.dp}}°</td>
+                        </tr>
+                        <tr>
+                            <td>humidity</td>
+                            <td>{{station.measure.hum}}<span class="measure-unit">%</span></td>
+                        </tr>
+                        <tr>
+                            <td>pressure</td>
+                            <td>{{station.measure.bar}}<span class="measure-unit">mb</span></td>
+                        </tr><tr>
+                        <td>rain</td>
+                        <td>{{station.measure.rain}} <span class="measure-unit">mm</span></td>
+                    </tr>
+                        <tr>
+                            <td>wind</td>
+                            <td>{{station.measure.wspeed}} <span class="measure-unit">{{getWindDirectionChar(station.measure.dir)}} km/h</span></td>
+                        </tr>
+                        <tr>
+                            <td>dp</td>
+                            <td>{{station.measure.dp}}°</td>
+                        </tr>
+                        <tr>
+                            <td>humidity</td>
+                            <td>{{station.measure.hum}}<span class="measure-unit">%</span></td>
+                        </tr>
+                        <tr>
+                            <td>pressure</td>
+                            <td>{{station.measure.bar}}<span class="measure-unit">mb</span></td>
+                        </tr><tr>
+                        <td>rain</td>
+                        <td>{{station.measure.rain}} <span class="measure-unit">mm</span></td>
+                    </tr>
+                        <tr>
+                            <td>wind</td>
+                            <td>{{station.measure.wspeed}} <span class="measure-unit">{{getWindDirectionChar(station.measure.dir)}} km/h</span></td>
+                        </tr>
+                        <tr>
+                            <td>dp</td>
+                            <td>{{station.measure.dp}}°</td>
+                        </tr>
+                        <tr>
+                            <td>humidity</td>
+                            <td>{{station.measure.hum}}<span class="measure-unit">%</span></td>
+                        </tr>
+                        <tr>
+                            <td>pressure</td>
+                            <td>{{station.measure.bar}}<span class="measure-unit">mb</span></td>
+                        </tr><tr>
+                        <td>rain</td>
+                        <td>{{station.measure.rain}} <span class="measure-unit">mm</span></td>
+                    </tr>
+                        <tr>
+                            <td>wind</td>
+                            <td>{{station.measure.wspeed}} <span class="measure-unit">{{getWindDirectionChar(station.measure.dir)}} km/h</span></td>
+                        </tr>
+                        <tr>
+                            <td>dp</td>
+                            <td>{{station.measure.dp}}°</td>
+                        </tr>
+                        <tr>
+                            <td>humidity</td>
+                            <td>{{station.measure.hum}}<span class="measure-unit">%</span></td>
+                        </tr>
+                        <tr>
+                            <td>pressure</td>
+                            <td>{{station.measure.bar}}<span class="measure-unit">mb</span></td>
+                        </tr>
+
+                    </table>
+
+                    <!-- -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

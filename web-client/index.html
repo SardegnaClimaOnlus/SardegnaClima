@@ -12,25 +12,30 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/bootstrap/css/bootstrap.css">
+    <!--<link rel="stylesheet" href="styles/bootstrap/css/bootstrap.css">-->
+    <link rel="stylesheet" href="styles/mobile-angular-bootstrap/css/mobile-angular-ui-hover.css">
+    <link rel="stylesheet" href="styles/mobile-angular-bootstrap/css/mobile-angular-ui-base.css">
+    <link rel="stylesheet" href="styles/mobile-angular-bootstrap/css/mobile-angular-ui-desktop.css">
+
+
     <link rel="stylesheet" href="styles/main.css">
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVjv8LJblLLUcUJdpnTWGEbK2gNGlUGrw"></script>
+
     <!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>-->
 
     <!-- endbuild -->
 </head>
 <body  ng-app="sardegnaclima">
-    <div ng-view="" id="main-view"></div>
+<!-- Sidebars -->
+<div ng-include="'views/sidebar.html'" class="sidebar sidebar-left" toggleable parent-active-class="sidebar-left-in" id="mainSidebar"></div>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-51447533-1', 'buele.github.io');
-        ga('send', 'pageview');
-    </script>
+<!--<div ng-include="'sidebarRight.html'" class="sidebar sidebar-right" toggleable parent-active-class="sidebar-right-in" id="rightSidebar"></div>-->
+
+<div class="app">
+    <div ng-show="loading" class="app-content-loading">
+        <i class="fa fa-spinner fa-spin loading-spinner"></i>
+    </div>
+    <ng-view  ng-hide="loading"></ng-view>
+</div><!-- ~ .app -->
 
     <!-- build:js(.) scripts/oldieshim.js -->
     <!--[if lt IE 9]>
@@ -45,11 +50,13 @@
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVjv8LJblLLUcUJdpnTWGEbK2gNGlUGrw"></script>
     <script src="scripts/lib/jquery.js"></script>
     <script src="scripts/lib/moment.js"></script>
     <script src="scripts/lib/underscore.js"></script>
     <script src="scripts/lib/google-maps_rich-marker.js"></script>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="styles/mobile-angular-bootstrap/js/mobile-angular-ui.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
@@ -59,7 +66,8 @@
     <script src="bower_components/angular-touch/angular-touch.js"></script>
 
 
-    <script src="styles/bootstrap/js/bootstrap.js"></script>
+    <script src="styles/mobile-angular-bootstrap/js/mobile-angular-ui.js"></script>
+    <!--<script src="styles/bootstrap/js/bootstrap.js"></script>-->
 
     <script src="scripts/app.js"></script>
     <script src="scripts/services/main.js"></script>

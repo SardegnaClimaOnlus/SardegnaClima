@@ -16,7 +16,8 @@ angular
         'ngResource',
         'ngRoute',
         'ngSanitize',
-        'ngTouch'
+        'ngTouch',
+        'mobile-angular-ui'
   ])
     .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
@@ -42,14 +43,16 @@ angular
             }
         })
       .otherwise({
-        redirectTo: '/main'
+        redirectTo: '/main/0'
       });
   }])
     .run(function() {
-        console.log("hello from run in app.js");
+
 }).factory('App',function() {
         return{
             status: 'LOADING',
+            //baseUrl: "http://www.sardegna-clima.it/stazioni/",
+            baseUrl: "../",
             configurations: {
                 currentMapZoom : 8
             }
