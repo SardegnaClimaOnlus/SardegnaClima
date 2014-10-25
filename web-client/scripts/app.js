@@ -25,9 +25,9 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
             resolve: {
-                currentStation: function(Stations, $route){
-                    if(Stations.model )
-                        return _.findWhere(Stations.model, {id: parseInt($route.current.params.station_id)});
+                currentStation: function(Stations2, $route){
+                    if(Stations2.model )
+                        return _.findWhere(Stations2.model, {id: parseInt($route.current.params.station_id)});
                     else
                         return null;
                 }
@@ -37,8 +37,8 @@ angular
             templateUrl: 'views/station_details.html',
             controller: 'StationDetailsCtrl',
             resolve: {
-                station: function(Stations, $route){
-                    return _.findWhere(Stations.model, {id: parseInt($route.current.params.id)});
+                station: function(Stations2, $route){
+                    return _.findWhere(Stations2.model, {id: parseInt($route.current.params.id)});
                 }
             }
         })
@@ -46,15 +46,25 @@ angular
         redirectTo: '/main/0'
       });
   }])
-    .run(function() {
+    .run(function($rootScope) {
+        $rootScope.$on("$routeChangeStart", function(){
+            $rootScope.loading = true;
+        });
+
+        $rootScope.$on("$routeChangeSuccess", function(){
+            $rootScope.loading = false;
+        });
+
+
 
 }).factory('App',function() {
         return{
+            mode: "prod",
             status: 'LOADING',
             //baseUrl: "http://www.sardegna-clima.it/stazioni/",
             baseUrl: "../",
             configurations: {
-                currentMapZoom : 8
+                currentMapZoom : 7
             }
         };
     }).filter('scdate', function() {

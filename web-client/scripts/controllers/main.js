@@ -8,22 +8,20 @@
 
  */
 
+
 angular.module('sardegnaclima')
-.controller('MainCtrl', function ($scope,$rootScope, $location, $anchorScroll, MainService,MapUtilities,Stations, currentStation,App) {
-        console.log("-------");
-        $rootScope.$on("$routeChangeStart", function(){
-            $rootScope.loading = true;
-        });
 
-        $rootScope.$on("$routeChangeSuccess", function(){
-            $rootScope.loading = false;
-        });
-
-        var addMarker = function(station){
+    /*
+     * Sardegna Clima Marker Object
+     */
+    .factory('SardegnaClimaMarker', function($rootScope, $location){
+        return function(station, color, value){
+           // console.log("constructor of a marker");
+           // console.log(station);
             var div = document.createElement('DIV');
-            div.innerHTML = '<div style="border-radius: 50%;width: 20px;height: 20px;opacity:0.9;background-color:' + MapUtilities.colorByTemperature[parseInt(station.measure.temp) + '']+ ';color:#34495e;font-size: 11px;padding: 2px 2px 2px 2px;text-align: center;">'+ parseInt(station.measure.temp) + '</div>';
+            div.innerHTML = '<div style="border-radius: 50%;width: 20px;height: 20px;opacity:0.9;background-color:' + color +  ';color:#34495e;font-size: 11px;padding: 2px 2px 2px 2px;text-align: center;">'+ parseInt(value)+ '</div>';
             var marker = new RichMarker({
-                map: Stations.map,
+                map: null,
                 position: new google.maps.LatLng(station.latitude, station.longitude),
                 draggable: false,
                 flat: true,
@@ -32,82 +30,101 @@ angular.module('sardegnaclima')
                 station: station
             });
             google.maps.event.addListener(marker, 'click', function() {
-                Stations.map.setCenter(marker.getPosition());
-                $scope.$apply(function() {
-
-
-                    App.configurations.currentMapZoom = Stations.map.getZoom();
+                $rootScope.$apply(function() {
+                    console.log("marker.station clicked");
+                    console.log(marker.station);
                     $location.path('/station/' + marker.station.id);
                 });
 
             });
+            return marker;
+        }
+    })
+
+    /*
+     * Stations model Singleton
+     */
+    .factory('Stations2', function(){
+        return {
+            model: null
         };
+    })
 
-        var setMarkers = function(){
-            if(Stations.model)
-                for(var i = 0; i < Stations.model.length; i++)
-                    if(Stations.model[i].measure.temp)
-                        addMarker(Stations.model[i]);
-        };
-
-        var loadMapPage = function(){
-            var coordinates= {lat:40.026053, lon: 9.101251};
-            if(currentStation){
-                coordinates.lat =currentStation.latitude;
-                coordinates.lon =currentStation.longitude;
-            }
-            var bounds = new google.maps.LatLngBounds(
-                new google.maps.LatLng(38.773357, 9.986572),
-                new google.maps.LatLng(41.321138, 7.998047)
-
-            );
-            var defaultCenter = new google.maps.LatLng(coordinates.lat, coordinates.lon);
-            var mapOptions = {
-                center: defaultCenter,
+    /*
+     * Sardegna Clima Map Object
+     */
+    .factory('SardegnaClimaMap', function(SardegnaClimaMarker,Stations2,App,MapUtilities , $rootScope){
+        var defaultCoordinates= {lat:40.026053, lon: 9.101251},
+            mapOptions = {
+                center: new google.maps.LatLng(defaultCoordinates.lat, defaultCoordinates.lon),
                 zoom: App.configurations.currentMapZoom,
                 disableDefaultUI: true,
                 mapTypeId: google.maps.MapTypeId.TERRAIN,
-                minZoom: 8
+                minZoom: 7
             };
-            var mapElem = $("#container").find("#map")[0];
-            Stations.map =  new google.maps.Map(mapElem, mapOptions);
 
-            //var lastValidCenter = bounds.getCenter();
-            //Stations.map.panTo(lastValidCenter)
-            google.maps.event.addListener(Stations.map, 'center_changed', function() {
-
-                if (bounds.contains(Stations.map.getCenter())) {
-                    //lastValidCenter = Stations.map.getCenter();
-
-                }else{
-                    //Stations.map.panTo(defaultCenter);
+        var SardegnaClimaMap = {
+            map: null,
+            init: function(){
+                this.map = new google.maps.Map($("#container").find("#map")[0], mapOptions);
+            },
+            markers: {
+                temp: [],
+                rain: []
+            },
+            settings:{ mode: 'temp'},
+            markerTypes: ["temp", "rain"],
+            showMarkersByType: function(type){
+                console.log("showMarkersByType");
+                for(var i = 0; i < this.markers[type].length; i++){
+                    console.log("this.markers[type][i]: " );
+                    console.log(this.markers[type][i]);
+                    this.markers[type][i].map = this.map;
                 }
 
-            });
-
-
-            setMarkers();
-
-        };
-        var initStations = function(){
-            MainService.getSummary().then(function(summary){
-                Stations.model = summary;
-                setMarkers();
-
-            });
-        };
-        console.log("hello");
-        //google.maps.event.addDomListener(window, 'load', function() {
-            if(App.status == 'LOADING'){
-
-
-
-                loadMapPage();
-                App.status = 'RUNNING';
+            },
+            hideMarkers: function(type){
+                console.log("hideMarkers()");
+                console.log();
+                for(var i = 0; i < this.markers[type].length; i++)
+                    this.markers[type][i].map = null;
+            },
+            cleanMap: function(){
+                for(var i = 0; i < this.markerTypes.length; i++)
+                    this.hideMarkers(this.markerTypes[i]);
+            },
+            generateMarkers: function(){
+                for(var i = 0; i < this.markerTypes.length; i++)
+                    this.generateMarkersByType(this.markerTypes[i]);
+            },
+            generateMarkersByType: function(type){
+                for(var i = 0; i < Stations2.model.length; i++)
+                    this.markers[type].push(new SardegnaClimaMarker(Stations2.model[i], MapUtilities.getColorByTypeAndValue(type, Stations2.model[i].measure[type]), Stations2.model[i].measure[type]));
             }
-            initStations();
-        //});
+        };
 
-        App.status != 'LOADING' && loadMapPage();
+        SardegnaClimaMap.init();
+        return SardegnaClimaMap;
+    })
+    .controller('MainCtrl', function ($scope, $rootScope, $location, $anchorScroll, MainService, MapUtilities, Stations2, currentStation, App,SardegnaClimaMap) {
 
-  });
+        function init(){
+            SardegnaClimaMap.init();
+            SardegnaClimaMap.cleanMap();
+            SardegnaClimaMap.showMarkersByType('temp');
+        }
+
+        if(!Stations2.model)
+            MainService.getSummary().then(function(summary){
+                console.log("//// http /////");
+                Stations2.model = summary;
+                SardegnaClimaMap.generateMarkers();
+                init();
+            });
+        else
+            init();
+
+        $rootScope.setMapMode = function(mode){
+            console.log(mode);
+        }
+    });
