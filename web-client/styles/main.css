@@ -151,4 +151,5 @@ html, body{
     bottom:25px;
     right:25px;
     height: 60px;
+    z-index: 99999999;
 }

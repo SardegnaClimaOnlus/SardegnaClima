@@ -61,12 +61,13 @@ angular.module('sardegnaclima')
             map: null,
             init: function(){
                 this.map = new google.maps.Map($("#container").find("#map")[0], mapOptions);
+                this.settings.mode = "temp";
             },
             markers: {
                 temp: [],
                 rain: []
             },
-            settings:{ mode: 'temp'},
+            settings:{ mode: "temp"},
             markerTypes: ["temp", "rain"],
             resetPositionAndZoom: function(){
                 this.map.setZoom(defaultZoom);
@@ -102,7 +103,7 @@ angular.module('sardegnaclima')
         function init(){
             SardegnaClimaMap.resetPositionAndZoom();
             SardegnaClimaMap.cleanMap();
-            SardegnaClimaMap.showMarkersByType('temp');
+            SardegnaClimaMap.showMarkersByType(SardegnaClimaMap.settings.mode);
         }
 
         if(!Stations2.model)
@@ -116,7 +117,7 @@ angular.module('sardegnaclima')
             init();
 
         $rootScope.setMapMode = function(mode){
-            // TODO: change map mode here
+            SardegnaClimaMap.settings.mode  = mode;
             SardegnaClimaMap.cleanMap();
             SardegnaClimaMap.showMarkersByType(mode);
 
