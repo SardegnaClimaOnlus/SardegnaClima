@@ -10,14 +10,11 @@
 
 
 angular.module('sardegnaclima')
-
     /*
      * Sardegna Clima Marker Object
      */
     .factory('SardegnaClimaMarker', function($rootScope, $location){
         return function(station, color, value){
-           // console.log("constructor of a marker");
-           // console.log(station);
             var div = document.createElement('DIV');
             div.innerHTML = '<div style="border-radius: 50%;width: 20px;height: 20px;opacity:0.9;background-color:' + color +  ';color:#34495e;font-size: 11px;padding: 2px 2px 2px 2px;text-align: center;">'+ parseInt(value)+ '</div>';
             var marker = new RichMarker({
@@ -31,11 +28,8 @@ angular.module('sardegnaclima')
             });
             google.maps.event.addListener(marker, 'click', function() {
                 $rootScope.$apply(function() {
-                    console.log("marker.station clicked");
-                    console.log(marker.station);
                     $location.path('/station/' + marker.station.id);
                 });
-
             });
             return marker;
         }
@@ -54,15 +48,15 @@ angular.module('sardegnaclima')
      * Sardegna Clima Map Object
      */
     .factory('SardegnaClimaMap', function(SardegnaClimaMarker,Stations2,App,MapUtilities , $rootScope){
-        var defaultCoordinates= {lat:40.026053, lon: 9.101251},
+        var defaultCenter= new google.maps.LatLng(40.026053, 9.101251),
+            defaultZoom = 7,
             mapOptions = {
-                center: new google.maps.LatLng(defaultCoordinates.lat, defaultCoordinates.lon),
+                center: defaultCenter,
                 zoom: App.configurations.currentMapZoom,
                 disableDefaultUI: true,
                 mapTypeId: google.maps.MapTypeId.TERRAIN,
-                minZoom: 7
+                minZoom: defaultZoom
             };
-
         var SardegnaClimaMap = {
             map: null,
             init: function(){
@@ -74,20 +68,17 @@ angular.module('sardegnaclima')
             },
             settings:{ mode: 'temp'},
             markerTypes: ["temp", "rain"],
+            resetPositionAndZoom: function(){
+                this.map.setZoom(defaultZoom);
+                this.map.setCenter(defaultCenter);
+            },
             showMarkersByType: function(type){
-                console.log("showMarkersByType");
-                for(var i = 0; i < this.markers[type].length; i++){
-                    console.log("this.markers[type][i]: " );
-                    console.log(this.markers[type][i]);
-                    this.markers[type][i].map = this.map;
-                }
-
+                for(var i = 0; i < this.markers[type].length; i++)
+                    this.markers[type][i].setMap( this.map);
             },
             hideMarkers: function(type){
-                console.log("hideMarkers()");
-                console.log();
                 for(var i = 0; i < this.markers[type].length; i++)
-                    this.markers[type][i].map = null;
+                    this.markers[type][i].setMap( null);
             },
             cleanMap: function(){
                 for(var i = 0; i < this.markerTypes.length; i++)
@@ -104,27 +95,30 @@ angular.module('sardegnaclima')
         };
 
         SardegnaClimaMap.init();
+
         return SardegnaClimaMap;
     })
     .controller('MainCtrl', function ($scope, $rootScope, $location, $anchorScroll, MainService, MapUtilities, Stations2, currentStation, App,SardegnaClimaMap) {
-
         function init(){
-            SardegnaClimaMap.init();
+            SardegnaClimaMap.resetPositionAndZoom();
             SardegnaClimaMap.cleanMap();
             SardegnaClimaMap.showMarkersByType('temp');
         }
 
         if(!Stations2.model)
             MainService.getSummary().then(function(summary){
-                console.log("//// http /////");
                 Stations2.model = summary;
                 SardegnaClimaMap.generateMarkers();
+                SardegnaClimaMap.init();
                 init();
             });
         else
             init();
 
         $rootScope.setMapMode = function(mode){
-            console.log(mode);
+            // TODO: change map mode here
+            SardegnaClimaMap.cleanMap();
+            SardegnaClimaMap.showMarkersByType(mode);
+
         }
     });
