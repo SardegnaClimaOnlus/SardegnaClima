@@ -69,7 +69,7 @@ angular
         };
     }).filter('scdate', function() {
         return function(date) {
-            return moment(date).fromNow();
+            return moment(date).lang("it").fromNow();
         };
     });
 

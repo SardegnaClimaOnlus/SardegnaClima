@@ -21,50 +21,39 @@
         <div class="scrollable">
             <div class="scrollable-content">
                 <div class=" station-detail-container" >
-
                     <div class="row-fluid measure-time-box">
                         <div class="col-xs-12 col-sm-12">{{station.measure.date | scdate}}</div>
                     </div>
-
                     <div class="row temperature-box">
-                        <div class="col-xs-6 col-sm-6 station-temperature nopadding">{{station.measure.temp}}°</div>
+                        <div class="col-xs-6 col-sm-6 station-temperature nopadding">{{station.measure.temp}}<span class="temp-unit">°C</span></div>
                         <div class="col-xs-5 col-sm-5 max-min-temperature-box ">
-                            <div class="row station-tempmax">↑ {{station.measure.tempmax}}°</div>
-                            <div class="row station-tempmin">↓ {{station.measure.tempmin}}°</div>
+                            <div class="row station-tempmax">max {{station.measure.tempmax}}<span class="measure-unit max-min-unit">°C</span></div>
+                            <div class="row station-tempmin">min {{station.measure.tempmin}}<span class="measure-unit max-min-unit">°C</span></div>
                         </div>
-
-                        <!-- Add the extra clearfix for only the required viewport -->
                         <div class="clearfix visible-xs-block"></div>
-
-
                     </div>
-
                     <table class="table table-hover">
                         <tr>
-                            <td>rain</td>
+                            <td>Pioggia</td>
                             <td>{{station.measure.rain}} <span class="measure-unit">mm</span></td>
                         </tr>
                         <tr>
-                            <td>wind</td>
+                            <td>Vento</td>
                             <td>{{station.measure.wspeed}} <span class="measure-unit">{{getWindDirectionChar(station.measure.dir)}} km/h</span></td>
                         </tr>
                         <tr>
-                            <td>dp</td>
-                            <td>{{station.measure.dp}}°</td>
+                            <td>Punto di rugiada</td>
+                            <td>{{station.measure.dp}}<span class="measure-unit">°C</span></td>
                         </tr>
                         <tr>
-                            <td>humidity</td>
+                            <td>Umidità</td>
                             <td>{{station.measure.hum}}<span class="measure-unit">%</span></td>
                         </tr>
                         <tr>
-                            <td>pressure</td>
+                            <td>Pressione</td>
                             <td>{{station.measure.bar}}<span class="measure-unit">mb</span></td>
                         </tr>
-
-
                     </table>
-
-                    <!-- -->
                 </div>
             </div>
         </div>

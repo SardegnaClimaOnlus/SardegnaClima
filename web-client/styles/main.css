@@ -41,22 +41,39 @@ html, body{
 }
 
 .station-tempmin, .station-tempmax{
-    font-size: 25px;
+    font-size: 20px;
     margin-left: 5px;
 }
 
 .station-tempmax{
-    color:#C0392B;
+    /*color:#C0392B;*/
+    top: 3px;
+    position: relative;
 }
 
 .station-tempmin{
-    color: #22A7F0;
+    top: 12px;
+    position: relative;
+    /*color: #22A7F0;*/
 }
 
 .max-min-temperature-box{
     padding: 17px 20px 25px 20px;
     /*text-align: right;*/
 
+}
+
+.max-min-unit{
+    top: -7px;
+    position: relative;
+    left: 3px;
+}
+
+.temp-unit{
+    top: -35px;
+    position: relative;
+    left: 3px;
+    font-size: 20px;
 }
 
 .measure-time-box{
@@ -72,6 +89,7 @@ html, body{
 
 .measure-unit{
     font-size: 10px;
+    margin-left: 4px;
 }
 
 .temperature-box{
