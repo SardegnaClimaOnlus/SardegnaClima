@@ -61,7 +61,7 @@ class StationDataParserContext{
                 }
                 // filter too old measure
                 $date = new \DateTime();
-                $date->modify('-30 minutes');
+                $date->modify('-3 hours');
                 if($measure && $measure->getDate() > $date){
                     return $measure;
                 }

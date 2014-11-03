@@ -3,3 +3,4 @@ composer.lock
 .idea
 config/yaml/configurations.yml
 composer.phar
+Apps/Core/logs

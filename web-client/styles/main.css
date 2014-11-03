@@ -93,29 +93,7 @@ html, body{
     margin-right: 5px !important;
 }
 
-.humidity {
-    display: block;
-    width: 24px;
-    height: 24px;
-    background-image: url(../images/hum.png);
-    /*margin-top: 5px;*/
-}
 
-.rain{
-    display: block;
-    width: 24px;
-    height: 24px;
-    background-image: url(../images/rain.png);
-    /*margin-top: 5px;*/
-}
-
-.wind{
-    display: block;
-    width: 24px;
-    height: 24px;
-    background-image: url(../images/wind.png);
-    /*margin-top: 5px;*/
-}
 
 .measure-value{
     margin-left: 20px !important;
@@ -136,4 +114,23 @@ html, body{
     border-color: #F9BF3B;
 }
 
+.map-toolbar{
+    background-color: transparent !important;
+    border-color: transparent;
+}
 
+.map-toolbar-title{
+    background-color: transparent !important;
+    border-color: transparent;
+}
+.map-settings-button{
+    color: #3A539B !important;
+}
+
+/**** sardegna clima logo ****/
+.sardegna-clima-logo{
+    position: fixed;
+    bottom:25px;
+    right:25px;
+    height: 60px;
+}
