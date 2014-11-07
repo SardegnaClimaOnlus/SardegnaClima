@@ -16,7 +16,9 @@ angular.module('sardegnaclima')
     .factory('SardegnaClimaMarker', function($rootScope, $location){
         return function(station, color, value){
             var div = document.createElement('DIV');
-            div.innerHTML = '<div style="border-radius: 50%;width: 20px;height: 20px;opacity:0.9;background-color:' + color +  ';color:#34495e;font-size: 11px;padding: 2px 2px 2px 2px;text-align: center;">'+ parseInt(value)+ '</div>';
+            value = (value==="null")?"ND":value;
+            value = (value===null)?"ND":value;
+            div.innerHTML = '<div style="border-radius: 50%;width: 25px;height: 25px;opacity:0.9;background-color:' + color +  ';color:#34495e;font-size: 11px;padding: 5px 2px 2px 2px;text-align: center;">'+ value + '</div>';
             var marker = new RichMarker({
                 map: null,
                 position: new google.maps.LatLng(station.latitude, station.longitude),
@@ -120,6 +122,7 @@ angular.module('sardegnaclima')
             SardegnaClimaMap.settings.mode  = mode;
             SardegnaClimaMap.cleanMap();
             SardegnaClimaMap.showMarkersByType(mode);
+            $location.path('/main/init');
 
         }
     });

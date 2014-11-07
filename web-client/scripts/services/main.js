@@ -81,39 +81,41 @@ angular.module('sardegnaclima')
                     },
                     "rain": function(rain){
                         console.log(rain);
+                        if(rain === null) return "#BFBFBF";
+                        rain = parseFloat(rain);
                             if(rain == 0)
                                 return "#FFFFFF";
-                            else if( 0 > rain >= 0.5)
+                            else if( 0 > rain && rain <= 0.5)
                                 return "#D6E2FF";
-                            else if(0.5 > rain >= 1)
+                            else if(0.5 > rain && rain <= 1)
                                 return "#B5C9FF";
-                            else if(1 > rain >= 2)
+                            else if(1 > rain && rain <= 2)
                                 return "#8EB2FF";
-                            else if(2 > rain >= 5)
+                            else if(2 > rain && rain <= 5)
                                 return "#7F96FF";
-                            else if(5 > rain >= 10)
+                            else if(5 > rain && rain <= 10)
                                 return "#6370F8";
-                            else if(10 > rain >= 15)
+                            else if(10 > rain && rain <= 15)
                                 return "#0063FF";
-                            else if(15 > rain >= 20)
+                            else if(15 > rain && rain <= 20)
                                 return "#009696";
-                            else if(20 > rain >= 30)
+                            else if(20 > rain && rain <= 30)
                                 return "#00C633";
-                            else if(30 > rain >= 40)
+                            else if(30 > rain && rain <= 40)
                                return  "#63FF00";
-                            else if(40 > rain >= 50)
+                            else if(40 > rain && rain <= 50)
                                 return "#96FF00";
-                            else if(50 > rain >= 60)
+                            else if(50 > rain && rain <= 60)
                                 return  "#C6FF33";
-                            else if(60 > rain >= 80)
+                            else if(60 > rain && rain <= 80)
                                 return "#FFFF00";
-                            else if(80 > rain >= 100)
+                            else if(80 > rain && rain <= 100)
                                 return "#FFC600";
-                            else if(100 > rain >= 120)
+                            else if(100 > rain && rain <= 120)
                                 return "#FFA000"
-                            else if(120 > rain >= 150)
+                            else if(120 > rain && rain <= 150)
                                 return "#FF7C00";
-                            else if(150 > rain >= 200)
+                            else if(150 > rain && rain <= 200)
                                 return "#FF1900";
                             else if(rain > 200)
                                 return "#FF1900";

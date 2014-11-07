@@ -7,7 +7,8 @@ class StationDataParserContext{
 	private $strategy = null;
 	public function __construct($station, $filter) {
         if(!count($filter) || in_array( $station->getType(), $filter)) {
-            \Logger::getLogger('parser')->trace("processing station type: " . $station->getType());
+            \Logger::getLogger('parser')->trace("station type: " . $station->getType());
+            \Logger::getLogger('parser')->trace("station data_source: " . $station->getDataUrl());
             switch ($station->getType()) {
                 case "CLIENTRAW":
                     $this->strategy = new ClientRawParser($station);

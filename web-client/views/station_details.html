@@ -25,33 +25,38 @@
                         <div class="col-xs-12 col-sm-12">{{station.measure.date | scdate}}</div>
                     </div>
                     <div class="row temperature-box">
-                        <div class="col-xs-6 col-sm-6 station-temperature nopadding">{{station.measure.temp}}<span class="temp-unit">°C</span></div>
-                        <div class="col-xs-5 col-sm-5 max-min-temperature-box ">
-                            <div class="row station-tempmax">max {{station.measure.tempmax}}<span class="measure-unit max-min-unit">°C</span></div>
-                            <div class="row station-tempmin">min {{station.measure.tempmin}}<span class="measure-unit max-min-unit">°C</span></div>
-                        </div>
+                        <div class="col-xs-12 col-sm-12 station-temperature nopadding">{{station.measure.temp}}°C</div>
+                        
                         <div class="clearfix visible-xs-block"></div>
                     </div>
                     <table class="table table-hover">
                         <tr>
+                            <td>Max</td>
+                            <td><span class="station-tempmax">{{station.measure.tempmax}}</span> °C</td>
+                        </tr>
+                        <tr>
+                            <td>Min</td>
+                            <td><span class="station-tempmin">{{station.measure.tempmin}}</span> °C</td>
+                        </tr>
+                        <tr>
                             <td>Pioggia</td>
-                            <td>{{station.measure.rain}} <span class="measure-unit">mm</span></td>
+                            <td>{{(station.measure.rain)?station.measure.rain:"ND"}} mm</td>
                         </tr>
                         <tr>
                             <td>Vento</td>
-                            <td>{{station.measure.wspeed}} <span class="measure-unit">{{getWindDirectionChar(station.measure.dir)}} km/h</span></td>
+                            <td>{{station.measure.wspeed}} {{getWindDirectionChar(station.measure.dir)}} km/h</td>
                         </tr>
                         <tr>
                             <td>Punto di rugiada</td>
-                            <td>{{station.measure.dp}}<span class="measure-unit">°C</span></td>
+                            <td>{{station.measure.dp}} °C </td>
                         </tr>
                         <tr>
                             <td>Umidità</td>
-                            <td>{{station.measure.hum}}<span class="measure-unit">%</span></td>
+                            <td>{{station.measure.hum}} % </td>
                         </tr>
                         <tr>
                             <td>Pressione</td>
-                            <td>{{station.measure.bar}}<span class="measure-unit">mb</span></td>
+                            <td>{{station.measure.bar}} mb </td>
                         </tr>
                     </table>
                 </div>
