@@ -157,3 +157,9 @@ html, body{
 .map-mode-active{
     font-weight: bold;
 }
+
+.map-button{
+    background-image: url("../images/map.png");
+    width: 24px;
+    height: 24px;
+}
