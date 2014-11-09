@@ -15,7 +15,10 @@ class Downld02Parser extends Parser implements StationParserInterface{
 
 
         $line = trim(preg_replace("/[\s,]+/", " ", $line));
-        list($date, $time, $temp, $tempmax, $tempmin, $hum, $dp, $wspeed, $dir, $wrun, $whi, $whidir, $wchill, $hindex, $thwi, $bar, $rain, $rr, $inutile2, $cooldd) = explode(" ",$line);
+        \Logger::getLogger('measure')->debug("_____________>>>_____>>> testing DOWLD02: rain:");
+        \Logger::getLogger('measure')->debug("line: ");
+        \Logger::getLogger('measure')->debug($line);
+        list($date, $time, $temp, $tempmax, $tempmin, $hum, $dp, $wspeed, $dir, $wrun, $whi, $whidir, $wchill, $hindex, $thwi, $useless, $bar, $rain, $rr, $inutile2, $cooldd) = explode(" ",$line);
         // date
         list($giorno, $mese, $anno) = explode("/",$date);
         $anno = '20' . $anno;
@@ -36,6 +39,10 @@ class Downld02Parser extends Parser implements StationParserInterface{
         $measure->setWspeed($wspeed);
         $measure->setDir($dir);
         $measure->setBar($bar);
+        \Logger::getLogger('measure')->debug($rain);
+        $rainInTheDay = $this->em->getRepository('Measure')->getLastRainDuringTheDayByStation($this->station);
+        \Logger::getLogger('measure')->debug("rainInTheDay");
+        \Logger::getLogger('measure')->debug("$rainInTheDay");
         $effectiveRain = $this->em->getRepository('Measure')->getLastRainDuringTheDayByStation($this->station) + $rain;
         $measure->setRain($effectiveRain);
         $measure->setRr($rr);

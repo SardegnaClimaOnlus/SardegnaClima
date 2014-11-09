@@ -1,1618 +1,194 @@
 DEBUG - Getting filters from user...
-DEBUG - filters: []
+DEBUG - filters: ["DOWNLD02"]
 DEBUG - Getting stations list...
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Asuni(OR) - 233 mt slm, and id: 2
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://www.monteualla.it/meteoasuni/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 14.4
-TRACE - setTempmax
-TRACE - 18.1
-TRACE - setTempmin
-TRACE - 6.2
-TRACE - setHum
-TRACE - 81
-TRACE - setDp
-TRACE - 11.2
-TRACE - setWChill
-TRACE - 14.4
-TRACE - setHindex
-TRACE - 14.4
-TRACE - setWspeed
-TRACE - 2.7
-TRACE - setDir
-TRACE - NW
-TRACE - setBar
-TRACE - 1011.4
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 15.6
-TRACE - setRainyr
-TRACE - 534.9
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:02:51.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7330
+ERROR - measure invalid, for station with name: Asuni(OR) - 233 mt slm, and id: 2
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Desulo(NU) - 945 mt slm, and id: 3
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://desulometeo.altervista.org/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 10.8
-TRACE - setTempmax
-TRACE - 13.0
-TRACE - setTempmin
-TRACE - 5.5
-TRACE - setHum
-TRACE - 87
-TRACE - setDp
-TRACE - 8.7
-TRACE - setWChill
-TRACE - 10.8
-TRACE - setHindex
-TRACE - 10.8
-TRACE - setWspeed
-TRACE - 0.2
-TRACE - setDir
-TRACE - S
-TRACE - setBar
-TRACE - 1006.6
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 13.6
-TRACE - setRainyr
-TRACE - 840.6
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:03:07.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7331
+ERROR - measure invalid, for station with name: Desulo(NU) - 945 mt slm, and id: 3
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Guspini(CA) - 90 mt slm, and id: 4
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://www.guspinimeteo.it/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 17.4
-TRACE - setTempmax
-TRACE - 19.2
-TRACE - setTempmin
-TRACE - 13.8
-TRACE - setHum
-TRACE - 81
-TRACE - setDp
-TRACE - 14.1
-TRACE - setWChill
-TRACE - 17.4
-TRACE - setHindex
-TRACE - 17.4
-TRACE - setWspeed
-TRACE - 7.8
-TRACE - setDir
-TRACE - NW
-TRACE - setBar
-TRACE - 1008.5
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 8.4
-TRACE - setRainyr
-TRACE - 473.2
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 18:15:49.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7332
+ERROR - measure invalid, for station with name: Guspini(CA) - 90 mt slm, and id: 4
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Ollolai(NU) - 950 mt slm, and id: 5
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://ollolai.altervista.org/clientrawollo.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 8.4
-TRACE - setTempmax
-TRACE - 8.4
-TRACE - setTempmin
-TRACE - 5.3
-TRACE - setHum
-TRACE - 86
-TRACE - setDp
-TRACE - 6.2
-TRACE - setWChill
-TRACE - 8.4
-TRACE - setHindex
-TRACE - 8.4
-TRACE - setWspeed
-TRACE - 0.0
-TRACE - setDir
-TRACE - ENE
-TRACE - setBar
-TRACE - 1004.1
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 10.8
-TRACE - setRainyr
-TRACE - 415.2
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 09:59:23.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-ERROR - expired measure
 ERROR - measure invalid, for station with name: Ollolai(NU) - 950 mt slm, and id: 5
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Ozieri(SS) - 420 mt slm, and id: 6
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://ozierimeteo.altervista.org/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 13.0
-TRACE - setTempmax
-TRACE - 13.6
-TRACE - setTempmin
-TRACE - 8.2
-TRACE - setHum
-TRACE - 83
-TRACE - setDp
-TRACE - 10.2
-TRACE - setWChill
-TRACE - 13.0
-TRACE - setHindex
-TRACE - 13.0
-TRACE - setWspeed
-TRACE - 0.6
-TRACE - setDir
-TRACE - WNW
-TRACE - setBar
-TRACE - 1009.1
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 12.2
-TRACE - setRainyr
-TRACE - 371.4
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:03:22.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7333
+ERROR - measure invalid, for station with name: Ozieri(SS) - 420 mt slm, and id: 6
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: San Vito(CA) - 40 mt slm, and id: 7
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://sanvitometeo.altervista.org/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 17.5
-TRACE - setTempmax
-TRACE - 19.6
-TRACE - setTempmin
-TRACE - 14.4
-TRACE - setHum
-TRACE - 66
-TRACE - setDp
-TRACE - 11.1
-TRACE - setWChill
-TRACE - 17.5
-TRACE - setHindex
-TRACE - 17.5
-TRACE - setWspeed
-TRACE - 0.0
-TRACE - setDir
-TRACE - NNW
-TRACE - setBar
-TRACE - 1003.9
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 9.4
-TRACE - setRainyr
-TRACE - 151.4
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:03:07.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7334
+ERROR - measure invalid, for station with name: San Vito(CA) - 40 mt slm, and id: 7
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Oristano - 10 mt slm, and id: 8
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://www.oristanometeo.com/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 16.4
-TRACE - setTempmax
-TRACE - 19.2
-TRACE - setTempmin
-TRACE - 10.1
-TRACE - setHum
-TRACE - 80
-TRACE - setDp
-TRACE - 12.9
-TRACE - setWChill
-TRACE - 16.4
-TRACE - setHindex
-TRACE - 16.4
-TRACE - setWspeed
-TRACE - 1.0
-TRACE - setDir
-TRACE - NNE
-TRACE - setBar
-TRACE - 1009.1
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 22.4
-TRACE - setRainyr
-TRACE - 388.7
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:05:02.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7335
+ERROR - measure invalid, for station with name: Oristano - 10 mt slm, and id: 8
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Quartu S.E.(CA) - 15 mt slm, and id: 9
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://quartuweather.altervista.org/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 16.4
-TRACE - setTempmax
-TRACE - 18.0
-TRACE - setTempmin
-TRACE - 11.8
-TRACE - setHum
-TRACE - 77
-TRACE - setDp
-TRACE - 12.4
-TRACE - setWChill
-TRACE - 16.4
-TRACE - setHindex
-TRACE - 16.4
-TRACE - setWspeed
-TRACE - 6.5
-TRACE - setDir
-TRACE - NNW
-TRACE - setBar
-TRACE - 1008.5
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 21.1
-TRACE - setRainyr
-TRACE - 39.6
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:03:06.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7336
+ERROR - measure invalid, for station with name: Quartu S.E.(CA) - 15 mt slm, and id: 9
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Laconi(NU) - 512 mt slm, and id: 10
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://www.laconimeteo.it/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 12.4
-TRACE - setTempmax
-TRACE - 15.1
-TRACE - setTempmin
-TRACE - 9.1
-TRACE - setHum
-TRACE - 81
-TRACE - setDp
-TRACE - 9.2
-TRACE - setWChill
-TRACE - 12.4
-TRACE - setHindex
-TRACE - 12.4
-TRACE - setWspeed
-TRACE - 0.1
-TRACE - setDir
-TRACE - N
-TRACE - setBar
-TRACE - 1010.4
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 8.2
-TRACE - setRainyr
-TRACE - 428.8
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:02:39.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7337
+ERROR - measure invalid, for station with name: Laconi(NU) - 512 mt slm, and id: 10
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Iglesias(CA) - 230 mt slm, and id: 11
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://www.isolameteo.it/joomla/wdl/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 13.1
-TRACE - setTempmax
-TRACE - 15.4
-TRACE - setTempmin
-TRACE - 11.9
-TRACE - setHum
-TRACE - 77
-TRACE - setDp
-TRACE - 9.2
-TRACE - setWChill
-TRACE - 13.1
-TRACE - setHindex
-TRACE - 13.1
-TRACE - setWspeed
-TRACE - 0.0
-TRACE - setDir
-TRACE - N
-TRACE - setBar
-TRACE - 1009.1
-TRACE - setRain
-TRACE - 5.1
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 5.1
-TRACE - setRainyr
-TRACE - 598.1
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-06 22:52:11.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-ERROR - expired measure
 ERROR - measure invalid, for station with name: Iglesias(CA) - 230 mt slm, and id: 11
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Sinnai(CA) - 153 mt slm, and id: 12
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://sinnaimeteo.altervista.org/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 15.3
-TRACE - setTempmax
-TRACE - 17.7
-TRACE - setTempmin
-TRACE - 13.0
-TRACE - setHum
-TRACE - 81
-TRACE - setDp
-TRACE - 12.1
-TRACE - setWChill
-TRACE - 15.3
-TRACE - setHindex
-TRACE - 15.3
-TRACE - setWspeed
-TRACE - 12.6
-TRACE - setDir
-TRACE - WNW
-TRACE - setBar
-TRACE - 1006.0
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 13.8
-TRACE - setRainyr
-TRACE - 221.0
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:00:01.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7338
+ERROR - measure invalid, for station with name: Sinnai(CA) - 153 mt slm, and id: 12
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Borore(NU) - 400 mt slm, and id: 13
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://www.bororemeteo-live.it/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 13.4
-TRACE - setTempmax
-TRACE - 16.4
-TRACE - setTempmin
-TRACE - 9.3
-TRACE - setHum
-TRACE - 85
-TRACE - setDp
-TRACE - 10.9
-TRACE - setWChill
-TRACE - 13.4
-TRACE - setHindex
-TRACE - 13.4
-TRACE - setWspeed
-TRACE - 14.3
-TRACE - setDir
-TRACE - WNW
-TRACE - setBar
-TRACE - 1009.7
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 17.2
-TRACE - setRainyr
-TRACE - 495.0
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:03:14.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7339
+ERROR - measure invalid, for station with name: Borore(NU) - 400 mt slm, and id: 13
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Tula(SS) - 275 mt slm, and id: 14
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://www.meteotula.altervista.org/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 16.4
-TRACE - setTempmax
-TRACE - 16.9
-TRACE - setTempmin
-TRACE - 8.9
-TRACE - setHum
-TRACE - 78
-TRACE - setDp
-TRACE - 12.5
-TRACE - setWChill
-TRACE - 16.4
-TRACE - setHindex
-TRACE - 16.4
-TRACE - setWspeed
-TRACE - 0.9
-TRACE - setDir
-TRACE - NW
-TRACE - setBar
-TRACE - 1017.0
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 8.2
-TRACE - setRainyr
-TRACE - 358.9
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:00:42.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7340
+ERROR - measure invalid, for station with name: Tula(SS) - 275 mt slm, and id: 14
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Chia(CA) - 55 mt slm, and id: 15
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://meteochia.altervista.org/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 0.0
-TRACE - setTempmax
-TRACE - 0.0
-TRACE - setTempmin
-TRACE - 0.0
-TRACE - setHum
-TRACE - 0
-TRACE - setDp
-TRACE - 0.0
-TRACE - setWChill
-TRACE - -3.5
-TRACE - setHindex
-TRACE - 0.0
-TRACE - setWspeed
-TRACE - 5.9
-TRACE - setDir
-TRACE - WSW
-TRACE - setBar
-TRACE - 1003.8
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 0.0
-TRACE - setRainyr
-TRACE - 129.8
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-05 08:43:00.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-ERROR - expired measure
 ERROR - measure invalid, for station with name: Chia(CA) - 55 mt slm, and id: 15
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Biasi`(NU) - 150 mt slm, and id: 16
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://www.biasimeteo.altervista.org/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - attempt #1
-TRACE - attempt #2
-TRACE - attempt #3
-TRACE - attempt #4
-ERROR - expired measure
 ERROR - measure invalid, for station with name: Biasi`(NU) - 150 mt slm, and id: 16
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Su Filariu(NU) - 1370 mt slm, and id: 17
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://bruncuspina2.altervista.org/pino/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 7.1
-TRACE - setTempmax
-TRACE - 7.4
-TRACE - setTempmin
-TRACE - 2.2
-TRACE - setHum
-TRACE - 92
-TRACE - setDp
-TRACE - 5.9
-TRACE - setWChill
-TRACE - 7.1
-TRACE - setHindex
-TRACE - 7.1
-TRACE - setWspeed
-TRACE - 0.0
-TRACE - setDir
-TRACE - NNE
-TRACE - setBar
-TRACE - 1005.5
-TRACE - setRain
-TRACE - 0.5
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 28.3
-TRACE - setRainyr
-TRACE - 522.8
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:00:26.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7341
+ERROR - measure invalid, for station with name: Su Filariu(NU) - 1370 mt slm, and id: 17
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Nuoro - 548 mt slm, and id: 18
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://meteonuoro.altervista.org/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 12.3
-TRACE - setTempmax
-TRACE - 13.8
-TRACE - setTempmin
-TRACE - 7.0
-TRACE - setHum
-TRACE - 79
-TRACE - setDp
-TRACE - 8.8
-TRACE - setWChill
-TRACE - 12.3
-TRACE - setHindex
-TRACE - 12.3
-TRACE - setWspeed
-TRACE - 0.0
-TRACE - setDir
-TRACE - NNW
-TRACE - setBar
-TRACE - 1007.0
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 0.0
-TRACE - setRainyr
-TRACE - 0.0
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:01:56.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7342
+ERROR - measure invalid, for station with name: Nuoro - 548 mt slm, and id: 18
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Sestu(CA) - 40 mt slm, and id: 19
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://www.sestumeteo.it/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 15.6
-TRACE - setTempmax
-TRACE - 18.2
-TRACE - setTempmin
-TRACE - 10.8
-TRACE - setHum
-TRACE - 88
-TRACE - setDp
-TRACE - 13.6
-TRACE - setWChill
-TRACE - 15.6
-TRACE - setHindex
-TRACE - 15.6
-TRACE - setWspeed
-TRACE - 9.2
-TRACE - setDir
-TRACE - N
-TRACE - setBar
-TRACE - 1007.7
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 10.3
-TRACE - setRainyr
-TRACE - 303.3
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:03:28.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7343
+ERROR - measure invalid, for station with name: Sestu(CA) - 40 mt slm, and id: 19
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Quartucciu(CA) - 15 mt slm, and id: 20
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://quartuweather.altervista.org/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 16.4
-TRACE - setTempmax
-TRACE - 18.0
-TRACE - setTempmin
-TRACE - 11.8
-TRACE - setHum
-TRACE - 77
-TRACE - setDp
-TRACE - 12.4
-TRACE - setWChill
-TRACE - 16.4
-TRACE - setHindex
-TRACE - 16.4
-TRACE - setWspeed
-TRACE - 5.5
-TRACE - setDir
-TRACE - NNE
-TRACE - setBar
-TRACE - 1008.5
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 21.1
-TRACE - setRainyr
-TRACE - 39.6
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:03:16.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7344
+ERROR - measure invalid, for station with name: Quartucciu(CA) - 15 mt slm, and id: 20
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Porto S.Paolo(SS) - 10 mt slm, and id: 21
-TRACE - station type: WUNDER
-TRACE - station data_source: http://api.wunderground.com/weatherstation/WXCurrentObXML.asp?ID=IOTOLBIA2
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 17.8
-TRACE - setTempmax
-TRACE - 17.9
-TRACE - setTempmin
-TRACE - 17.9
-TRACE - setHum
-TRACE - 75
-TRACE - setDp
-TRACE - 13.3
-TRACE - setWChill
-TRACE - 
-TRACE - setHindex
-TRACE - 
-TRACE - setWspeed
-TRACE - 1.6
-TRACE - setDir
-TRACE - NW
-TRACE - setBar
-TRACE - 1009
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 
-TRACE - setRainmt
-TRACE - 
-TRACE - setRainyr
-TRACE - 
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 19:59:51.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7345
+ERROR - measure invalid, for station with name: Porto S.Paolo(SS) - 10 mt slm, and id: 21
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Sanluri(CA) - 152 mt slm, and id: 22
-TRACE - station type: DATI_STAZIONE
-TRACE - station data_source: http://www.lestazionimeteo.it/sanluri/dati_stazione.htm
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 15.1
-TRACE - setTempmax
-TRACE - 17.8
-TRACE - setTempmin
-TRACE - 12.4
-TRACE - setHum
-TRACE - 84
-TRACE - setDp
-TRACE - 12.4
-TRACE - setWChill
-TRACE - 13.9
-TRACE - setHindex
-TRACE - 
-TRACE - setWspeed
-TRACE - 0
-TRACE - setDir
-TRACE - W
-TRACE - setBar
-TRACE - 1013.8
-TRACE - setRain
-TRACE - 0
-TRACE - setRr
-TRACE - 0
-TRACE - setRainmt
-TRACE - 17.3
-TRACE - setRainyr
-TRACE - 495
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:02:00.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7346
+ERROR - measure invalid, for station with name: Sanluri(CA) - 152 mt slm, and id: 22
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Bonorva(SS) - 471 mt slm, and id: 23
-TRACE - station type: WL_LIVEMAP
-TRACE - station data_source: http://www.bonorvameteo.altervista.org/index_file/WL_livemap.htm
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 13.0
-TRACE - setTempmax
-TRACE - 15.7
-TRACE - setTempmin
-TRACE - 9.0
-TRACE - setHum
-TRACE - 88
-TRACE - setDp
-TRACE - 11.1
-TRACE - setWChill
-TRACE - 13.0
-TRACE - setHindex
-TRACE - 13.0
-TRACE - setWspeed
-TRACE - 1.6
-TRACE - setDir
-TRACE - ENE
-TRACE - setBar
-TRACE - 1010.6
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 
-TRACE - setRainmt
-TRACE - 
-TRACE - setRainyr
-TRACE - 
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:00:00.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7347
+ERROR - measure invalid, for station with name: Bonorva(SS) - 471 mt slm, and id: 23
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Sadali(NU) - 763 mt slm, and id: 24
-TRACE - station type: WL_LIVEMAP
-TRACE - station data_source: http://sadalimeteolive.altervista.org/htdoscs/sadali/WL_livemap.htm
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 11.0
-TRACE - setTempmax
-TRACE - 13.0
-TRACE - setTempmin
-TRACE - 6.9
-TRACE - setHum
-TRACE - 84
-TRACE - setDp
-TRACE - 8.4
-TRACE - setWChill
-TRACE - 10.9
-TRACE - setHindex
-TRACE - 11.0
-TRACE - setWspeed
-TRACE - 4.8
-TRACE - setDir
-TRACE - NNW
-TRACE - setBar
-TRACE - 1009.5
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 
-TRACE - setRainmt
-TRACE - 
-TRACE - setRainyr
-TRACE - 
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:01:00.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7348
+ERROR - measure invalid, for station with name: Sadali(NU) - 763 mt slm, and id: 24
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Budduso`(SS) - 700 mt slm, and id: 25
-TRACE - station type: SCLIMA
-TRACE - station data_source: http://www.erikapetroli.it/meteo/sclima.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 9.7
-TRACE - setTempmax
-TRACE -  NA
-TRACE - setTempmin
-TRACE -  NA
-TRACE - setHum
-TRACE - 91.0
-TRACE - setDp
-TRACE - 8.3
-TRACE - setWChill
-TRACE - 
-TRACE - setHindex
-TRACE -  10.2 
-TRACE - setHindex
-TRACE -  10.2 
-TRACE - setWspeed
-TRACE - 5.4
-TRACE - setDir
-TRACE - 315
-TRACE - setBar
-TRACE - 1005.4
-TRACE - setRain
-TRACE - NA
-TRACE - setRr
-TRACE - 
-TRACE - setRainmt
-TRACE -  NA
-TRACE - setRainyr
-TRACE -  NA
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:03:00.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7349
+ERROR - measure invalid, for station with name: Budduso`(SS) - 700 mt slm, and id: 25
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Orosei(NU) - 20 mt slm, and id: 26
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://www.oroseimeteo.com/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 17.5
-TRACE - setTempmax
-TRACE - 20.6
-TRACE - setTempmin
-TRACE - 14.9
-TRACE - setHum
-TRACE - 68
-TRACE - setDp
-TRACE - 11.5
-TRACE - setWChill
-TRACE - 17.5
-TRACE - setHindex
-TRACE - 17.5
-TRACE - setWspeed
-TRACE - 3.4
-TRACE - setDir
-TRACE - W
-TRACE - setBar
-TRACE - 1008.1
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 2.6
-TRACE - setRainyr
-TRACE - 254.2
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:03:30.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7350
+ERROR - measure invalid, for station with name: Orosei(NU) - 20 mt slm, and id: 26
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Lanusei(NU) - 663 mt slm, and id: 27
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://meteolanusei.altervista.org/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 13.2
-TRACE - setTempmax
-TRACE - 15.6
-TRACE - setTempmin
-TRACE - 9.9
-TRACE - setHum
-TRACE - 72
-TRACE - setDp
-TRACE - 8.3
-TRACE - setWChill
-TRACE - 13.2
-TRACE - setHindex
-TRACE - 13.2
-TRACE - setWspeed
-TRACE - 0.0
-TRACE - setDir
-TRACE - SE
-TRACE - setBar
-TRACE - 1006.4
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 6.6
-TRACE - setRainyr
-TRACE - 286.4
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:03:25.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7351
+ERROR - measure invalid, for station with name: Lanusei(NU) - 663 mt slm, and id: 27
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Tortoli`(NU) - 20 mt slm, and id: 28
-TRACE - station type: WUNDER
-TRACE - station data_source: http://api.wunderground.com/weatherstation/WXCurrentObXML.asp?ID=ISARDEGN30
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 26.3
-TRACE - setTempmax
-TRACE - 0
-TRACE - setTempmin
-TRACE - 0
-TRACE - setHum
-TRACE - 62
-TRACE - setDp
-TRACE - 21.2
-TRACE - setWChill
-TRACE - 
-TRACE - setHindex
-TRACE - 
-TRACE - setWspeed
-TRACE - 3.2
-TRACE - setDir
-TRACE - E
-TRACE - setBar
-TRACE - 1011.1
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 
-TRACE - setRainmt
-TRACE - 
-TRACE - setRainyr
-TRACE - 
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-07-24 11:21:09.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-ERROR - expired measure
 ERROR - measure invalid, for station with name: Tortoli`(NU) - 20 mt slm, and id: 28
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Gavoi(NU) - 740 mt slm, and id: 29
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://meteogavoi.altervista.org/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 11.2
-TRACE - setTempmax
-TRACE - 13.3
-TRACE - setTempmin
-TRACE - 4.2
-TRACE - setHum
-TRACE - 84
-TRACE - setDp
-TRACE - 8.6
-TRACE - setWChill
-TRACE - 11.2
-TRACE - setHindex
-TRACE - 11.2
-TRACE - setWspeed
-TRACE - 0.6
-TRACE - setDir
-TRACE - NNE
-TRACE - setBar
-TRACE - 1007.3
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 8.1
-TRACE - setRainyr
-TRACE - 403.6
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:03:22.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7352
+ERROR - measure invalid, for station with name: Gavoi(NU) - 740 mt slm, and id: 29
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Santa Giusta(OR) - 10 mt slm, and id: 30
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://www.santagiustameteo.altervista.org/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - attempt #1
-TRACE - attempt #2
-TRACE - attempt #3
-TRACE - attempt #4
-ERROR - expired measure
 ERROR - measure invalid, for station with name: Santa Giusta(OR) - 10 mt slm, and id: 30
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Settimo S.Pietro(CA) - 70 mt slm, and id: 31
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://www.meteosettimosp.altervista.org/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 12.4
-TRACE - setTempmax
-TRACE - 13.5
-TRACE - setTempmin
-TRACE - 12.1
-TRACE - setHum
-TRACE - 78
-TRACE - setDp
-TRACE - 8.7
-TRACE - setWChill
-TRACE - 12.4
-TRACE - setHindex
-TRACE - 12.4
-TRACE - setWspeed
-TRACE - 0.0
-TRACE - setDir
-TRACE - SW
-TRACE - setBar
-TRACE - 1006.1
-TRACE - setRain
-TRACE - 7.2
-TRACE - setRr
-TRACE - 0.036
-TRACE - setRainmt
-TRACE - 26.2
-TRACE - setRainyr
-TRACE - 216.8
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-06 08:31:08.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-ERROR - expired measure
 ERROR - measure invalid, for station with name: Settimo S.Pietro(CA) - 70 mt slm, and id: 31
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Su Siccu(CA) - 10 mt slm, and id: 32
-TRACE - station type: WL_LIVEMAP
-TRACE - station data_source: http://isolasub.altervista.org/alberti/WL_livemap.htm
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 17.1
-TRACE - setTempmax
-TRACE - 18.6
-TRACE - setTempmin
-TRACE - 13.2
-TRACE - setHum
-TRACE - 77
-TRACE - setDp
-TRACE - 13.0
-TRACE - setWChill
-TRACE - 17.1
-TRACE - setHindex
-TRACE - 17.1
-TRACE - setWspeed
-TRACE - 6.4
-TRACE - setDir
-TRACE - SE
-TRACE - setBar
-TRACE - 1008.3
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 
-TRACE - setRainmt
-TRACE - 
-TRACE - setRainyr
-TRACE - 
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 19:57:00.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7353
+ERROR - measure invalid, for station with name: Su Siccu(CA) - 10 mt slm, and id: 32
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Austis(NU) - 800 mt slm, and id: 33
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://ollolai.altervista.org/austis/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 10.6
-TRACE - setTempmax
-TRACE - 17.1
-TRACE - setTempmin
-TRACE - 10.5
-TRACE - setHum
-TRACE - 99
-TRACE - setDp
-TRACE - 10.4
-TRACE - setWChill
-TRACE - 10.6
-TRACE - setHindex
-TRACE - 10.6
-TRACE - setWspeed
-TRACE - 4.9
-TRACE - setDir
-TRACE - S
-TRACE - setBar
-TRACE - 907.0
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 0.0
-TRACE - setRainyr
-TRACE - 128.5
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2013-11-04 22:07:34.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-ERROR - expired measure
 ERROR - measure invalid, for station with name: Austis(NU) - 800 mt slm, and id: 33
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Monteponi(CA) - 190 mt slm, and id: 34
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://www.meteoiglesias.altervista.org/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 16.0
-TRACE - setTempmax
-TRACE - 19.9
-TRACE - setTempmin
-TRACE - 13.5
-TRACE - setHum
-TRACE - 81
-TRACE - setDp
-TRACE - 12.7
-TRACE - setWChill
-TRACE - 16.0
-TRACE - setHindex
-TRACE - 120.0
-TRACE - setWspeed
-TRACE - 8.8
-TRACE - setDir
-TRACE - SE
-TRACE - setBar
-TRACE - 1008.4
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 14.8
-TRACE - setRainyr
-TRACE - 607.7
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:03:26.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7354
+ERROR - measure invalid, for station with name: Monteponi(CA) - 190 mt slm, and id: 34
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Assemini(CA) - 20 mt slm, and id: 35
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://www.asseminimeteo.altervista.org/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 26.9
-TRACE - setTempmax
-TRACE - 26.9
-TRACE - setTempmin
-TRACE - 18.3
-TRACE - setHum
-TRACE - 65
-TRACE - setDp
-TRACE - 19.8
-TRACE - setWChill
-TRACE - 26.9
-TRACE - setHindex
-TRACE - 28.4
-TRACE - setWspeed
-TRACE - 0.0
-TRACE - setDir
-TRACE - W
-TRACE - setBar
-TRACE - 1008.5
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 0.0
-TRACE - setRainyr
-TRACE - 181.8
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-08-01 10:40:43.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-ERROR - expired measure
 ERROR - measure invalid, for station with name: Assemini(CA) - 20 mt slm, and id: 35
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: P.ta Modighina(OR) - 600 mt slm, and id: 36
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://www.monteualla.it/meteo/meteomodighina/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 23.3
-TRACE - setTempmax
-TRACE - 28.8
-TRACE - setTempmin
-TRACE - -7.9
-TRACE - setHum
-TRACE - 44
-TRACE - setDp
-TRACE - 10.4
-TRACE - setWChill
-TRACE - 23.3
-TRACE - setHindex
-TRACE - 25.2
-TRACE - setWspeed
-TRACE - 5.4
-TRACE - setDir
-TRACE - SSE
-TRACE - setBar
-TRACE - 948.4
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 2.5
-TRACE - setRainyr
-TRACE - 444.7
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-06-28 21:00:22.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-ERROR - expired measure
 ERROR - measure invalid, for station with name: P.ta Modighina(OR) - 600 mt slm, and id: 36
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Padru(SS) - 164 mt slm, and id: 37
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://www.padrumeteo.it/br/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 17.2
-TRACE - setTempmax
-TRACE - 18.6
-TRACE - setTempmin
-TRACE - 11.5
-TRACE - setHum
-TRACE - 72
-TRACE - setDp
-TRACE - 12.1
-TRACE - setWChill
-TRACE - 17.2
-TRACE - setHindex
-TRACE - 17.2
-TRACE - setWspeed
-TRACE - 3.0
-TRACE - setDir
-TRACE - NW
-TRACE - setBar
-TRACE - 1009.4
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 1.4
-TRACE - setRainyr
-TRACE - 19.6
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:05:26.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7355
+ERROR - measure invalid, for station with name: Padru(SS) - 164 mt slm, and id: 37
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Porto Torres(SS) - 17 mt slm, and id: 38
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://meteoptorres.altervista.org/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 17.9
-TRACE - setTempmax
-TRACE - 19.7
-TRACE - setTempmin
-TRACE - 10.4
-TRACE - setHum
-TRACE - 74
-TRACE - setDp
-TRACE - 13.2
-TRACE - setWChill
-TRACE - 17.9
-TRACE - setHindex
-TRACE - 17.9
-TRACE - setWspeed
-TRACE - 7.1
-TRACE - setDir
-TRACE - SSW
-TRACE - setBar
-TRACE - 1005.5
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 28.8
-TRACE - setRainyr
-TRACE - 324.5
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:03:05.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7356
+ERROR - measure invalid, for station with name: Porto Torres(SS) - 17 mt slm, and id: 38
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Capoterra(CA) - 10 mt slm, and id: 39
-TRACE - station type: WL_LIVEMAP
-TRACE - station data_source: http://isolasub.altervista.org/capoterra/WL_livemap.htm
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 17.3
-TRACE - setTempmax
-TRACE - 18.8
-TRACE - setTempmin
-TRACE - 12.2
-TRACE - setHum
-TRACE - 76
-TRACE - setDp
-TRACE - 13.0
-TRACE - setWChill
-TRACE - 15.2
-TRACE - setHindex
-TRACE - 17.3
-TRACE - setWspeed
-TRACE - 19.3
-TRACE - setDir
-TRACE - WNW
-TRACE - setBar
-TRACE - 1007.5
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 
-TRACE - setRainmt
-TRACE - 
-TRACE - setRainyr
-TRACE - 
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:01:00.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7357
+ERROR - measure invalid, for station with name: Capoterra(CA) - 10 mt slm, and id: 39
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Villanovatulo(NU) - 590 mt slm, and id: 40
 TRACE - station type: DOWNLD02
 TRACE - station data_source: http://villanovatulometeo.altervista.org/htdoscs/downld02.txt
 TRACE - getMeasure()
 TRACE - attempt #0
+DEBUG - _____________>>>_____>>> testing DOWLD02: rain:
+DEBUG - line: 
+DEBUG - 9/11/14 22.24 12.0 12.0 12.0 89 10.2 0.0 --- 0.00 0.0 --- 12.0 12.1 12.1 1014.7 0.00 0.0 0.004 0.000 21.3 56 12.1 20.7 10.34 1.1845 23 1 100.0 1
 TRACE - setTemp
-TRACE - 13.1
+TRACE - 12.0
 TRACE - setTempmax
-TRACE - 13.1
-TRACE - setTempmin
-TRACE - 13.1
-TRACE - setHum
-TRACE - 79
-TRACE - setDp
-TRACE - 9.5
-TRACE - setWChill
 TRACE - 12.1
+TRACE - setTempmin
+TRACE - 11.2
+TRACE - setHum
+TRACE - 89
+TRACE - setDp
+TRACE - 10.2
+TRACE - setWChill
+TRACE - 12.0
 TRACE - setHindex
-TRACE - 12.9
+TRACE - 12.1
 TRACE - setWspeed
-TRACE - 11.3
+TRACE - 0.0
 TRACE - setDir
-TRACE - NW
+TRACE - ---
 TRACE - setBar
-TRACE - 1009.5
+TRACE - 0.00
+DEBUG - 0.0
+DEBUG - rainInTheDay
+DEBUG - 0
 TRACE - setRain
 TRACE - 0
 TRACE - setRr
-TRACE - 0.0
+TRACE - 0.004
 TRACE - setRainmt
 TRACE - 
 TRACE - setRainyr
@@ -1620,600 +196,100 @@ TRACE -
 TRACE - setDate
 TRACE - DateTime Object
 (
-    [date] => 2014-11-07 19:53:00.000000
+    [date] => 2014-11-09 22:24:00.000000
     [timezone_type] => 3
     [timezone] => Europe/Rome
 )
 
-DEBUG - Persisted new measure with id: 7358
+DEBUG - Persisted new measure with id: 7629
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Sant`Antioco(CA) - 37 mt slm, and id: 41
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://www.tstormsardinia.altervista.org/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 18.1
-TRACE - setTempmax
-TRACE - 19.0
-TRACE - setTempmin
-TRACE - 15.9
-TRACE - setHum
-TRACE - 66
-TRACE - setDp
-TRACE - 11.6
-TRACE - setWChill
-TRACE - 18.1
-TRACE - setHindex
-TRACE - 18.1
-TRACE - setWspeed
-TRACE - 11.5
-TRACE - setDir
-TRACE - NE
-TRACE - setBar
-TRACE - 1009.4
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 23.6
-TRACE - setRainyr
-TRACE - 236.2
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:03:21.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7359
+ERROR - measure invalid, for station with name: Sant`Antioco(CA) - 37 mt slm, and id: 41
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Monte Arci(OR) - 550 mt slm, and id: 42
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://www.montearci.it/meteo/clientrawarci.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 11.6
-TRACE - setTempmax
-TRACE - 15.9
-TRACE - setTempmin
-TRACE - 9.1
-TRACE - setHum
-TRACE - 88
-TRACE - setDp
-TRACE - 9.7
-TRACE - setWChill
-TRACE - 11.6
-TRACE - setHindex
-TRACE - 11.6
-TRACE - setWspeed
-TRACE - 1.5
-TRACE - setDir
-TRACE - N
-TRACE - setBar
-TRACE - 948.4
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 10.7
-TRACE - setRainyr
-TRACE - 454.4
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:03:21.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7360
+ERROR - measure invalid, for station with name: Monte Arci(OR) - 550 mt slm, and id: 42
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Calangianus(SS) - 490 mt slm, and id: 43
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://prohu.altervista.org/calangianus/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 13.3
-TRACE - setTempmax
-TRACE - 14.9
-TRACE - setTempmin
-TRACE - 8.8
-TRACE - setHum
-TRACE - 83
-TRACE - setDp
-TRACE - 10.5
-TRACE - setWChill
-TRACE - 13.3
-TRACE - setHindex
-TRACE - 13.3
-TRACE - setWspeed
-TRACE - 0.0
-TRACE - setDir
-TRACE - NNW
-TRACE - setBar
-TRACE - 1010.4
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 4.1
-TRACE - setRainyr
-TRACE - 421.9
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:03:20.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7361
+ERROR - measure invalid, for station with name: Calangianus(SS) - 490 mt slm, and id: 43
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Macchiareddu(CA) - 10 mt slm, and id: 44
-TRACE - station type: WL_LIVEMAP
-TRACE - station data_source: http://isolasub.altervista.org/meteo/WL_livemap.htm
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 17.3
-TRACE - setTempmax
-TRACE - 18.9
-TRACE - setTempmin
-TRACE - 12.0
-TRACE - setHum
-TRACE - 77
-TRACE - setDp
-TRACE - 13.3
-TRACE - setWChill
-TRACE - 17.3
-TRACE - setHindex
-TRACE - 17.4
-TRACE - setWspeed
-TRACE - 11.3
-TRACE - setDir
-TRACE - NE
-TRACE - setBar
-TRACE - 1008.1
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 
-TRACE - setRainmt
-TRACE - 
-TRACE - setRainyr
-TRACE - 
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:02:00.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7362
+ERROR - measure invalid, for station with name: Macchiareddu(CA) - 10 mt slm, and id: 44
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Tonara(NU) - 910 mt slm, and id: 45
-TRACE - station type: TAGMER
-TRACE - station data_source: http://www.lestazionimeteo.it/tonara-nu/tagmer.htm
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 10.0
-TRACE - setTempmax
-TRACE - 11.2
-TRACE - setTempmin
-TRACE - 4.8
-TRACE - setHum
-TRACE - 87
-TRACE - setDp
-TRACE - 7.9
-TRACE - setWChill
-TRACE - 7.1
-TRACE - setHindex
-TRACE - 10.1
-TRACE - setWspeed
-TRACE - 17.7
-TRACE - setDir
-TRACE - NNW
-TRACE - setBar
-TRACE - 1011.3
-TRACE - setRain
-TRACE - 0.8
-TRACE - setRr
-TRACE - 0.00
-TRACE - setRainmt
-TRACE - 13.0
-TRACE - setRainyr
-TRACE - 583.9
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:03:00.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7363
+ERROR - measure invalid, for station with name: Tonara(NU) - 910 mt slm, and id: 45
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Villasor(CA) - 30 mt slm, and id: 46
-TRACE - station type: TAGMER
-TRACE - station data_source: http://www.lestazionimeteo.it/villasor-ca/tagmer.htm
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 16.7
-TRACE - setTempmax
-TRACE - 18.2
-TRACE - setTempmin
-TRACE - 11.2
-TRACE - setHum
-TRACE - 78
-TRACE - setDp
-TRACE - 12.8
-TRACE - setWChill
-TRACE - 16.7
-TRACE - setHindex
-TRACE - 16.7
-TRACE - setWspeed
-TRACE - <!--wind10Avg-->
-TRACE - setDir
-TRACE - NNW
-TRACE - setBar
-TRACE - 1007.8
-TRACE - setRain
-TRACE - 0.51
-TRACE - setRr
-TRACE - <!--dailyEt-->
-TRACE - setRainmt
-TRACE - 3.05
-TRACE - setRainyr
-TRACE - 1422.91
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:03:00.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7364
+ERROR - measure invalid, for station with name: Villasor(CA) - 30 mt slm, and id: 46
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Vallermosa(CA) - 70 mt slm, and id: 47
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://vallermosameteolive.altervista.org/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 17.5
-TRACE - setTempmax
-TRACE - 19.1
-TRACE - setTempmin
-TRACE - 11.1
-TRACE - setHum
-TRACE - 74
-TRACE - setDp
-TRACE - 12.8
-TRACE - setWChill
-TRACE - 17.5
-TRACE - setHindex
-TRACE - 17.5
-TRACE - setWspeed
-TRACE - 12.9
-TRACE - setDir
-TRACE - NW
-TRACE - setBar
-TRACE - 1002.5
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 14.4
-TRACE - setRainyr
-TRACE - 282.4
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:03:41.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7365
+ERROR - measure invalid, for station with name: Vallermosa(CA) - 70 mt slm, and id: 47
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Seui(NU) - 820 mt slm, and id: 48
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://www.seuimeteo.it/br/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 11.8
-TRACE - setTempmax
-TRACE - 13.2
-TRACE - setTempmin
-TRACE - 6.8
-TRACE - setHum
-TRACE - 78
-TRACE - setDp
-TRACE - 8.1
-TRACE - setWChill
-TRACE - 11.8
-TRACE - setHindex
-TRACE - 11.8
-TRACE - setWspeed
-TRACE - 4.2
-TRACE - setDir
-TRACE - NW
-TRACE - setBar
-TRACE - 1010.1
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 8.6
-TRACE - setRainyr
-TRACE - 409.6
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:03:38.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7366
+ERROR - measure invalid, for station with name: Seui(NU) - 820 mt slm, and id: 48
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Decimoputzu(CA) - 40 mt slm, and id: 49
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://www.livemeteo.altervista.org/wd/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 25.6
-TRACE - setTempmax
-TRACE - 25.6
-TRACE - setTempmin
-TRACE - 25.6
-TRACE - setHum
-TRACE - 71
-TRACE - setDp
-TRACE - 19.9
-TRACE - setWChill
-TRACE - 25.6
-TRACE - setHindex
-TRACE - 25.6
-TRACE - setWspeed
-TRACE - 3.1
-TRACE - setDir
-TRACE - W
-TRACE - setBar
-TRACE - 1010.7
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 0.0
-TRACE - setRainyr
-TRACE - 247.3
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-09-23 00:17:10.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-ERROR - expired measure
 ERROR - measure invalid, for station with name: Decimoputzu(CA) - 40 mt slm, and id: 49
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Separadorgiu(NU) - 1460 mt slm, and id: 50
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://prohu.altervista.org/bruncuspina/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 7.2
-TRACE - setTempmax
-TRACE - 7.7
-TRACE - setTempmin
-TRACE - 3.1
-TRACE - setHum
-TRACE - 97
-TRACE - setDp
-TRACE - 6.8
-TRACE - setWChill
-TRACE - 7.2
-TRACE - setHindex
-TRACE - 7.2
-TRACE - setWspeed
-TRACE - 0.7
-TRACE - setDir
-TRACE - NNW
-TRACE - setBar
-TRACE - 851.5
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 13.2
-TRACE - setRainyr
-TRACE - 218.6
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:02:42.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7367
+ERROR - measure invalid, for station with name: Separadorgiu(NU) - 1460 mt slm, and id: 50
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Olbia(SS) - 15 mt slm, and id: 51
-TRACE - station type: WL_LIVEMAP
-TRACE - station data_source: http://olbiameteo.altervista.org/WL_livemap.html
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 18.2
-TRACE - setTempmax
-TRACE - 19.7
-TRACE - setTempmin
-TRACE - 12.2
-TRACE - setHum
-TRACE - 72
-TRACE - setDp
-TRACE - 13.0
-TRACE - setWChill
-TRACE - 18.2
-TRACE - setHindex
-TRACE - 18.2
-TRACE - setWspeed
-TRACE - 11.3
-TRACE - setDir
-TRACE - W
-TRACE - setBar
-TRACE - 1009.0
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 
-TRACE - setRainmt
-TRACE - 
-TRACE - setRainyr
-TRACE - 
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:02:00.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7368
+ERROR - measure invalid, for station with name: Olbia(SS) - 15 mt slm, and id: 51
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Barrali(CA) - 150 mt slm, and id: 52
-TRACE - station type: LOGDAT
-TRACE - station data_source: http://www.barralimeteo.com/log.dat
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - <html
-TRACE - setTempmax
-TRACE - 
-
-<head>
-
-TRACE - setTempmin
-TRACE - data-adblockkey="MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANHZLSNGAhe0lWbSycFlY7t3c4tFHP+Epw8naGgm3CR8CftAihnB7Jkt+vFmvIf3BV/p3RpOrZ/XbZsX9uh0m9UCAwEAAQ==_VA57o5p5lFMM3YQbUSSLTNaFxK8ZYpP5gwNagJ4MGcBmJHJ0+FUmlbEiUo3Sh2YPVYBvfpMboH0UzXzv0XFj6A==">
-TRACE - setHum
-TRACE - 
-TRACE - setDp
-TRACE - 
-TRACE - setWChill
-TRACE - 
-TRACE - setHindex
-TRACE - 
-TRACE - setWspeed
-TRACE - 
-TRACE - setDir
-TRACE - 
-TRACE - setBar
-TRACE - 
-TRACE - setRain
-TRACE - 
-TRACE - setRr
-TRACE - 
-TRACE - setRainmt
-TRACE - 
-TRACE - setRainyr
-TRACE - 
-TRACE - setDate
-TRACE - 
-ERROR - expired measure
 ERROR - measure invalid, for station with name: Barrali(CA) - 150 mt slm, and id: 52
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Ovodda(NU) - 718 mt slm, and id: 53
-TRACE - station type: CURRDATA
-TRACE - station data_source: http://www.ramsite.altervista.org/ovodda/meteo/currdata.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 12.2
-TRACE - setTempmax
-TRACE - 13.0
-TRACE - setTempmin
-TRACE - 5.3
-TRACE - setHum
-TRACE - 85
-TRACE - setDp
-TRACE - 9.7
-TRACE - setWChill
-TRACE - 12.2
-TRACE - setHindex
-TRACE - 12.2
-TRACE - setWspeed
-TRACE - 0
-TRACE - setDir
-TRACE - NNW
-TRACE - setBar
-TRACE - 1011.8
-TRACE - setRain
-TRACE - 0.2
-TRACE - setRr
-TRACE - 0.0
-TRACE - setRainmt
-TRACE - 12.6
-TRACE - setRainyr
-TRACE - 534.2
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:00:00.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7369
+ERROR - measure invalid, for station with name: Ovodda(NU) - 718 mt slm, and id: 53
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: San Gavino(CA) - 60 mt slm, and id: 54
 TRACE - station type: DOWNLD02
 TRACE - station data_source: http://sangavinometeo.altervista.org/vp2/downld02.txt
 TRACE - getMeasure()
 TRACE - attempt #0
+DEBUG - _____________>>>_____>>> testing DOWLD02: rain:
+DEBUG - line: 
+DEBUG - 9/11/14 22:30 16.6 16.7 16.6 90 15.0 3.2 ESE 0.27 9.7 E 16.6 16.9 16.9 15.7 1012.4 0.00 0.0 0 0.00 0 0.006 0.000 22.8 71 17.3 23.5 13.33 1.1689 0.00 117 1 100.0 5
 TRACE - setTemp
-TRACE - 15.9
+TRACE - 16.6
 TRACE - setTempmax
-TRACE - 16
+TRACE - 16.9
 TRACE - setTempmin
-TRACE - 16
+TRACE - 16.7
 TRACE - setHum
-TRACE - 80
+TRACE - 90
 TRACE - setDp
-TRACE - 12.4
+TRACE - 15.0
 TRACE - setWChill
-TRACE - 15.9
+TRACE - 16.6
 TRACE - setHindex
-TRACE - 15.9
+TRACE - 16.9
 TRACE - setWspeed
-TRACE - 4.8
+TRACE - 3.2
 TRACE - setDir
-TRACE - WNW
+TRACE - ESE
 TRACE - setBar
-TRACE - 14.6
+TRACE - 1012.4
+DEBUG - 0.00
+DEBUG - rainInTheDay
+DEBUG - 1012.3
 TRACE - setRain
-TRACE - 2019.3
+TRACE - 1012.3
 TRACE - setRr
-TRACE - 0.00
+TRACE - 0.0
 TRACE - setRainmt
 TRACE - 
 TRACE - setRainyr
@@ -2221,301 +297,72 @@ TRACE -
 TRACE - setDate
 TRACE - DateTime Object
 (
-    [date] => 2014-11-07 20:00:00.000000
+    [date] => 2014-11-09 22:30:00.000000
     [timezone_type] => 3
     [timezone] => Europe/Rome
 )
 
-DEBUG - Persisted new measure with id: 7370
+DEBUG - Persisted new measure with id: 7630
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Cagliari Genneruxi - 40 mt slm, and id: 55
-TRACE - station type: WUNDER
-TRACE - station data_source: http://api.wunderground.com/weatherstation/WXCurrentObXML.asp?ID=ISARDEGN6
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 17.2
-TRACE - setTempmax
-TRACE - 17.2
-TRACE - setTempmin
-TRACE - 17.2
-TRACE - setHum
-TRACE - 78
-TRACE - setDp
-TRACE - 13.3
-TRACE - setWChill
-TRACE - 
-TRACE - setHindex
-TRACE - 
-TRACE - setWspeed
-TRACE - 8.0
-TRACE - setDir
-TRACE - W
-TRACE - setBar
-TRACE - 1007.3
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 
-TRACE - setRainmt
-TRACE - 
-TRACE - setRainyr
-TRACE - 
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 19:48:54.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7371
+ERROR - measure invalid, for station with name: Cagliari Genneruxi - 40 mt slm, and id: 55
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Fonni(NU) - 990 mt slm, and id: 56
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://prohu.altervista.org/meteo/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 9.5
-TRACE - setTempmax
-TRACE - 10.3
-TRACE - setTempmin
-TRACE - 4.9
-TRACE - setHum
-TRACE - 92
-TRACE - setDp
-TRACE - 8.3
-TRACE - setWChill
-TRACE - 8.5
-TRACE - setHindex
-TRACE - 9.5
-TRACE - setWspeed
-TRACE - 4.2
-TRACE - setDir
-TRACE - ENE
-TRACE - setBar
-TRACE - 1013.0
-TRACE - setRain
-TRACE - 0.2
-TRACE - setRr
-TRACE - 0.000
-TRACE - setRainmt
-TRACE - 9.6
-TRACE - setRainyr
-TRACE - 513.2
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:04:06.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7372
+ERROR - measure invalid, for station with name: Fonni(NU) - 990 mt slm, and id: 56
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Busachi(OR) - 403 mt slm, and id: 57
-TRACE - station type: WL_LIVEMAP
-TRACE - station data_source: http://busachimeteo.altervista.org/WL_livemap.htm
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 13.2
-TRACE - setTempmax
-TRACE - 13.5
-TRACE - setTempmin
-TRACE - 10.5
-TRACE - setHum
-TRACE - 79
-TRACE - setDp
-TRACE - 9.7
-TRACE - setWChill
-TRACE - 13.2
-TRACE - setHindex
-TRACE - 13.0
-TRACE - setWspeed
-TRACE - 4.8
-TRACE - setDir
-TRACE - WNW
-TRACE - setBar
-TRACE - 1007.5
-TRACE - setRain
-TRACE - 3.2
-TRACE - setRr
-TRACE - 
-TRACE - setRainmt
-TRACE - 
-TRACE - setRainyr
-TRACE - 
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-06 14:20:00.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-ERROR - expired measure
 ERROR - measure invalid, for station with name: Busachi(OR) - 403 mt slm, and id: 57
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Arborea(OR) - 10 mt slm, and id: 58
-TRACE - station type: WLINK
-TRACE - station data_source: http://www.weatherlink.com/user/arborea/index.php?view=summary&headers=1
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 17.0
-TRACE - setTempmax
-TRACE - 19.7
-TRACE - setTempmin
-TRACE - 11.8
-TRACE - setHum
-TRACE - 78
-TRACE - setDp
-TRACE - 13.3
-TRACE - setWChill
-TRACE - 
-TRACE - setHindex
-TRACE - 
-TRACE - setWspeed
-TRACE - 11 km/h
-TRACE - setDir
-TRACE - 360
-TRACE - setBar
-TRACE - 1009
-TRACE - setRain
-TRACE - 
-TRACE - setRr
-TRACE - 0.0
-TRACE - setRainmt
-TRACE - 
-TRACE - setRainyr
-TRACE - 
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:03:00.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7373
+ERROR - measure invalid, for station with name: Arborea(OR) - 10 mt slm, and id: 58
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Tempio(SS) - 520 mt slm, and id: 59
-TRACE - station type: DATI_STAZIONE
-TRACE - station data_source: http://www.lestazionimeteo.it/tempio-pausania/dati_stazione.htm
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 13.9
-TRACE - setTempmax
-TRACE - 14.5
-TRACE - setTempmin
-TRACE - 9.5
-TRACE - setHum
-TRACE - 87
-TRACE - setDp
-TRACE - 11.8
-TRACE - setWChill
-TRACE - 12.8
-TRACE - setHindex
-TRACE - 
-TRACE - setWspeed
-TRACE - 8
-TRACE - setDir
-TRACE - NW
-TRACE - setBar
-TRACE - 1013.1
-TRACE - setRain
-TRACE - 0.3
-TRACE - setRr
-TRACE - 0
-TRACE - setRainmt
-TRACE - 13.5
-TRACE - setRainyr
-TRACE - 781.8
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 19:38:00.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7374
+ERROR - measure invalid, for station with name: Tempio(SS) - 520 mt slm, and id: 59
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Carbonia(CA) - 111 mt slm, and id: 60
-TRACE - station type: WL_LIVEMAP
-TRACE - station data_source: http://carbonia2meteo.altervista.org/Carbonia/WL_livemap.htm
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 17.4
-TRACE - setTempmax
-TRACE - 18.4
-TRACE - setTempmin
-TRACE - 14.6
-TRACE - setHum
-TRACE - 77
-TRACE - setDp
-TRACE - 13.4
-TRACE - setWChill
-TRACE - 17.4
-TRACE - setHindex
-TRACE - 17.5
-TRACE - setWspeed
-TRACE - 9.7
-TRACE - setDir
-TRACE - NNE
-TRACE - setBar
-TRACE - 1007.1
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 
-TRACE - setRainmt
-TRACE - 
-TRACE - setRainyr
-TRACE - 
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 17:05:00.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7375
+ERROR - measure invalid, for station with name: Carbonia(CA) - 111 mt slm, and id: 60
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Ussana(CA) - 108 mt slm, and id: 61
 TRACE - station type: DOWNLD02
 TRACE - station data_source: http://ussanameteo.altervista.org/downld02.txt
 TRACE - getMeasure()
 TRACE - attempt #0
+DEBUG - _____________>>>_____>>> testing DOWLD02: rain:
+DEBUG - line: 
+DEBUG - 9/11/14 22.15 15.2 15.2 15.2 88 13.2 0.0 ENE 0.00 4.8 ENE 15.2 15.2 15.2 13.9 1013.6 0.00 0.0 0 0.00 0 0.0 0.00 0.0 0.011 0.000 22.4 60 14.3 22.5 11.00 1.1760 0.00 117 1 100.0 5
 TRACE - setTemp
-TRACE - 15.6
+TRACE - 15.2
 TRACE - setTempmax
-TRACE - 15.3
+TRACE - 16.1
 TRACE - setTempmin
-TRACE - 15.3
+TRACE - 15.2
 TRACE - setHum
-TRACE - 80
+TRACE - 88
 TRACE - setDp
-TRACE - 12.1
+TRACE - 13.2
 TRACE - setWChill
-TRACE - 14.7
+TRACE - 15.2
 TRACE - setHindex
-TRACE - 15.5
+TRACE - 15.2
 TRACE - setWspeed
-TRACE - 12.9
+TRACE - 0.0
 TRACE - setDir
-TRACE - NW
+TRACE - ENE
 TRACE - setBar
-TRACE - 13.4
+TRACE - 1013.6
+DEBUG - 0.00
+DEBUG - rainInTheDay
+DEBUG - 1013.2
 TRACE - setRain
-TRACE - 2019.4
+TRACE - 1013.2
 TRACE - setRr
-TRACE - 0.00
+TRACE - 0.0
 TRACE - setRainmt
 TRACE - 
 TRACE - setRainyr
@@ -2523,42 +370,48 @@ TRACE -
 TRACE - setDate
 TRACE - DateTime Object
 (
-    [date] => 2014-11-07 19:50:00.000000
+    [date] => 2014-11-09 22:15:00.000000
     [timezone_type] => 3
     [timezone] => Europe/Rome
 )
 
-DEBUG - Persisted new measure with id: 7376
+DEBUG - Persisted new measure with id: 7631
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Palau(SS) - 45 mt slm, and id: 62
 TRACE - station type: DOWNLD02
 TRACE - station data_source: http://www.mdservice-nautica.it/m/downld02.txt
 TRACE - getMeasure()
 TRACE - attempt #0
+DEBUG - _____________>>>_____>>> testing DOWLD02: rain:
+DEBUG - line: 
+DEBUG - 9/11/14 21.30 16.1 16.9 16.1 77 12.0 4.3 W 2.17 7.8 N 16.1 15.9 15.9 1012.0 0.00 0.0 0.047 0.000 19.8 62 12.3 19.7 11.40 1.1869 702 1 100.0 30
 TRACE - setTemp
-TRACE - 17.4
+TRACE - 16.1
 TRACE - setTempmax
-TRACE - 17.4
+TRACE - 17.8
 TRACE - setTempmin
-TRACE - 17.4
+TRACE - 16.1
 TRACE - setHum
-TRACE - 76
+TRACE - 77
 TRACE - setDp
-TRACE - 13.2
+TRACE - 12.0
 TRACE - setWChill
 TRACE - 16.1
 TRACE - setHindex
-TRACE - 17.5
+TRACE - 15.9
 TRACE - setWspeed
-TRACE - 8.7
+TRACE - 4.3
 TRACE - setDir
-TRACE - WNW
+TRACE - W
 TRACE - setBar
-TRACE - 1008.2
+TRACE - 0.00
+DEBUG - 0.0
+DEBUG - rainInTheDay
+DEBUG - 0
 TRACE - setRain
 TRACE - 0
 TRACE - setRr
-TRACE - 0.0
+TRACE - 0.047
 TRACE - setRainmt
 TRACE - 
 TRACE - setRainyr
@@ -2566,42 +419,48 @@ TRACE -
 TRACE - setDate
 TRACE - DateTime Object
 (
-    [date] => 2014-11-07 19:30:00.000000
+    [date] => 2014-11-09 21:30:00.000000
     [timezone_type] => 3
     [timezone] => Europe/Rome
 )
 
-DEBUG - Persisted new measure with id: 7377
+DEBUG - Persisted new measure with id: 7632
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Villacidro(CA) - 265 mt slm, and id: 63
 TRACE - station type: DOWNLD02
 TRACE - station data_source: http://meteoman.altervista.org/downld02.txt
 TRACE - getMeasure()
 TRACE - attempt #0
+DEBUG - _____________>>>_____>>> testing DOWLD02: rain:
+DEBUG - line: 
+DEBUG - 9/11/14 22.00 16.9 16.9 16.9 88 14.9 8.0 SW 2.01 22.5 WSW 16.9 17.2 17.2 1012.3 0.00 0.0 0.014 0.000 18.4 70 12.9 18.4 13.34 1.1923 351 1 100.0 15
 TRACE - setTemp
-TRACE - 15.7
+TRACE - 16.9
 TRACE - setTempmax
-TRACE - 15.8
+TRACE - 16.9
 TRACE - setTempmin
-TRACE - 15.8
+TRACE - 16.5
 TRACE - setHum
-TRACE - 81
+TRACE - 88
 TRACE - setDp
-TRACE - 12.4
+TRACE - 14.9
 TRACE - setWChill
-TRACE - 12.4
+TRACE - 16.9
 TRACE - setHindex
-TRACE - 15.7
+TRACE - 17.2
 TRACE - setWspeed
-TRACE - 25.7
+TRACE - 8.0
 TRACE - setDir
-TRACE - NNW
+TRACE - SW
 TRACE - setBar
-TRACE - 1009.2
+TRACE - 0.00
+DEBUG - 0.0
+DEBUG - rainInTheDay
+DEBUG - 0
 TRACE - setRain
 TRACE - 0
 TRACE - setRr
-TRACE - 0.0
+TRACE - 0.014
 TRACE - setRainmt
 TRACE - 
 TRACE - setRainyr
@@ -2609,104 +468,29 @@ TRACE -
 TRACE - setDate
 TRACE - DateTime Object
 (
-    [date] => 2014-11-07 20:00:00.000000
+    [date] => 2014-11-09 22:00:00.000000
     [timezone_type] => 3
     [timezone] => Europe/Rome
 )
 
-DEBUG - Persisted new measure with id: 7378
+DEBUG - Persisted new measure with id: 7633
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Fenosu(OR) - 15 mt slm, and id: 64
-TRACE - station type: CLIENTRAW
-TRACE - station data_source: http://prohu.altervista.org/_altervista_ht/clientraw.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 16.3
-TRACE - setTempmax
-TRACE - 19.7
-TRACE - setTempmin
-TRACE - 9.9
-TRACE - setHum
-TRACE - 77
-TRACE - setDp
-TRACE - 12.3
-TRACE - setWChill
-TRACE - 16.3
-TRACE - setHindex
-TRACE - 16.3
-TRACE - setWspeed
-TRACE - 3.4
-TRACE - setDir
-TRACE - NE
-TRACE - setBar
-TRACE - 1009.3
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.0
-TRACE - setRainmt
-TRACE - 17.1
-TRACE - setRainyr
-TRACE - 329.6
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 19:45:06.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7379
+ERROR - measure invalid, for station with name: Fenosu(OR) - 15 mt slm, and id: 64
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Bitti(NU) - 550 mt slm, and id: 65
-TRACE - station type: REALTIME
-TRACE - station data_source: http://meteobitti.altervista.org/realtime.txt
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 13.5
-TRACE - setTempmax
-TRACE - 14.7
-TRACE - setTempmin
-TRACE - 9.4
-TRACE - setHum
-TRACE - 82
-TRACE - setDp
-TRACE - 
-TRACE - setWChill
-TRACE - 11.5
-TRACE - setHindex
-TRACE - 13.5
-TRACE - setWspeed
-TRACE - 10.5
-TRACE - setDir
-TRACE - WSW
-TRACE - setBar
-TRACE - 1010.4
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 0.0
-TRACE - setRainmt
-TRACE - 2.6
-TRACE - setRainyr
-TRACE - 21.5
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:03:44.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7380
+ERROR - measure invalid, for station with name: Bitti(NU) - 550 mt slm, and id: 65
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Ossi(SS) - 340 mt slm, and id: 66
 TRACE - station type: DOWNLD02
 TRACE - station data_source: http://ossimeteo.altervista.org/downld02.txt
 TRACE - getMeasure()
 TRACE - attempt #0
+DEBUG - _____________>>>_____>>> testing DOWLD02: rain:
+DEBUG - line: 
+DEBUG - 31/08/14 21:55 19.8 19.9 19.8 80 16.3 1.6 WSW 0.13 8.0 WSW 19.8 20.5 20.5 1013.5 0.00 0.0 0.000 0.005 24.7 61 16.6 25.1 11.02 .0727 103 6 100.0 5
 TRACE - setTemp
 TRACE - 19.8
 TRACE - setTempmax
@@ -2726,11 +510,14 @@ TRACE - 1.6
 TRACE - setDir
 TRACE - WSW
 TRACE - setBar
-TRACE - 1013.5
+TRACE - 0.00
+DEBUG - 0.0
+DEBUG - rainInTheDay
+DEBUG - 0
 TRACE - setRain
 TRACE - 0
 TRACE - setRr
-TRACE - 0.0
+TRACE - 0.000
 TRACE - setRainmt
 TRACE - 
 TRACE - setRainyr
@@ -2747,45 +534,6 @@ ERROR - expired measure
 ERROR - measure invalid, for station with name: Ossi(SS) - 340 mt slm, and id: 66
 DEBUG - _____________________________________________________________________
 DEBUG - Processing station with name: Capoterra-T.Ulivi(CA) - 10 mt slm, and id: 67
-TRACE - station type: WUNDER
-TRACE - station data_source: http://api.wunderground.com/weatherstation/WXCurrentObXML.asp?ID=ISARDEGN52
 TRACE - getMeasure()
-TRACE - attempt #0
-TRACE - setTemp
-TRACE - 18.4
-TRACE - setTempmax
-TRACE - 18.4
-TRACE - setTempmin
-TRACE - 18.4
-TRACE - setHum
-TRACE - 70
-TRACE - setDp
-TRACE - 12.8
-TRACE - setWChill
-TRACE - 
-TRACE - setHindex
-TRACE - 
-TRACE - setWspeed
-TRACE - 11.3
-TRACE - setDir
-TRACE - WNW
-TRACE - setBar
-TRACE - 1010.4
-TRACE - setRain
-TRACE - 0.0
-TRACE - setRr
-TRACE - 
-TRACE - setRainmt
-TRACE - 
-TRACE - setRainyr
-TRACE - 
-TRACE - setDate
-TRACE - DateTime Object
-(
-    [date] => 2014-11-07 20:02:51.000000
-    [timezone_type] => 3
-    [timezone] => Europe/Rome
-)
-
-DEBUG - Persisted new measure with id: 7381
+ERROR - measure invalid, for station with name: Capoterra-T.Ulivi(CA) - 10 mt slm, and id: 67
 DEBUG - DONE.
