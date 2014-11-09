@@ -64,6 +64,7 @@ angular.module('sardegnaclima')
             init: function(){
                 this.map = new google.maps.Map($("#container").find("#map")[0], mapOptions);
                 this.settings.mode = "temp";
+                $rootScope.mapMode = "temp";
             },
             markers: {
                 temp: [],
@@ -120,6 +121,7 @@ angular.module('sardegnaclima')
 
         $rootScope.setMapMode = function(mode){
             SardegnaClimaMap.settings.mode  = mode;
+            $rootScope.mapMode = mode;
             SardegnaClimaMap.cleanMap();
             SardegnaClimaMap.showMarkersByType(mode);
             $location.path('/main/init');

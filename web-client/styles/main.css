@@ -153,3 +153,7 @@ html, body{
     height: 60px;
     z-index: 99999999;
 }
+
+.map-mode-active{
+    font-weight: bold;
+}
