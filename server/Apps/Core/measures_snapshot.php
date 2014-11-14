@@ -18,11 +18,12 @@ for($i = 1; $i < count($argv); $i++)$filter[] = $argv[$i];
 $stations = $entityManager->getRepository('Station')->findAll();
 foreach ($stations as $i => $station) {
     \Logger::getLogger('measure_snapshot')->debug('_____________________________________________________________________');
-    \Logger::getLogger('measure_snapshot')->debug('Processing station with name: ' .$station->getName() . ", and id: " . $station->getId());
+    \Logger::getLogger('measure_snapshot')->error('Processing station with name: ' .$station->getName() . ", and id: " . $station->getId());
 	$stationDataParserContext = new StationDataParserContext($station,$filter);
     if($stationDataParserContext) {
         $measure = $stationDataParserContext->getMeasure($station->getDataUrl());
         //persist measure
+        if($measure == "DONE") continue;
         if ($measure) {
             $measure->setStation($station);
             $entityManager->persist($measure);

@@ -5,6 +5,7 @@ require_once __DIR__ ."/../../../bootstrap.php";
 
 class StationDataParserContext{
 	private $strategy = null;
+
 	public function __construct($station, $filter) {
         if(!count($filter) || in_array( $station->getType(), $filter)) {
             \Logger::getLogger('parser')->trace("station type: " . $station->getType());
@@ -60,9 +61,11 @@ class StationDataParserContext{
                     $measure = $this->strategy->getMeasure($data_url);
                     if(!$measure) usleep($config['attemptsInterval']);
                 }
+                if($measure == "DONE") return "DONE";
                 // filter too old measure
                 $date = new \DateTime();
                 $date->modify('-3 hours');
+
                 if($measure && $measure->getDate() > $date){
                     return $measure;
                 }
@@ -77,6 +80,6 @@ class StationDataParserContext{
                 return null;
             }
         else
-            return null;
+            return "DONE";
 	}
 }

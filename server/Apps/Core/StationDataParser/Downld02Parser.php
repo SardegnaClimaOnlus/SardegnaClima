@@ -5,53 +5,60 @@ require_once __DIR__ ."/../../../vendor/autoload.php";
 class Downld02Parser extends Parser implements StationParserInterface{
 	public function getMeasure($data_url){
 
-
+        $logger = \Logger::getLogger('downl02');
         $file = file("$data_url");
         $lines = count($file);
         if($lines < 4) return null;
+        $lastMeasure = $this->station->getLastMeasure();
+        $lastMeasureDate = $lastMeasure->getDate();
+        for($i = 4; $i < $lines; $i++){
+                $line = $file[$i];        
 
+                $line = trim(preg_replace("/[\s,]+/", " ", $line));
+                list($date, $time, $temp, $tempmax, $tempmin, $hum, $dp, $wspeed, $dir, $wrun, $whi, $whidir, $wchill, $hindex, $thwi, $useless, $bar, $rain, $rr, $inutile2, $cooldd) = explode(" ",$line);
+                // date
+                list($giorno, $mese, $anno) = explode("/",$date);
+                $anno = '20' . $anno;
+                $date = $anno . "/" . $mese . "/" . $giorno;
+                $datetime = $date . ' ' . $time;
+                if($wdir == '---') $wdir = null;
+                if($whidir == '---') $whidir = null;
+                $lineDate = date_create($datetime);
+                $logger->debug("lineDate:");
+                $logger->debug($lineDate);
+                $logger->debug("lastMeasureDate:");
+                $logger->debug($lastMeasureDate);
+                if($lineDate > $lastMeasureDate){
+                        $measure = new \Measure();
+                        $measure->setTemp($temp);
+                        $measure->setTempmax($this->em->getRepository('Measure')->getTempMaxByStation($this->station));
+                        $measure->setTempmin($this->em->getRepository('Measure')->getTempMinByStation($this->station));
+                        $measure->setHum($hum);
+                        $measure->setDp($dp);
+                        $measure->setWchill($wchill);
+                        $measure->setHindex($hindex);
+                        $measure->setWspeed($wspeed);
+                        $measure->setDir($dir);
+                        $measure->setBar($bar);
 
-        $line = $file[$lines - 1];
+                        $rainInTheDay = $this->em->getRepository('Measure')->getLastRainDuringTheDayByStation($this->station);
+                        $effectiveRain = $this->em->getRepository('Measure')->getLastRainDuringTheDayByStation($this->station) + $rain;
+                       
+                        $measure->setRain($effectiveRain);
+                        $measure->setRr($rr);
+                        $measure->setRainmt(null);
+                        $measure->setRainyr(null);
+                        $dateObj = date_create($datetime);
+                        $measure->setDate($dateObj?$dateObj:null);
 
+                        $measure->setStation($this->station);
+                        $this->em->persist($measure);
+                        $this->station->setLastMeasure($measure);
+                        $this->em->flush();
+                        
 
-        $line = trim(preg_replace("/[\s,]+/", " ", $line));
-        \Logger::getLogger('measure')->debug("_____________>>>_____>>> testing DOWLD02: rain:");
-        \Logger::getLogger('measure')->debug("line: ");
-        \Logger::getLogger('measure')->debug($line);
-        list($date, $time, $temp, $tempmax, $tempmin, $hum, $dp, $wspeed, $dir, $wrun, $whi, $whidir, $wchill, $hindex, $thwi, $useless, $bar, $rain, $rr, $inutile2, $cooldd) = explode(" ",$line);
-        // date
-        list($giorno, $mese, $anno) = explode("/",$date);
-        $anno = '20' . $anno;
-        $date = $anno . "/" . $mese . "/" . $giorno;
-        $datetime = $date . ' ' . $time;
-        //cast null cases
-        if($wdir == '---') $wdir = null;
-        if($whidir == '---') $whidir = null;
-
-        $measure = new \Measure();
-        $measure->setTemp($temp);
-        $measure->setTempmax($this->em->getRepository('Measure')->getTempMaxByStation($this->station));
-        $measure->setTempmin($this->em->getRepository('Measure')->getTempMinByStation($this->station));
-        $measure->setHum($hum);
-        $measure->setDp($dp);
-        $measure->setWchill($wchill);
-        $measure->setHindex($hindex);
-        $measure->setWspeed($wspeed);
-        $measure->setDir($dir);
-        $measure->setBar($bar);
-        \Logger::getLogger('measure')->debug($rain);
-        $rainInTheDay = $this->em->getRepository('Measure')->getLastRainDuringTheDayByStation($this->station);
-        \Logger::getLogger('measure')->debug("rainInTheDay");
-        \Logger::getLogger('measure')->debug("$rainInTheDay");
-        $effectiveRain = $this->em->getRepository('Measure')->getLastRainDuringTheDayByStation($this->station) + $rain;
-        $measure->setRain($effectiveRain);
-        $measure->setRr($rr);
-        $measure->setRainmt(null);
-        $measure->setRainyr(null);
-        $dateObj = date_create($datetime);
-        $measure->setDate($dateObj?$dateObj:null);
-
-        return $measure;
-
-	}
+                    }
+	       }
+        return "DONE";
+        }
 }
