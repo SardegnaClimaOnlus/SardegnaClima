@@ -14,7 +14,7 @@ class SClimaParser extends Parser implements StationParserInterface{
 		$mese = trim($databu[17]);
 		$anno = trim($databu[18]);
 		$ora = date('G:i:s' , strtotime("$databu[19]:$databu[20]"));
-		$data = $anno . "/" . $mese . "/" . $giorno;
+		$data = $anno . "-" . $mese . "-" . $giorno;
 		$datetime = $data . ' ' . $ora;
 
 		$measure = new \Measure();

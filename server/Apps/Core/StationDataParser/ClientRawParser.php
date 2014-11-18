@@ -15,7 +15,7 @@ class ClientRawParser extends Parser implements StationParserInterface{
 		$date = $datagus[74];
 		$hour = ("$datagus[29]:$datagus[30]:$datagus[31]");
 		list($giorno, $mese, $anno) = explode("/",$date);
-		$date = $anno . "/" . $mese . "/" . $giorno;
+		$date = $anno . "-" . $mese . "-" . $giorno;
 	
 		$measure = new \Measure();
 		$measure->setTemp($datagus[4]);

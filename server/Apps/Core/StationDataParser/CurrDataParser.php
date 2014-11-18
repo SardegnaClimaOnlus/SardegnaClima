@@ -11,7 +11,7 @@ class CurrDataParser extends Parser implements StationParserInterface{
 		$data = $datafil[0];
 		$ora = $datafil[1];
 		list($giorno, $mese, $anno) = explode("/",$data);
-		$data = $anno . "/" . $mese . "/" . $giorno;
+		$data = $anno . "-" . $mese . "-" . $giorno;
 		$datetime = $data . ' ' . $ora;
 		$measure = new \Measure();
 		$measure->setTemp($datafil[2]);

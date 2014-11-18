@@ -111,7 +111,7 @@ class WlinkParser extends Parser implements StationParserInterface{
 		$pos = strpos($meteostr,"</td>");
 		$rainrateoggi500 = substr($meteostr, +0 , $pos);
 		$mese = date('m', strtotime($mese));
-		$data = $anno . "/" . $mese . "/" . $giorno;
+		$data = $anno . "-" . $mese . "-" . $giorno;
 		$datetime = $data . ' ' . $ora;
 
 		$measure = new \Measure();

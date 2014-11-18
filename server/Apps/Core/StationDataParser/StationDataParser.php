@@ -17,7 +17,7 @@ class StationDataParser extends Parser implements StationParserInterface{
 		$anno = "20" . $anno;
 		$anno = date('Y', strtotime($anno));
 		$ora = date('G:i:s', strtotime($ora));
-		$data = $anno . "/" . $mese . "/" . $giorno;
+		$data = $anno . "-" . $mese . "-" . $giorno;
 		$datetime = $data . ' ' . $ora;
 
 		$measure = new \Measure();

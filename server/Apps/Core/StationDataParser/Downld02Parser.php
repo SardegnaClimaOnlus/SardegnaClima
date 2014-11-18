@@ -19,8 +19,9 @@ class Downld02Parser extends Parser implements StationParserInterface{
                 // date
                 list($giorno, $mese, $anno) = explode("/",$date);
                 $anno = '20' . $anno;
-                $date = $anno . "/" . $mese . "/" . $giorno;
+                $date = $anno . "-" . $mese . "-" . $giorno;
                 $datetime = $date . ' ' . $time;
+                $lineday = $date . ' 00:00:00';
                 if($wdir == '---') $wdir = null;
                 if($whidir == '---') $whidir = null;
                 $lineDate = date_create($datetime);
@@ -31,8 +32,10 @@ class Downld02Parser extends Parser implements StationParserInterface{
                 if($lineDate > $lastMeasureDate){
                         $measure = new \Measure();
                         $measure->setTemp($temp);
-                        $measure->setTempmax($this->em->getRepository('Measure')->getTempMaxByStation($this->station));
-                        $measure->setTempmin($this->em->getRepository('Measure')->getTempMinByStation($this->station));
+                        $maxInDB = $this->em->getRepository('Measure')->getTempMaxByStation($this->station,$lineday);
+                        $measure->setTempmax(($maxInDB===null)?$temp:max(array($maxInDB, $temp)));
+                        $minInDB = $this->em->getRepository('Measure')->getTempMinByStation($this->station,$lineday);
+                        $measure->setTempmin(($minInDB===null)?$temp:min(array($minInDB, $temp)));
                         $measure->setHum($hum);
                         $measure->setDp($dp);
                         $measure->setWchill($wchill);
@@ -40,9 +43,13 @@ class Downld02Parser extends Parser implements StationParserInterface{
                         $measure->setWspeed($wspeed);
                         $measure->setDir($dir);
                         $measure->setBar($bar);
-
-                        $rainInTheDay = $this->em->getRepository('Measure')->getLastRainDuringTheDayByStation($this->station);
-                        $effectiveRain = $this->em->getRepository('Measure')->getLastRainDuringTheDayByStation($this->station) + $rain;
+                        // FIXME: not during the day, but during the line day!
+                        $rainInTheDay = $this->em->getRepository('Measure')->getLastRainDuringTheDayByStation($this->station,$lineday);
+                        $logger->debug("rain during the day:");
+                        $logger->debug($rainInTheDay);
+                        $logger->debug("rain in the line:");
+                        $logger->debug($rain);
+                        $effectiveRain = $rainInTheDay + $rain;
                        
                         $measure->setRain($effectiveRain);
                         $measure->setRr($rr);

@@ -11,7 +11,7 @@ class TagmerParser  extends Parser implements StationParserInterface{
 		$ora = "$datagus[0]";
 		$data = "$datagus[1]";
 		list($giorno, $mese, $anno) = explode("/",$data);  
-		$data = "20" . $anno . "/" . $mese . "/" . $giorno;
+		$data = "20" . $anno . "-" . $mese . "-" . $giorno;
 		$datetime = $data . ' ' . $ora;
 		$measure = new \Measure();
 		$measure->setTemp($datagus[2]);

@@ -11,7 +11,7 @@ class WLLiveMapParser extends Parser implements StationParserInterface{
 		$data = "$datagus[1]";
 
 		list($giorno, $mese, $anno) = explode("/",$data);
-		$data = "20" . $anno . "/" . $mese . "/" . $giorno;
+		$data = "20" . $anno . "-" . $mese . "-" . $giorno;
 		$datetime = $data . ' ' . $ora;
 		
 		$measure = new \Measure();

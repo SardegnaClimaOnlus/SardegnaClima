@@ -18,7 +18,7 @@ class LogDatParser extends Parser implements StationParserInterface{
 		$dataanno = "$datagus[3]";
 
 		// data
-	   	$data = $dataanno . "/" . $datame . "/" . $datagio;
+	   	$data = $dataanno . "-" . $datame . "-" . $datagio;
 	 	$datetime = $data . ' ' . $ora;
 
 	    $measure = new \Measure();

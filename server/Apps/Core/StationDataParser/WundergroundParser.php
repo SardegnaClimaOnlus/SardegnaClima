@@ -11,6 +11,12 @@ class WundergroundParser extends Parser implements StationParserInterface{
 		$array_data = explode(",", $array_data);
 		$array_data = $array_data[1];
 		$datetime = date("Y-m-d H:i:s", strtotime($array_data));
+		$array_datetime = explode(" ", $datetime);
+		$lineday = $array_datetime[0] . ' 00:00:00';
+
+		\Logger::getLogger('measure_snapshot')->debug("WUNDERGROUND DEBUG");
+		\Logger::getLogger('measure_snapshot')->debug("line date DEBUG: ");
+		\Logger::getLogger('measure_snapshot')->debug($lineday);
 
 		$array_temp = $dataraw->temp_c; 
 		$array_hum = $dataraw->relative_humidity; 
@@ -28,9 +34,10 @@ class WundergroundParser extends Parser implements StationParserInterface{
 		// -- create measure -- //
 		$measure = new \Measure();
 		$measure->setTemp(floatval($array_temp));
-
-		$measure->setTempmax($this->em->getRepository('Measure')->getTempMaxByStation($this->station));
-		$measure->setTempmin($this->em->getRepository('Measure')->getTempMinByStation($this->station));
+		$maxInDB = $this->em->getRepository('Measure')->getTempMaxByStation($this->station,$lineday);
+		$measure->setTempmax(($maxInDB===null)?$temp:max(array($maxInDB, floatval($array_temp))));
+		$minInDB = $this->em->getRepository('Measure')->getTempMinByStation($this->station,$lineday);
+		$measure->setTempmin(($minInDB===null)?$temp:min(array($minInDB, floatval($array_temp))));
 		$measure->setHum(floatval($array_hum));
 		$measure->setDp(floatval($array_dp));
 		$measure->setWchill(null);

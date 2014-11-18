@@ -14,7 +14,7 @@ class RealTimeParser extends Parser implements StationParserInterface{
 
 		list($giorno, $mese, $anno) = explode("/",$data);
 		$anno = "20" . $anno;
-		$data = $anno . "/" . $mese . "/" . $giorno;
+		$data = $anno . "-" . $mese . "-" . $giorno;
 		$datetime = $data . ' ' . $ora;
 
 		$measure = new \Measure();
