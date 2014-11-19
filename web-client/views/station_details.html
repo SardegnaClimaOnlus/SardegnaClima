@@ -24,37 +24,37 @@
                     <div class="row-fluid measure-time-box">
                         <div class="col-xs-12 col-sm-12">{{station.measure.date | scdate}}</div>
                     </div>
-                    <div class="row temperature-box">
+                    <div class="row temperature-box" ng-hide="(station.measure.temp===null)">
                         <div class="col-xs-12 col-sm-12 station-temperature nopadding">{{station.measure.temp}}°C</div>
                         
                         <div class="clearfix visible-xs-block"></div>
                     </div>
                     <table class="table table-hover">
-                        <tr>
+                        <tr ng-hide="(station.measure.tempmax===null)">
                             <td>Max</td>
                             <td><span class="station-tempmax">{{station.measure.tempmax}}</span> °C</td>
                         </tr>
-                        <tr>
+                        <tr ng-hide="(station.measure.tempmin===null)">
                             <td>Min</td>
                             <td><span class="station-tempmin">{{station.measure.tempmin}}</span> °C</td>
                         </tr>
-                        <tr>
+                        <tr ng-hide="(station.measure.rain===null)">
                             <td>Pioggia</td>
-                            <td>{{(station.measure.rain)?station.measure.rain:"ND"}} mm</td>
+                            <td>{{station.measure.rain}} mm</td>
                         </tr>
-                        <tr>
+                        <tr ng-hide="(station.measure.wspeed===null)">
                             <td>Vento</td>
                             <td>{{station.measure.wspeed}} {{getWindDirectionChar(station.measure.dir)}} km/h</td>
                         </tr>
-                        <tr>
+                        <tr ng-hide="(station.measure.dp===null)">
                             <td>Punto di rugiada</td>
                             <td>{{station.measure.dp}} °C </td>
                         </tr>
-                        <tr>
+                        <tr ng-hide="(station.measure.hum===null)">
                             <td>Umidità</td>
                             <td>{{station.measure.hum}} % </td>
                         </tr>
-                        <tr>
+                        <tr ng-hide="(station.measure.bar===null)">
                             <td>Pressione</td>
                             <td>{{station.measure.bar}} mb </td>
                         </tr>
@@ -63,6 +63,7 @@
             </div>
         </div>
     </div>
+
 </div>
 
 
