@@ -43,7 +43,7 @@ class WundergroundParser extends Parser implements StationParserInterface{
 		$measure->setWchill(null);
 		$measure->setHindex(null);
 		$measure->setWspeed($wspeed);
-		$measure->setDir($this->getDirByWunderDireciton(strval($array_dir)));
+		$measure->setDir($this->windDirectionToDegree(strval($array_dir)));
 		$measure->setBar(floatval($array_bar));
 		$measure->setRain($rain);
 		$measure->setRr(null);
@@ -55,22 +55,7 @@ class WundergroundParser extends Parser implements StationParserInterface{
 		return $measure;
 	}
 
-	private function getDirByWunderDireciton($wunderDirection){
-        switch($wunderDirection){
-            case "North":
-                $wunderDirection = 'N';
-                break;
-            case "South":
-                $wunderDirection= 'S';
-                break;
-            case "East":
-                $wunderDirection= 'E';
-                break;
-            case "West":
-                $wunderDirection= 'W';
-        }
-		return $wunderDirection;
-	}
+	
 
 
 }

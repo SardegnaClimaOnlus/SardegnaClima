@@ -29,7 +29,7 @@ class StationDataParser extends Parser implements StationParserInterface{
 		$measure->setWchill(floatval($datagus[28]));
 		$measure->setHindex(null);
 		$measure->setWspeed(floatval($datagus[36]));
-		$measure->setDir($datagus[43]);
+		$measure->setDir($this->windDirectionToDegree($datagus[43]));
 		$measure->setBar(floatval($datagus[59]));
 		$measure->setRain(floatval($datagus[69]));
 		$measure->setRr(floatval($datagus[73]));

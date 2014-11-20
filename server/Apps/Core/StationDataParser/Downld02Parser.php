@@ -41,9 +41,8 @@ class Downld02Parser extends Parser implements StationParserInterface{
                         $measure->setWchill($wchill);
                         $measure->setHindex($hindex);
                         $measure->setWspeed($wspeed);
-                        $measure->setDir($dir);
+                        $measure->setDir($this->windDirectionToDegree($dir));
                         $measure->setBar($bar);
-                        // FIXME: not during the day, but during the line day!
                         $rainInTheDay = $this->em->getRepository('Measure')->getLastRainDuringTheDayByStation($this->station,$lineday);
                         $logger->debug("rain during the day:");
                         $logger->debug($rainInTheDay);

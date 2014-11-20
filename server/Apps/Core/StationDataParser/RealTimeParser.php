@@ -26,7 +26,7 @@ class RealTimeParser extends Parser implements StationParserInterface{
 		$measure->setWchill($datagus[24]);
 		$measure->setHindex($datagus[41]);
 		$measure->setWspeed($datagus[4]);
-		$measure->setDir($datagus[11]);
+		$measure->setDir($this->windDirectionToDegree($datagus[11]));
 		$measure->setBar($datagus[10]);
 		$measure->setRain($datagus[9]);
 		$measure->setRr($datagus[8]);

@@ -22,7 +22,7 @@ class TagmerParser  extends Parser implements StationParserInterface{
 		$measure->setWchill($datagus[6]);
 		$measure->setHindex($datagus[5]);
 		$measure->setWspeed($datagus[46]);
-		$measure->setDir($datagus[45]);
+		$measure->setDir($this->windDirectionToDegree($datagus[45]));
 		$measure->setBar($datagus[7]);
 		$measure->setRain($datagus[54]);
 		$measure->setRr($datagus[55]);

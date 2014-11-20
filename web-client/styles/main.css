@@ -163,3 +163,25 @@ html, body{
     width: 24px;
     height: 24px;
 }
+
+/**** wind-arrow ***/
+.wind-unity{
+    margin-left:5px;
+}
+
+.wind-speed-value{
+    margin-right: 3px;
+}
+
+.wind-arrow{
+
+    display: inline-block;
+    -webkit-transition: 1.5s ease-in-out;
+    -moz-transition: 1.5s ease-in-out;
+    -o-transition: 1.5s ease-in-out;
+    transition: 1.5s ease-in-out;
+}
+
+.dir-wind-container{
+    padding-bottom: 3px;
+}

@@ -22,7 +22,7 @@ class CurrDataParser extends Parser implements StationParserInterface{
 		$measure->setWchill($datafil[3]);
 		$measure->setHindex($datafil[4]);
 		$measure->setWspeed($datafil[9]);
-		$measure->setDir($datafil[11]);
+		$measure->setDir($this->windDirectionToDegree($datafil[11]));
 		$measure->setBar($datafil[7]);
 		$measure->setRain($datafil[43]);
 		$measure->setRr($datafil[12]);

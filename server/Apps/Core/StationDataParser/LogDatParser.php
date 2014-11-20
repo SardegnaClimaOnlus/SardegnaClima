@@ -30,7 +30,7 @@ class LogDatParser extends Parser implements StationParserInterface{
 		$measure->setWchill(null);
 		$measure->setHindex(null);
 		$measure->setWspeed($datagus[9]);
-		$measure->setDir($datagus[10]);
+		$measure->setDir($this->windDirectionToDegree($datagus[10]));
 		$measure->setBar(null);
 		$measure->setRain($datagus[11]);
 		$measure->setRr(null);

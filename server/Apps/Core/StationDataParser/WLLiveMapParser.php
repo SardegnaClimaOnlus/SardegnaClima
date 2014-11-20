@@ -23,7 +23,7 @@ class WLLiveMapParser extends Parser implements StationParserInterface{
 		$measure->setWchill($datagus[4]);
 		$measure->setHindex($datagus[3]);
 		$measure->setWspeed($datagus[9]);
-		$measure->setDir($datagus[10]);
+		$measure->setDir($this->windDirectionToDegree($datagus[10]));
 		$measure->setBar($datagus[7]);
 		$measure->setRain($datagus[11]);
 		$measure->setRr(null);
