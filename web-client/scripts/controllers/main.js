@@ -72,8 +72,9 @@ angular.module('sardegnaclima')
                );
 
                // Listen for the dragend event
-               google.maps.event.addListener(self.map, 'drag', function() {
+               google.maps.event.addListener(self.map, 'dragend', function() {
                  if (strictBounds.contains(self.map.getCenter())) return;
+
                  var c = self.map.getCenter(),
                      x = c.lng(),
                      y = c.lat(),
