@@ -16,8 +16,7 @@ angular.module('sardegnaclima')
     .factory('SardegnaClimaMarker', function($rootScope, $location){
         return function(station, color, value){
             var div = document.createElement('DIV');
-            value = (value==="null")?"ND":value;
-            value = (value===null)?"ND":value;
+            value = (value==="null" || value===null)?"ND":value;
             div.innerHTML = '<div style="border-radius: 50%;width: 25px;height: 25px;opacity:0.9;background-color:' + color +  ';color: #000000 !important;font-size: 11px;padding: 5px 2px 2px 2px;text-align: center;">'+ value + '</div>';
             var marker = new RichMarker({
                 map: null,
@@ -62,9 +61,34 @@ angular.module('sardegnaclima')
         var SardegnaClimaMap = {
             map: null,
             init: function(){
+                var self = this;
                 this.map = new google.maps.Map($("#container").find("#map")[0], mapOptions);
                 this.settings.mode = "temp";
                 $rootScope.mapMode = "temp";
+
+               var strictBounds = new google.maps.LatLngBounds(
+                 new google.maps.LatLng(38.855680, 7.915886), 
+                 new google.maps.LatLng(41.359220, 10.464714)
+               );
+
+               // Listen for the dragend event
+               google.maps.event.addListener(self.map, 'drag', function() {
+                 if (strictBounds.contains(self.map.getCenter())) return;
+                 var c = self.map.getCenter(),
+                     x = c.lng(),
+                     y = c.lat(),
+                     maxX = strictBounds.getNorthEast().lng(),
+                     maxY = strictBounds.getNorthEast().lat(),
+                     minX = strictBounds.getSouthWest().lng(),
+                     minY = strictBounds.getSouthWest().lat();
+
+                 if (x < minX) x = minX;
+                 if (x > maxX) x = maxX;
+                 if (y < minY) y = minY;
+                 if (y > maxY) y = maxY;
+
+                 self.map.setCenter(new google.maps.LatLng(y, x));
+               });
             },
             markers: {
                 temp: [],
