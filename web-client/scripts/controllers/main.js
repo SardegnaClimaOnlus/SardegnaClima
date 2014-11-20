@@ -18,7 +18,7 @@ angular.module('sardegnaclima')
             var div = document.createElement('DIV');
             value = (value==="null")?"ND":value;
             value = (value===null)?"ND":value;
-            div.innerHTML = '<div style="border-radius: 50%;width: 25px;height: 25px;opacity:0.9;background-color:' + color +  ';color:#34495e;font-size: 11px;padding: 5px 2px 2px 2px;text-align: center;">'+ value + '</div>';
+            div.innerHTML = '<div style="border-radius: 50%;width: 25px;height: 25px;opacity:0.9;background-color:' + color +  ';color: #000000 !important;font-size: 11px;padding: 5px 2px 2px 2px;text-align: center;">'+ value + '</div>';
             var marker = new RichMarker({
                 map: null,
                 position: new google.maps.LatLng(station.latitude, station.longitude),
