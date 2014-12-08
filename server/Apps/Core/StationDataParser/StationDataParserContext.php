@@ -32,6 +32,9 @@ class StationDataParserContext{
                 case "DOWNLD02":
                     $this->strategy = new Downld02Parser($station);
                     break;
+                case "DOWNLD02A":
+                    $this->strategy = new Downld02AParser($station);
+                    break;
                 case "LOGDAT":
                     $this->strategy = new LogDatParser($station);
                     break;
