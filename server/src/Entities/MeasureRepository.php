@@ -28,7 +28,17 @@ class MeasureRepository extends EntityRepository
 
 
     public function getLastRainDuringTheDayByStation($station, $day){
-        $queryString = "SELECT m.rain as rain FROM measures m WHERE station_id = (?) AND m.rain > 0  AND  m.date >= '$day' ORDER  BY m.date DESC  LIMIT 1;";
+        $date = new DateTime($day);
+        $tomorrow = $date->modify('+1 day');
+        $tomorrowTimeStamp = $tomorrow->format('Y-m-d H:i:s'); 
+        
+        \Logger::getLogger('measure_repository')->debug("lineday:");
+        \Logger::getLogger('measure_repository')->debug("'$day'");
+
+        \Logger::getLogger('measure_repository')->debug("tomorrow:");
+        \Logger::getLogger('measure_repository')->debug("'$tomorrowTimeStamp'");
+
+        $queryString = "SELECT m.rain as rain FROM measures m WHERE station_id = (?) AND m.rain > 0  AND  m.date >= '$day' AND m.date < '$tomorrowTimeStamp' ORDER  BY m.date DESC  LIMIT 1;";
         return $this->runQuery1Param1Result($queryString, $station->getId(), 'rain');
     }
 

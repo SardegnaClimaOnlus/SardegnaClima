@@ -30,9 +30,15 @@ class Downld02AParser extends Parser implements StationParserInterface{
                 $lineday = $date . ' 00:00:00';
                 if($wdir == '---') $wdir = null;
                 if($whidir == '---') $whidir = null;
+
+
                 $lineDate = date_create($datetime);
+                $logger->debug("lastMeasureId:");
+                $logger->debug($lastMeasure->getId());
                 $logger->debug("lineDate:");
                 $logger->debug($lineDate);
+                $logger->debug("lineday:");
+                $logger->debug($lineday);
                 $logger->debug("lastMeasureDate:");
                 $logger->debug($lastMeasureDate);
                 if($lineDate > $lastMeasureDate){
