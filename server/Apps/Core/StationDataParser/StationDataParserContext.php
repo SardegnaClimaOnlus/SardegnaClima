@@ -47,6 +47,10 @@ class StationDataParserContext{
                 case "WLINK":
                     $this->strategy = new WlinkParser($station);
                     break;
+                case "WLINK2":
+                    $this->strategy = new Wlink2Parser($station);
+                    break;
+    
             }
         }
         else
