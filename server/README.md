@@ -14,4 +14,4 @@ Provide data from database to SardegnaClima client.
  - Symfony/yaml
  - Apache/log4php
  
- 
+(in progress...)
