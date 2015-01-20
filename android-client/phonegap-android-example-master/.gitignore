@@ -1,0 +1,10 @@
+.classpath
+.project
+bin/
+gen/
+.DS_Store
+gravy.tmproj
+build/*
+*.pbxuser
+*.mode1v3
+profile

@@ -4,6 +4,7 @@ require_once __DIR__ ."/../../../bootstrap.php";
 
 #summary
 $app->get('/v1/summary', function () use ($app, $entityManager)  {
+    /*
     $stations = $entityManager->getRepository('Station')->findAll();
     $result = array();
     for($i = 0; $i < count($stations); $i++){
@@ -31,5 +32,7 @@ $app->get('/v1/summary', function () use ($app, $entityManager)  {
             );
     }
    	$app->response->write(json_encode($result));
+    */
+    $app->response->write(file_get_contents ( __DIR__ ."/cache/summary.json"));
 });
 

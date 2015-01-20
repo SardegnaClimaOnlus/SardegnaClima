@@ -16,8 +16,9 @@ for($i = 1; $i < count($argv); $i++)$filter[] = $argv[$i];
 // get measures
 \Logger::getLogger('measure_snapshot')->debug('Getting stations list...');
 $stations = $entityManager->getRepository('Station')->findAll();
+$json = array();
 foreach ($stations as $i => $station) {
-    \Logger::getLogger('measure_snapshot')->debug('_____________________________________________________________________');
+    \logger::getLogger('measure_snapshot')->debug('_____________________________________________________________________');
     \Logger::getLogger('measure_snapshot')->error('Processing station with name: ' .$station->getName() . ", and id: " . $station->getId());
 	$stationDataParserContext = new StationDataParserContext($station,$filter);
     if($stationDataParserContext) {
@@ -29,12 +30,37 @@ foreach ($stations as $i => $station) {
             $entityManager->persist($measure);
             $station->setLastMeasure($measure);
             $entityManager->flush();
+            // add to json
+            $json[] = array(
+                "id" =>$station->getId(),
+                "name" =>$station->getName(),
+                "latitude" => $station->getLatitude(),
+                "longitude" => $station->getLongitude(),
+                "measure"=> array(
+                    "temp" => $measure->getTemp(),
+                    "date"=>$measure->getDate()->format('Y-m-d H:i:s'),
+                    "tempmax"=>$measure->getTempmax(),
+                    "tempmin"=>$measure->getTempmin(),
+                    "hum"=>$measure->getHum(),
+                    "dp"=>$measure->getDp(),
+                    "rain"=>$measure->getrain(),
+                    "wspeed"=>$measure->getWspeed(),
+                    "dir"=>$measure->getDir(),
+                    "bar"=>$measure->getBar()
+                )
+            );
+
             \Logger::getLogger('measure_snapshot')->debug('Persisted new measure with id: '. $measure->getId());
         } else {
             \Logger::getLogger('measure_snapshot')->error("measure invalid, for station with name: " . $station->getName() . ", and id: " . $station->getId());
         }
     }
 }
+
+
+
+// generate the json
+file_put_contents(dirname(__FILE__).'/../WebServices/MapClient/cache/summary.json', json_encode($json));
 
 
 \Logger::getLogger('measure_snapshot')->debug("DONE.");

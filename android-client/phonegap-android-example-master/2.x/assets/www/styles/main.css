@@ -1,0 +1,187 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    background-color: #EEEEEE;
+}
+
+#main-view{
+    width: 100%;
+    height: 100%;
+}
+
+.station-detail-container{
+    /*padding: 51px;*/
+    background-color: #EEEEEE;
+}
+
+.app-body, .app-content{
+    background-color: #EEEEEE;
+    width: 100%;
+    height: 100%;
+}
+
+.loading-spinner{
+    top: 50%;
+    left: 50%;
+    margin-top: -7px;
+    margin-left: -7px;
+    position: fixed;
+}
+
+.app, .app-content-loading{
+    width: 100%;
+    height: 100%;
+}
+.station-detail-container{
+    padding: 5px 5px 5px 5px;
+}
+
+.station-temperature{
+    font-size: 70px;
+}
+
+.station-tempmin, .station-tempmax{
+    /*font-size: 20px;*/
+    /*margin-left: 5px;*/
+}
+
+.station-tempmax{
+    color:#C0392B;
+    /*top: 3px;*/
+    /*position: relative;*/
+}
+
+.station-tempmin{
+    /*top: 12px;*/
+    /*position: relative;*/
+    color: #22A7F0;
+}
+
+.max-min-temperature-box{
+    padding: 17px 20px 25px 20px;
+    /*text-align: right;*/
+
+}
+
+.max-min-unit{
+    top: -7px;
+    position: relative;
+    left: 3px;
+}
+
+.temp-unit{
+    top: -35px;
+    position: relative;
+    /*left: 3px;*/
+    font-size: 20px;
+}
+
+.measure-time-box{
+    color: #708090;
+    margin-bottom: 50px;
+    text-align: center;
+
+}
+
+.measure-item{
+    font-size: 20px;
+}
+
+.measure-unit{
+    font-size: 10px;
+    /*margin-left: 4px;*/
+}
+
+.temperature-box{
+    margin: 0px 10px  30px 10px;
+    padding: 10px;
+}
+
+.measure-detail-values-box{
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+/* icons */
+.glyphicon{
+    margin-right: 5px !important;
+}
+
+
+
+.measure-value{
+    margin-left: 20px !important;
+}
+
+.navbar{
+    background-color: #3A539B !important;
+    color: #EEEEEE !important;
+}
+.navbar-app .btn-navbar, .navbar-app .btn  a{
+    color: #EEEEEE !important;
+
+}
+.table > tbody > tr > td {
+    border-color: #95A5A6
+}
+.navbar-app{
+    border-color: #F9BF3B;
+}
+
+.map-toolbar{
+    background-color: transparent !important;
+    border-color: transparent;
+}
+
+.map-toolbar-title{
+    background-color: transparent !important;
+    border-color: transparent;
+}
+.map-settings-button{
+    color: #3A539B !important;
+}
+
+/**** sardegna clima logo ****/
+.sardegna-clima-logo{
+    position: fixed;
+    bottom:25px;
+    right:25px;
+    height: 60px;
+    z-index: 99999999;
+}
+
+.map-mode-active{
+    font-weight: bold;
+}
+
+.map-button{
+    background-image: url("../images/map.png");
+    width: 24px;
+    height: 24px;
+}
+
+/**** wind-arrow ***/
+.wind-unity{
+    margin-left:5px;
+}
+
+.wind-speed-value{
+    margin-right: 3px;
+}
+
+.wind-arrow{
+
+    display: inline-block;
+    -webkit-transition: 1.5s ease-in-out;
+    -moz-transition: 1.5s ease-in-out;
+    -o-transition: 1.5s ease-in-out;
+    transition: 1.5s ease-in-out;
+}
+
+.dir-wind-container{
+    padding-bottom: 3px;
+}

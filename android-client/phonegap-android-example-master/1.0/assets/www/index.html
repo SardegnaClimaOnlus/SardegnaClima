@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Gravy</title>
+
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	
+		<script type="text/javascript" charset="utf-8" src="phonegap-1.0.0.js"></script>  
+		      
+        <script type="text/javascript" charset="utf-8" src="app47pg.js"></script>      
+        <script type="text/javascript" charset="utf-8" src="gravy.js"></script>
+     
+    </head>
+    <body>
+        <div id="jqt">
+            <div id="home">
+                <div data-role="header" class="ui-bar ui-bar-b">
+                    <h1>Share a deal!</h1>
+                </div>
+                <form method="post" id="submit_deal">
+					<input type="text" placeholder="Description" name="description" id="description" autocapitalize="off" autocorrect="on" autocomplete="on" />
+					<input type="text" placeholder="Tags" name="tags" id="tags" autocapitalize="off" autocorrect="on" autocomplete="on" />
+					<button type="submit" data-theme="b" name="submit" value="submit-value">Share it!</button>
+                </form>
+                <div id="notice"></div>
+            </div>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+
+<div class="navbar navbar-app navbar-absolute-top">
+    <div class="navbar-brand navbar-brand-center" yield-to="title">
+        <span>Sardegna Clima</span>
+    </div>
+    <div class="navbar-brand navbar-brand-center">
+
+    </div>
+    <div class="btn-group pull-left">
+        <div class="btn btn-navbar sidebar-toggle">
+            <a href="#/main/{{station.id}}" ><i class="fa fa-map-marker "></i></a>
+        </div>
+    </div>
+</div>
+
+<div content-for="title">
+    <span>  {{station.name}}</span>
+</div>
+<div class="app-body">
+    <div class="app-content">
+        <div class="scrollable">
+             <div class="scrollable-content">
+                 
+                <div class=" station-detail-container" >
+                    <div class="row-fluid measure-time-box">
+                        <div class="col-xs-12 col-sm-12">{{station.measure.date | scdate}}</div>
+                    </div>
+                    <div class="row temperature-box" ng-hide="(station.measure.temp===null)">
+                        <div class="col-xs-12 col-sm-12 station-temperature nopadding">{{station.measure.temp}}°C</div>
+                        
+                        <div class="clearfix visible-xs-block"></div>
+                    </div>
+                    <table class="table table-hover">
+                        <tr ng-hide="(station.measure.tempmax===null)">
+                            <td>Max</td>
+                            <td><span class="station-tempmax">{{station.measure.tempmax}}</span> °C</td>
+                        </tr>
+                        <tr ng-hide="(station.measure.tempmin===null)">
+                            <td>Min</td>
+                            <td><span class="station-tempmin">{{station.measure.tempmin}}</span> °C</td>
+                        </tr>
+                        <tr ng-hide="(station.measure.rain===null)">
+                            <td>Pioggia</td>
+                            <td>{{station.measure.rain}} mm</td>
+                        </tr>
+                        <tr ng-hide="(station.measure.wspeed===null)">
+                            <td>Vento</td>
+                            <td><span class="wind-speed-value">{{station.measure.wspeed}}</span> <span class="dir-wind-container"><i ng-hide="station.measure.dir ===null || station.measure.wspeed == 0"class="wind-arrow">↑</i> </span> <span class="wind-unity">km/h</span></td>
+                        </tr>
+                        <tr ng-hide="(station.measure.dp===null)">
+                            <td>Punto di rugiada</td>
+                            <td>{{station.measure.dp}} °C </td>
+                        </tr>
+                        <tr ng-hide="(station.measure.hum===null)">
+                            <td>Umidità</td>
+                            <td>{{station.measure.hum}} % </td>
+                        </tr>
+                        <tr ng-hide="(station.measure.bar===null)">
+                            <td>Pressione</td>
+                            <td>{{station.measure.bar}} mb </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

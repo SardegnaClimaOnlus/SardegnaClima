@@ -1,11 +1,8 @@
 <?php
 namespace StationDataParser;
-
 require_once __DIR__ ."/../../../bootstrap.php";
-
 class StationDataParserContext{
 	private $strategy = null;
-
 	public function __construct($station, $filter) {
         if(!count($filter) || in_array( $station->getType(), $filter)) {
             \Logger::getLogger('parser')->trace("station type: " . $station->getType());
@@ -47,6 +44,10 @@ class StationDataParserContext{
                 case "WLINK":
                     $this->strategy = new WlinkParser($station);
                     break;
+                case "WLINK2":
+                    $this->strategy = new Wlink2Parser($station);
+                    break;
+    
             }
         }
         else
@@ -67,8 +68,7 @@ class StationDataParserContext{
                 if($measure == "DONE") return "DONE";
                 // filter too old measure
                 $date = new \DateTime();
-                $date->modify('-3 hours');
-
+                $date->modify('-2 hours');
                 if($measure && $measure->getDate() > $date){
                     return $measure;
                 }
@@ -76,8 +76,6 @@ class StationDataParserContext{
                     \Logger::getLogger('parser')->error("expired measure" );
                     return null;
                 }
-
-
             }catch(\Exception $e){
                 \Logger::getLogger('parser')->error($e->getMessage());
                 return null;

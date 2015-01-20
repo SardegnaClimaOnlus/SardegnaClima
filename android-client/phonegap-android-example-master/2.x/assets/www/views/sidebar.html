@@ -1,0 +1,11 @@
+<h3 class="app-name">Dati mappa</h3>
+
+<div class="scrollable sidebar-scrollable">
+  <div class="scrollable-content">
+    <div class="list-group" toggle="off" bubble target="mainSidebar">
+      <a ng-click="setMapMode('temp')" class="list-group-item" ng-class="{'map-mode-active': (mapMode=='temp')}" >Temperature (°C)</a>
+      <a ng-click="setMapMode('rain')" class="list-group-item" ng-class="{'map-mode-active': (mapMode=='rain')}">Piogge (mm)</a>
+    </div>
+
+  </div>
+</div>

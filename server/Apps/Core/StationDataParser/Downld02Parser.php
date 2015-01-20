@@ -11,6 +11,7 @@ class Downld02Parser extends Parser implements StationParserInterface{
         if($lines < 4) return null;
         $lastMeasure = $this->station->getLastMeasure();
         $lastMeasureDate = $lastMeasure->getDate();
+        $measure = null;
         for($i = 4; $i < $lines; $i++){
                 $line = $file[$i];        
 
@@ -65,6 +66,6 @@ class Downld02Parser extends Parser implements StationParserInterface{
 
                     }
 	       }
-        return "DONE";
+        return ($measure)?$measure:$lastMeasure;
         }
 }
