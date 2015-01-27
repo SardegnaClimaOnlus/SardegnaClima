@@ -15,8 +15,9 @@ angular
         'ngCookies',
         'ngResource',
         'ngRoute',
-        'ngSanitize',
         'ngTouch',
+        'ngSanitize',
+        'hmTouchEvents',
         'mobile-angular-ui'
   ])
     .config(['$routeProvider', function ($routeProvider) {
