@@ -178,7 +178,7 @@ angular.module('sardegnaclima')
         var SardegnaClimaMap = {
             init: function(){
                 this.settings.mode = "temp";
--               $rootScope.mapMode = "temp";
+               $rootScope.mapMode = "temp";
                 var mapOptions = {
                     center: new google.maps.LatLng(40.109982, 9.011880),
                     zoom: 7,
