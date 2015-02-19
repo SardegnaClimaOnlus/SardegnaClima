@@ -11,7 +11,9 @@
 angular.module('sardegnaclima')
     .factory('MainService', function ($http, App) {
         return {
+
             summaryUrl: "../server/Apps/WebServices/MapClient/cache/summary.json",
+
             getSummary: function(){
                 var self = this;
                 return $http({
@@ -174,51 +176,78 @@ angular.module('sardegnaclima')
      * Sardegna Clima Map Object
      */
     .factory('SardegnaClimaMap', function(SardegnaClimaMarker,Stations2,App,MapUtilities , $rootScope){
-        var defaultCenter= new google.maps.LatLng(40.026053, 9.101251),
-            defaultZoom = 7,
-            mapOptions = {
-                center: defaultCenter,
-                zoom: App.configurations.currentMapZoom,
-                disableDefaultUI: true,
-                mapTypeId: google.maps.MapTypeId.TERRAIN,
-                minZoom: defaultZoom
-            };
+    
         var SardegnaClimaMap = {
-            map: null,
             init: function(){
-                var self = this;
-                this.map = new google.maps.Map($("#container").find("#map")[0], mapOptions);
                 this.settings.mode = "temp";
-                $rootScope.mapMode = "temp";
+               $rootScope.mapMode = "temp";
+                var mapOptions = {
+                    center: new google.maps.LatLng(40.109982, 9.011880),
+                    zoom: 7,
+                    disableDefaultUI: true,
 
-               var strictBounds = new google.maps.LatLngBounds(
-                 new google.maps.LatLng(38.855680, 7.915886), 
-                 new google.maps.LatLng(41.359220, 10.464714)
-               );
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                var map = new google.maps.Map($("#container").find("#map")[0],mapOptions)
+                    
+                // bounds of the desired area
+                var allowedBounds = new google.maps.LatLngBounds(
+                    new google.maps.LatLng(38.964465, 8.519562),   // SO
+                    new google.maps.LatLng(41.186415, 9.775209)  // NE
+                );
+                var boundLimits = {
+                    maxLat : allowedBounds.getNorthEast().lat(),
+                    maxLng : allowedBounds.getNorthEast().lng(),
+                    minLat : allowedBounds.getSouthWest().lat(),
+                    minLng : allowedBounds.getSouthWest().lng()
+                };
 
-               // Listen zoom change
-                google.maps.event.addListener(self.map, 'zoom_changed', function() {
-                    App.configurations.currentMapZoom = (self.map)?self.map.getZoom():App.configurations.currentMapZoom;
-                 });
-               // Listen for the dragend event
-               google.maps.event.addListener(self.map, 'dragend', function() {
-                 if (strictBounds.contains(self.map.getCenter())) return;
+                var lastValidCenter = map.getCenter();
+                var newLat, newLng;
+                var center = lastValidCenter;
 
-                 var c = self.map.getCenter(),
-                     x = c.lng(),
-                     y = c.lat(),
-                     maxX = strictBounds.getNorthEast().lng(),
-                     maxY = strictBounds.getNorthEast().lat(),
-                     minX = strictBounds.getSouthWest().lng(),
-                     minY = strictBounds.getSouthWest().lat();
+                google.maps.event.addListener(map, 'dragstart', function() {
+                    center = map.getCenter();
+                    if (allowedBounds.contains(center)) {
+                        // still within valid bounds, so save the last valid position
+                        lastValidCenter = map.getCenter();
+                        return;
+                    }
+                    newLat = lastValidCenter.lat();
+                    newLng = lastValidCenter.lng();
+                    if(center.lng() > boundLimits.minLng && center.lng() < boundLimits.maxLng){
+                        newLng = center.lng();
+                    }
+                    if(center.lat() > boundLimits.minLat && center.lat() < boundLimits.maxLat){
+                        newLat = center.lat();
+                    }
+                    map.panTo(new google.maps.LatLng(newLat, newLng));
+                });
 
-                 if (x < minX) x = minX;
-                 if (x > maxX) x = maxX;
-                 if (y < minY) y = minY;
-                 if (y > maxY) y = maxY;
+                google.maps.event.addListener(map, 'center_changed', function() {
+                    center = map.getCenter();
+                    if (allowedBounds.contains(center)) {
+                        lastValidCenter = map.getCenter();
+                        return;
+                    }
+                    newLat = lastValidCenter.lat();
+                    newLng = lastValidCenter.lng();
+                    if(center.lng() > boundLimits.minLng && center.lng() < boundLimits.maxLng){
+                        newLng = center.lng();
+                    }
+                    if(center.lat() > boundLimits.minLat && center.lat() < boundLimits.maxLat){
+                        newLat = center.lat();
+                    }
+                    
+                    map.panTo(new google.maps.LatLng(newLat, newLng));
+                });
 
-                 self.map.setCenter(new google.maps.LatLng(y, x));
-               });
+                google.maps.event.addListener(map, 'zoom_changed', function() {
+                                    
+                    if (map.getZoom() < 7 ) {
+                        map.setZoom(7);
+                    }
+                });
             },
             markers: {
                 temp: [],
