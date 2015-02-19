@@ -12,7 +12,9 @@ angular.module('sardegnaclima')
     .factory('MainService', function ($http, App) {
         return {
 
+
             summaryUrl: "../server/Apps/WebServices/MapClient/cache/summary.json",
+
 
             getSummary: function(){
                 var self = this;
