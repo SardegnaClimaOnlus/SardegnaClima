@@ -11,7 +11,7 @@
 angular.module('sardegnaclima')
     .factory('MainService', function ($http, App) {
         return {
-            summaryUrl: App.baseUrl + "server/public_html/index.php/v1/summary",
+            summaryUrl: "../server/Apps/WebServices/MapClient/cache/summary.json",
             getSummary: function(){
                 var self = this;
                 return $http({
