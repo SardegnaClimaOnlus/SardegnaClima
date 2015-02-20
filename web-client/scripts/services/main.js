@@ -6,6 +6,7 @@
  *  description
  * # MainCtrl
  * Controller of the bueleApp
+ *
  */
 
 angular.module('sardegnaclima')
