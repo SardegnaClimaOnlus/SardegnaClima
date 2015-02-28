@@ -14,7 +14,8 @@ angular.module('sardegnaclima')
         return {
 
 
-            summaryUrl: "../server/Apps/WebServices/MapClient/cache/summary.json",
+            summaryUrl:"../server/Apps/WebServices/MapClient/cache/summary.json",
+            //summaryUrl: "C:\\xampp\\htdocs\\SardegnaClima\\server\\Apps\\WebServices\\MapClient\\cache\\summary.json",
 
 
             getSummary: function(){
@@ -123,6 +124,12 @@ angular.module('sardegnaclima')
                                 return "#FF1900";
                             else if(rain > 200)
                                 return "#FF1900";
+                    },
+                    "tempmin": function(tempmin){
+                        return "#0000FF";
+                    },
+                    "tempmax": function(tempmax){
+                        return "#FF0000";                    
                     }
                 };
                 return strategy[type](value);
@@ -227,10 +234,12 @@ angular.module('sardegnaclima')
             },
             markers: {
                 temp: [],
+                tempmin: [],
+                tempmax: [],
                 rain: []
             },
             settings:{ mode: "temp"},
-            markerTypes: ["temp", "rain"],
+            markerTypes: ["temp", "tempmin", "tempmax", "rain"],
             resetPositionAndZoom: function(){
                 //this.map.setZoom(defaultZoom);
                 //this.map.setCenter(defaultCenter);
