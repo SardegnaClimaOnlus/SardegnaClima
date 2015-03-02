@@ -6,12 +6,19 @@
  *  description
  * # MainCtrl
  * Controller of the bueleApp
+ *
  */
 
 angular.module('sardegnaclima')
     .factory('MainService', function ($http, App) {
         return {
-            summaryUrl: App.baseUrl + "server/public_html/index.php/v1/summary",
+
+
+            //summaryUrl:"../server/Apps/WebServices/MapClient/cache/summary.json",
+            summaryUrl: "../server/public_html/index.php/v1/summary",
+            //summaryUrl: "C:\\xampp\\htdocs\\SardegnaClima\\server\\Apps\\WebServices\\MapClient\\cache\\summary.json",
+
+
             getSummary: function(){
                 var self = this;
                 return $http({
@@ -118,6 +125,12 @@ angular.module('sardegnaclima')
                                 return "#FF1900";
                             else if(rain > 200)
                                 return "#FF1900";
+                    },
+                    "tempmin": function(tempmin){
+                        return "#0000FF";
+                    },
+                    "tempmax": function(tempmax){
+                        return "#FF0000";                    
                     }
                 };
                 return strategy[type](value);
@@ -222,10 +235,12 @@ angular.module('sardegnaclima')
             },
             markers: {
                 temp: [],
+                tempmin: [],
+                tempmax: [],
                 rain: []
             },
             settings:{ mode: "temp"},
-            markerTypes: ["temp", "rain"],
+            markerTypes: ["temp", "tempmin", "tempmax", "rain"],
             resetPositionAndZoom: function(){
                 //this.map.setZoom(defaultZoom);
                 //this.map.setCenter(defaultCenter);

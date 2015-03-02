@@ -14,7 +14,8 @@ angular.module('sardegnaclima')
         return {
 
 
-            summaryUrl:"../server/Apps/WebServices/MapClient/cache/summary.json",
+            //summaryUrl:"../server/Apps/WebServices/MapClient/cache/summary.json",
+            summaryUrl: "../server/public_html/index.php/v1/summary",
             //summaryUrl: "C:\\xampp\\htdocs\\SardegnaClima\\server\\Apps\\WebServices\\MapClient\\cache\\summary.json",
 
 

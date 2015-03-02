@@ -15,8 +15,9 @@ angular
         'ngCookies',
         'ngResource',
         'ngRoute',
-        'ngSanitize',
         'ngTouch',
+        'ngSanitize',
+        'hmTouchEvents',
         'mobile-angular-ui'
   ])
     .config(['$routeProvider', function ($routeProvider) {
@@ -61,8 +62,8 @@ angular
         return{
             mode: "prod",
             status: 'LOADING',
-            baseUrl: "http://www.sardegna-clima.it/stazioni/",
-            //baseUrl: "../",
+            //baseUrl: "http://www.sardegna-clima.it/stazioni/",
+            baseUrl: "../",
             configurations: {
                 currentMapZoom : 7
             }
