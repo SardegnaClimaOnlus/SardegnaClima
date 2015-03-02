@@ -12,13 +12,7 @@
 angular.module('sardegnaclima')
     .factory('MainService', function ($http, App) {
         return {
-
-
-            //summaryUrl:"../server/Apps/WebServices/MapClient/cache/summary.json",
-            summaryUrl: "../server/public_html/index.php/v1/summary",
-            //summaryUrl: "C:\\xampp\\htdocs\\SardegnaClima\\server\\Apps\\WebServices\\MapClient\\cache\\summary.json",
-
-
+            summaryUrl: "../server/Apps/WebServices/MapClient/cache/summary.json",
             getSummary: function(){
                 var self = this;
                 return $http({
@@ -26,6 +20,7 @@ angular.module('sardegnaclima')
                     url : self.summaryUrl
                 }).then(function(result) {
                     return result.data;
+                    
                 });
             }
         };
