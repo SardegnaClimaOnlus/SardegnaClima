@@ -30,6 +30,7 @@ public class SardegnaClima extends DroidGap {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		EmbeddedAgent.configureAgent(getApplicationContext());
+        super.setIntegerProperty("loadUrlTimeoutValue", 70000);
 		super.loadUrl("file:///android_asset/www/index.html");
 	}
 
