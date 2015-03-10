@@ -12,8 +12,12 @@ class Downld02AParser extends Parser implements StationParserInterface{
 	public function getMeasure($data_url){
 
         $logger = \Logger::getLogger('downl02');
-        $file = file("$data_url");
-        $lines = count($file);
+         try{
+    		$file = file("$data_url");
+        }catch(\Exception $e){
+		return null;
+	}
+	$lines = count($file);
         if($lines < 4) return null;
         $lastMeasure = $this->station->getLastMeasure();
         $lastMeasureDate = $lastMeasure->getDate();

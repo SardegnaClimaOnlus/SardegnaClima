@@ -4,8 +4,11 @@ require_once __DIR__ ."/../../../vendor/autoload.php";
 
 class CurrDataParser extends Parser implements StationParserInterface{
 	public function getMeasure($data_url){
-
-		$dataraw = file_get_contents($data_url);
+               try{
+		 	$dataraw = file_get_contents($data_url);
+		}catch(\Exception $e){
+			return null;
+		}
         if(!$dataraw) return null;
 		$datafil = explode(" ", $dataraw);
 		$data = $datafil[0];
