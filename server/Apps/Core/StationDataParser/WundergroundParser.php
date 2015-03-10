@@ -5,8 +5,12 @@ require_once __DIR__ ."/../../../vendor/autoload.php";
 
 class WundergroundParser extends Parser implements StationParserInterface{
 	public function getMeasure($data_url){
+	try{
 		$dataraw = simplexml_load_file($data_url);
-        if(!$dataraw)return null;
+        }catch(\Exception $e){
+		return null;
+	}
+	if(!$dataraw)return null;
 		$array_data = $dataraw->observation_time_rfc822; 
 		$array_data = explode(",", $array_data);
 		$array_data = $array_data[1];

@@ -4,9 +4,12 @@ require_once __DIR__ ."/../../../vendor/autoload.php";
 
 class RealTimeParser extends Parser implements StationParserInterface{
 	public function getMeasure($data_url){
-
+	try{
 		$dataraw = file_get_contents($data_url);
-        if(!$dataraw ) return null;
+        }catch(\Exception $e){
+		return null;
+	}
+	if(!$dataraw ) return null;
 		$datagus= explode(" ", $dataraw);
 
 		$data = "$datagus[0]";
