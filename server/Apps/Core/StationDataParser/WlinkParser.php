@@ -4,6 +4,7 @@ require_once __DIR__ ."/../../../vendor/autoload.php";
 
 class WlinkParser extends Parser implements StationParserInterface{
 	public function getMeasure($data_url){
+	try{
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $data_url);
 		curl_setopt($ch, CURLOPT_HEADER, false);
@@ -11,7 +12,10 @@ class WlinkParser extends Parser implements StationParserInterface{
 		curl_setopt($ch, CURLOPT_BINARYTRANSFER, true);
 		$pbotte = curl_exec($ch);
 		curl_close($ch);
-        if(!$pbotte) return null;
+        } catch(\Exception $e){
+		return null;
+	}
+	if(!$pbotte) return null;
 
 		$meteostr = $pbotte;
 		$meteostr = substr($meteostr, strpos($meteostr,"Current Conditions as of ")+25);
