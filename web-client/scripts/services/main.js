@@ -296,35 +296,48 @@ angular.module('sardegnaclima')
                 this.map = new google.maps.Map($("#container").find("#map")[0], mapOptions);
                 this.settings.mode = "temp";
                 $rootScope.mapMode = "temp";
+                   
+                // bounds of the desired area
+                var allowedBounds = new google.maps.LatLngBounds(
+                    new google.maps.LatLng(38.403112, 6.918923),    // SO
+                    new google.maps.LatLng(41.654651, 11.037852)    // NE
+                );
+                var boundLimits = {
+                    maxLat : allowedBounds.getNorthEast().lat(),
+                    maxLng : allowedBounds.getNorthEast().lng(),
+                    minLat : allowedBounds.getSouthWest().lat(),
+                    minLng : allowedBounds.getSouthWest().lng()
+                };
 
-               var strictBounds = new google.maps.LatLngBounds(
-                 new google.maps.LatLng(38.855680, 7.915886), 
-                 new google.maps.LatLng(41.359220, 10.464714)
-               );
-
-               // Listen zoom change
+                var lastValidCenter = self.map.getCenter();
+                var newLat, newLng;
+                var center = lastValidCenter;
+              
+                          
+               google.maps.event.addListener(self.map, 'center_changed', function() {
+                    center = self.map.getCenter();
+                    if (allowedBounds.contains(center)) {
+                        // still within valid bounds, so save the last valid position
+                        lastValidCenter = self.map.getCenter();
+                        return;
+                    }
+                    newLat = lastValidCenter.lat();
+                    newLng = lastValidCenter.lng();
+                    if(center.lng() > boundLimits.minLng && center.lng() < boundLimits.maxLng){
+                        newLng = center.lng();
+                    }
+                    if(center.lat() > boundLimits.minLat && center.lat() < boundLimits.maxLat){
+                        newLat = center.lat();
+                    }  
+                    self.map.panTo(new google.maps.LatLng(newLat, newLng));
+              });
+              
                 google.maps.event.addListener(self.map, 'zoom_changed', function() {
-                    App.configurations.currentMapZoom = (self.map)?self.map.getZoom():App.configurations.currentMapZoom;
-                 });
-               // Listen for the dragend event
-               google.maps.event.addListener(self.map, 'dragend', function() {
-                 if (strictBounds.contains(self.map.getCenter())) return;
-
-                 var c = self.map.getCenter(),
-                     x = c.lng(),
-                     y = c.lat(),
-                     maxX = strictBounds.getNorthEast().lng(),
-                     maxY = strictBounds.getNorthEast().lat(),
-                     minX = strictBounds.getSouthWest().lng(),
-                     minY = strictBounds.getSouthWest().lat();
-
-                 if (x < minX) x = minX;
-                 if (x > maxX) x = maxX;
-                 if (y < minY) y = minY;
-                 if (y > maxY) y = maxY;
-
-                 self.map.setCenter(new google.maps.LatLng(y, x));
-               });
+                                    
+                    if (self.map.getZoom() < 7 ) {
+                        self.map.setZoom(7);
+                    }
+                });
             },
             markers: {
                 temp: [],
