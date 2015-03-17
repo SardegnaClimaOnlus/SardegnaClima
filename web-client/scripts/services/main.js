@@ -273,6 +273,16 @@ angular.module('sardegnaclima')
             model: null,
             cleanModel: function(){
                 this.model = null;
+            },
+            filterModel: function(model){
+                var stations = [];
+                for(var i =0; i < model.length; i++)
+                    if(moment(model[i].measure.date) > moment().subtract(1, 'day') && moment(model[i].measure.date) < moment()) 
+                        stations.push(model[i]);
+                return stations;
+            },
+            setModel: function(model){
+                this.model = this.filterModel(model);
             }
         };
     })
@@ -387,7 +397,7 @@ angular.module('sardegnaclima')
         var refreshInterval = fifteenMinutesInMilliseconds;
         function refreshMap(){
             MainService.getSummary().then(function(summary){
-                Stations2.model = summary;
+                Stations2.setModel(summary);
                 SardegnaClimaMap.generateMarkers();
                 SardegnaClimaMap.init();
                // SardegnaClimaMap.resetPositionAndZoom();
