@@ -379,6 +379,8 @@ angular.module('sardegnaclima')
                     SardegnaClimaMap.init();
                     SardegnaClimaMap.cleanMap();
                     SardegnaClimaMap.showMarkersByType(SardegnaClimaMap.settings.mode);
+                    /* update refreshTime */
+                    $rootScope.lastRefreshTime = moment().format('HH:mm');
                 });
             }
         };
@@ -394,17 +396,7 @@ angular.module('sardegnaclima')
         var fifteenMinutesInMilliseconds = 900000;
         var oneMinuteInMilliseconds = 60000;
         var refreshInterval = fifteenMinutesInMilliseconds;
-//        function refreshMap(){
-//            MainService.getSummary().then(function(summary){
-//                Stations2.model = summary;
-//                SardegnaClimaMap.generateMarkers();
-//                SardegnaClimaMap.init();
-//               // SardegnaClimaMap.resetPositionAndZoom();
-//                SardegnaClimaMap.cleanMap();
-//                SardegnaClimaMap.showMarkersByType(SardegnaClimaMap.settings.mode);
-//            });
-//        };
-        
+
         SardegnaClimaMap.refresh();
-        setInterval(SardegnaClimaMap.refresh(), refreshInterval);
+        setInterval(function () {SardegnaClimaMap.refresh()}, refreshInterval);
     });
