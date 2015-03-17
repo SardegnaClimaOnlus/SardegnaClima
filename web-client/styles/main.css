@@ -185,3 +185,21 @@ html, body{
 .dir-wind-container{
     padding-bottom: 3px;
 }
+
+/*** manual update ***/
+.update-container{
+    float: right; 
+    height: 70px;
+    padding: 16px 0px 0px 0px;
+    text-align: center;
+}
+.update-icon{
+  /*  height: 30px;*/
+    display: block; 
+}
+.update-time{
+    font-size: 10px;
+    color: white;
+    display: block;
+    line-height: 30px;
+}
