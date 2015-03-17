@@ -26,6 +26,14 @@ angular.module('sardegnaclima')
             SardegnaClimaMap.showMarkersByType(mode);
             $location.path('/main/init');
 
-        }
+        };
+        $rootScope.lastRefresh = "xxx";
+        $rootScope.test = function(){
+             SardegnaClimaMap.refresh().then(function(){
+                // set here the time;   
+                 $rootScope.lastRefresh = moment().format('MMMM Do YYYY, h:mm:ss a');
+             
+             }) 
+        };
         
     });

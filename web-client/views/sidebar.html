@@ -1,6 +1,8 @@
 <h3 class="app-name">Dati mappa</h3>
 
 <div class="scrollable sidebar-scrollable">
+    <a ng-click="test()" >X</a>
+    <div>{{lastRefresh}}</div>
   <div class="scrollable-content">
     <div class="list-group" toggle="off" bubble target="mainSidebar">
       <a ng-click="setMapMode('temp')" class="list-group-item" ng-class="{'map-mode-active': (mapMode=='temp')}" >Temperature attuali [°C]</a>
