@@ -378,11 +378,22 @@ angular.module('sardegnaclima')
                 for(var i = 0; i < this.markerTypes.length; i++)
                     this.generateMarkersByType(this.markerTypes[i]);
             },
+            filterMaxDigits: function(num){
+                // GO AWAY!
+                var nn = (num+'').substring((1-1),(4-1));if(nn.substr(nn.length - 1) == '.')nn=nn.split('.')[0];return nn;
+            },
             generateMarkersByType: function(type){
+                var self = this;
                 for(var i = 0; i < Stations2.model.length; i++)
-                    this.markers[type].push(new SardegnaClimaMarker(Stations2.model[i], MapUtilities.getColorByTypeAndValue(type, Stations2.model[i].measure[type]), Stations2.model[i].measure[type]));
-            }
-        };
+                    switch(type){
+                            case "rain":
+                                this.markers[type].push(new SardegnaClimaMarker(Stations2.model[i], MapUtilities.getColorByTypeAndValue(type, Stations2.model[i].measure[type]), self.filterMaxDigits(Stations2.model[i].measure[type])));
+                            break;
+                            default:
+                                this.markers[type].push(new SardegnaClimaMarker(Stations2.model[i], MapUtilities.getColorByTypeAndValue(type, Stations2.model[i].measure[type]), Stations2.model[i].measure[type]));
+            };
+        }
+        }
         SardegnaClimaMap.init();
 
         return SardegnaClimaMap;
