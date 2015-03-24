@@ -219,6 +219,10 @@ html, body{
   font-weight: bold
 }
 
+.role-credits{
+  font-style: italic
+}
+
 hr{
   border-top: 1px solid #95A5A6;
 }
