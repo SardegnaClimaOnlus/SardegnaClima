@@ -185,3 +185,45 @@ html, body{
 .dir-wind-container{
     padding-bottom: 3px;
 }
+
+
+/*** manual update ***/
+.update-container{
+    float: right; 
+    height: 70px;
+    padding: 16px 0px 0px 0px;
+    text-align: center;
+}
+.update-icon{
+  /*  height: 30px;*/
+    display: block; 
+}
+.update-time{
+    font-size: 10px;
+    color: white;
+    display: block;
+    line-height: 30px;
+}
+
+
+
+.btn-group{
+  line-height: 50px !important;
+}
+
+.name-credits, .role-credits {
+  margin: 10px 0 10px 0 !important;
+}
+
+.name-credits {
+  font-weight: bold
+}
+
+.role-credits{
+  font-style: italic
+}
+
+hr{
+  border-top: 1px solid #95A5A6;
+}
+

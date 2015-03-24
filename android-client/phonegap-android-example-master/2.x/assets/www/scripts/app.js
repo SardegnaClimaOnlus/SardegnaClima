@@ -43,6 +43,10 @@ angular
                 }
             }
         })
+      .when('/credits/',{
+        templateUrl: 'views/credits.html',
+        controller: 'CreditsCtrl'
+      })
       .otherwise({
         redirectTo: '/main/0'
       });
