@@ -30,13 +30,14 @@ angular.module('sardegnaclima')
             $location.path('/main/init');
 
         };
-        $rootScope.lastRefresh = "xxx";
-        $rootScope.test = function(){
-             SardegnaClimaMap.refresh().then(function(){
-                // set here the time;   
-                 $rootScope.lastRefresh = moment().format('MMMM Do YYYY, h:mm:ss a');
-             
-             }) 
+       // $rootScope.lastRefresh = "xxx";
+         $rootScope.manualRefresh = function(){
+            /* start spinning */
+            document.getElementById('refresh-icon').className = 'fa fa-lg fa-refresh fa-spin update-icon';
+            SardegnaClimaMap.refresh().then(function(){
+                /* stop spinning */ 
+                document.getElementById('refresh-icon').className = 'fa fa-lg fa-refresh update-icon';
+            }); 
         };
         
     });
