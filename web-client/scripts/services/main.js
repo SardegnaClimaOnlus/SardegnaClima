@@ -280,9 +280,14 @@ angular.module('sardegnaclima')
             },
             filterModel: function(model){
                 var stations = [];
-                for(var i =0; i < model.length; i++)
+                for(var i =0; i < model.length; i++){
+                    console.log("--> MEASURE");
+                    console.log(moment(model[i].measure.date));
+                    console.log("---> yesterday");
+                    console.log(moment().subtract(1, 'day'));
                     if(moment(model[i].measure.date) > moment().subtract(1, 'day') && moment(model[i].measure.date) < moment()) 
                         stations.push(model[i]);
+                }
                 return stations;
             },
             setModel: function(model){
@@ -302,7 +307,8 @@ angular.module('sardegnaclima')
                 zoom: App.configurations.currentMapZoom,
                 disableDefaultUI: true,
                 mapTypeId: google.maps.MapTypeId.TERRAIN,
-                minZoom: defaultZoom
+                minZoom: defaultZoom,
+                maxZoom: 12
             };
         var SardegnaClimaMap = {
             map: null,
@@ -393,7 +399,7 @@ angular.module('sardegnaclima')
             },
             refresh: function(){
                 return MainService.getSummary().then(function(summary){
-                    Stations2.model = summary;
+                    Stations2.setModel(summary);
                     SardegnaClimaMap.generateMarkers();
                     SardegnaClimaMap.init();
                     SardegnaClimaMap.cleanMap();
