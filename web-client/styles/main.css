@@ -207,13 +207,16 @@ html, body{
 
 
 
-
 .btn-group{
   line-height: 50px !important;
 }
 
 .name-credits, .role-credits {
   margin: 10px 0 10px 0 !important;
+}
+
+.name-credits {
+  font-weight: bold
 }
 
 hr{
