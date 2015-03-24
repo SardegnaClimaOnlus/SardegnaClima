@@ -186,6 +186,7 @@ html, body{
     padding-bottom: 3px;
 }
 
+
 /*** manual update ***/
 .update-container{
     float: right; 
@@ -203,3 +204,21 @@ html, body{
     display: block;
     line-height: 30px;
 }
+
+
+
+
+
+
+.btn-group{
+  line-height: 50px !important;
+}
+
+.name-credits, .role-credits {
+  margin: 10px 0 10px 0 !important;
+}
+
+hr{
+  border-top: 1px solid #95A5A6;
+}
+

@@ -16,6 +16,9 @@ angular.module('sardegnaclima')
             SardegnaClimaMap.cleanMap();
             SardegnaClimaMap.showMarkersByType(SardegnaClimaMap.settings.mode);
         }
+        $scope.go = function ( path ) {
+          $location.path( path );
+        };
 
         init();
 
