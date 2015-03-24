@@ -12,15 +12,14 @@ angular.module('sardegnaclima')
 .controller('StationDetailsCtrl', function ($scope, station, $location) {
         if(!station)  $location.path('/main/init');
         $scope.station = station;
-        if(station.measure.dir !== null)
+        var correctDir = station.measure.dir;
+        if(correctDir !== null)
         	setTimeout(function(){
-        		$('.wind-arrow').css({'-webkit-transform' : 'rotate('+ station.measure.dir +'deg)',
-                 '-moz-transform' : 'rotate('+ station.measure.dir +'deg)',
-                 '-ms-transform' : 'rotate('+ station.measure.dir +'deg)',
-                 'transform' : 'rotate('+ station.measure.dir +'deg)'}); 
+        		$('.wind-arrow').css({'-webkit-transform' : 'rotate('+ correctDir +'deg)',
+                 '-moz-transform' : 'rotate('+ correctDir +'deg)',
+                 '-ms-transform' : 'rotate('+ correctDir +'deg)',
+                 'transform' : 'rotate('+ correctDir +'deg)'}); 
         	},100);
         	
-        
-        
 
   });

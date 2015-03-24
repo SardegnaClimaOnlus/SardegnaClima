@@ -12,13 +12,8 @@
 angular.module('sardegnaclima')
     .factory('MainService', function ($http, App) {
         return {
-
-
-            //summaryUrl:"../server/Apps/WebServices/MapClient/cache/summary.json",
+            //summaryUrl: "../server/Apps/WebServices/MapClient/cache/summary.json",
             summaryUrl: "http://www.sardegna-clima.it/stazioni/server/public_html/index.php/v1/summary",
-            //summaryUrl: "C:\\xampp\\htdocs\\SardegnaClima\\server\\Apps\\WebServices\\MapClient\\cache\\summary.json",
-
-
             getSummary: function(){
                 var self = this;
                 return $http({
@@ -26,6 +21,7 @@ angular.module('sardegnaclima')
                     url : self.summaryUrl
                 }).then(function(result) {
                     return result.data;
+                    
                 });
             }
         };
@@ -35,53 +31,53 @@ angular.module('sardegnaclima')
                 var strategy = {
                     "temp": function(temp){
                         var lookupTable = {
-                            "-10": " #0000FF",
+                            "-10": "#0000FF",
                             "-9": "#001FFF",
-                            "-8": " #003EFF",
-                            "-7": " #005DFF",
-                            "-6": "#007CFF ",
-                            "-5": "#009BFF ",
-                            "-4": "#00B9FF ",
-                            "-3": "#00D8FF ",
-                            "-2": "#00F8FF ",
-                            "-1": "#01F9E9 ",
-                            "0": "#02EFCC ",
-                            "1": "#03E6AF ",
-                            "2": "#04DC92 ",
-                            "3": "#05D16E ",
-                            "4": "#06C850 ",
-                            "5": "#06BF33 ",
-                            "6": "#07B516 ",
-                            "7": "#1EBA0E ",
-                            "8": "#3BC30C ",
-                            "9": "#58CC09 ",
-                            "10": "#75D507 ",
-                            "11": "#92DD06 ",
-                            "12": "#AFE605 ",
-                            "13": "#CCEF03 ",
-                            "14": "#E9F901 ",
-                            "15": "#FFFC00 ",
-                            "16": "#FFF100 ",
-                            "17": "#FFE600 ",
-                            "18": "#FFBB00 ",
-                            "19": "#FFB000 ",
-                            "20": "#FFA500 ",
-                            "21": "#FF9100 ",
-                            "22": "#FF7D00 ",
-                            "23": "#FF6900 ",
-                            "24": "#FF5000 ",
-                            "25": "#FF3C00 ",
-                            "26": "#FF2800 ",
-                            "27": "#FF1300 ",
-                            "28": "#FF0000 ",
-                            "29": "#EC0010 ",
-                            "30": "#D60021 ",
-                            "31": "#C20031 ",
-                            "32": "#AE0042 ",
-                            "33": "#990052 ",
-                            "34": "#850063 ",
-                            "35": "#700073 ",
-                            "36": "#5C0084 "
+                            "-8": "#003EFF",
+                            "-7": "#005DFF",
+                            "-6": "#007CFF",
+                            "-5": "#009BFF",
+                            "-4": "#00B9FF",
+                            "-3": "#00D8FF",
+                            "-2": "#00F8FF",
+                            "-1": "#01F9E9",
+                            "0": "#02EFCC",
+                            "1": "#03E6AF",
+                            "2": "#04DC92",
+                            "3": "#05D16E",
+                            "4": "#06C850",
+                            "5": "#06BF33",
+                            "6": "#07B516",
+                            "7": "#1EBA0E",
+                            "8": "#3BC30C",
+                            "9": "#58CC09",
+                            "10": "#75D507",
+                            "11": "#92DD06",
+                            "12": "#AFE605",
+                            "13": "#CCEF03",
+                            "14": "#E9F901",
+                            "15": "#FFFC00",
+                            "16": "#FFF100",
+                            "17": "#FFE600",
+                            "18": "#FFBB00",
+                            "19": "#FFB000",
+                            "20": "#FFA500",
+                            "21": "#FF9100",
+                            "22": "#FF7D00",
+                            "23": "#FF6900",
+                            "24": "#FF5000",
+                            "25": "#FF3C00",
+                            "26": "#FF2800",
+                            "27": "#FF1300",
+                            "28": "#FF0000",
+                            "29": "#EC0010",
+                            "30": "#D60021",
+                            "31": "#C20031",
+                            "32": "#AE0042",
+                            "33": "#990052",
+                            "34": "#850063",
+                            "35": "#700073",
+                            "36": "#5C0084"
                         };
                         return lookupTable[parseInt(temp)];
                     },
@@ -127,10 +123,108 @@ angular.module('sardegnaclima')
                                 return "#FF1900";
                     },
                     "tempmin": function(tempmin){
-                        return "#0000FF";
+                        var lookupTable = {
+                            "-10": "#0000FF",
+                            "-9": "#001FFF",
+                            "-8": "#003EFF",
+                            "-7": "#005DFF",
+                            "-6": "#007CFF",
+                            "-5": "#009BFF",
+                            "-4": "#00B9FF",
+                            "-3": "#00D8FF",
+                            "-2": "#00F8FF",
+                            "-1": "#01F9E9",
+                            "0": "#02EFCC",
+                            "1": "#03E6AF",
+                            "2": "#04DC92",
+                            "3": "#05D16E",
+                            "4": "#06C850",
+                            "5": "#06BF33",
+                            "6": "#07B516",
+                            "7": "#1EBA0E",
+                            "8": "#3BC30C",
+                            "9": "#58CC09",
+                            "10": "#75D507",
+                            "11": "#92DD06",
+                            "12": "#AFE605",
+                            "13": "#CCEF03",
+                            "14": "#E9F901",
+                            "15": "#FFFC00",
+                            "16": "#FFF100",
+                            "17": "#FFE600",
+                            "18": "#FFBB00",
+                            "19": "#FFB000",
+                            "20": "#FFA500",
+                            "21": "#FF9100",
+                            "22": "#FF7D00",
+                            "23": "#FF6900",
+                            "24": "#FF5000",
+                            "25": "#FF3C00",
+                            "26": "#FF2800",
+                            "27": "#FF1300",
+                            "28": "#FF0000",
+                            "29": "#EC0010",
+                            "30": "#D60021",
+                            "31": "#C20031",
+                            "32": "#AE0042",
+                            "33": "#990052",
+                            "34": "#850063",
+                            "35": "#700073",
+                            "36": "#5C0084"
+                        };
+                        return lookupTable[parseInt(tempmin)];
                     },
                     "tempmax": function(tempmax){
-                        return "#FF0000";                    
+                        var lookupTable = {
+                            "-10": "#0000FF",
+                            "-9": "#001FFF",
+                            "-8": "#003EFF",
+                            "-7": "#005DFF",
+                            "-6": "#007CFF",
+                            "-5": "#009BFF",
+                            "-4": "#00B9FF",
+                            "-3": "#00D8FF",
+                            "-2": "#00F8FF",
+                            "-1": "#01F9E9",
+                            "0": "#02EFCC",
+                            "1": "#03E6AF",
+                            "2": "#04DC92",
+                            "3": "#05D16E",
+                            "4": "#06C850",
+                            "5": "#06BF33",
+                            "6": "#07B516",
+                            "7": "#1EBA0E",
+                            "8": "#3BC30C",
+                            "9": "#58CC09",
+                            "10": "#75D507",
+                            "11": "#92DD06",
+                            "12": "#AFE605",
+                            "13": "#CCEF03",
+                            "14": "#E9F901",
+                            "15": "#FFFC00",
+                            "16": "#FFF100",
+                            "17": "#FFE600",
+                            "18": "#FFBB00",
+                            "19": "#FFB000",
+                            "20": "#FFA500",
+                            "21": "#FF9100",
+                            "22": "#FF7D00",
+                            "23": "#FF6900",
+                            "24": "#FF5000",
+                            "25": "#FF3C00",
+                            "26": "#FF2800",
+                            "27": "#FF1300",
+                            "28": "#FF0000",
+                            "29": "#EC0010",
+                            "30": "#D60021",
+                            "31": "#C20031",
+                            "32": "#AE0042",
+                            "33": "#990052",
+                            "34": "#850063",
+                            "35": "#700073",
+                            "36": "#5C0084"
+                        };
+                        return lookupTable[parseInt(tempmax)];                    
                     }
                 };
                 return strategy[type](value);
@@ -203,35 +297,48 @@ angular.module('sardegnaclima')
                 this.map = new google.maps.Map($("#container").find("#map")[0], mapOptions);
                 this.settings.mode = "temp";
                 $rootScope.mapMode = "temp";
+                   
+                // bounds of the desired area
+                var allowedBounds = new google.maps.LatLngBounds(
+                    new google.maps.LatLng(38.403112, 6.918923),    // SO
+                    new google.maps.LatLng(41.654651, 11.037852)    // NE
+                );
+                var boundLimits = {
+                    maxLat : allowedBounds.getNorthEast().lat(),
+                    maxLng : allowedBounds.getNorthEast().lng(),
+                    minLat : allowedBounds.getSouthWest().lat(),
+                    minLng : allowedBounds.getSouthWest().lng()
+                };
 
-               var strictBounds = new google.maps.LatLngBounds(
-                 new google.maps.LatLng(38.855680, 7.915886), 
-                 new google.maps.LatLng(41.359220, 10.464714)
-               );
-
-               // Listen zoom change
+                var lastValidCenter = self.map.getCenter();
+                var newLat, newLng;
+                var center = lastValidCenter;
+              
+                          
+               google.maps.event.addListener(self.map, 'center_changed', function() {
+                    center = self.map.getCenter();
+                    if (allowedBounds.contains(center)) {
+                        // still within valid bounds, so save the last valid position
+                        lastValidCenter = self.map.getCenter();
+                        return;
+                    }
+                    newLat = lastValidCenter.lat();
+                    newLng = lastValidCenter.lng();
+                    if(center.lng() > boundLimits.minLng && center.lng() < boundLimits.maxLng){
+                        newLng = center.lng();
+                    }
+                    if(center.lat() > boundLimits.minLat && center.lat() < boundLimits.maxLat){
+                        newLat = center.lat();
+                    }  
+                    self.map.panTo(new google.maps.LatLng(newLat, newLng));
+              });
+              
                 google.maps.event.addListener(self.map, 'zoom_changed', function() {
-                    App.configurations.currentMapZoom = (self.map)?self.map.getZoom():App.configurations.currentMapZoom;
-                 });
-               // Listen for the dragend event
-               google.maps.event.addListener(self.map, 'dragend', function() {
-                 if (strictBounds.contains(self.map.getCenter())) return;
-
-                 var c = self.map.getCenter(),
-                     x = c.lng(),
-                     y = c.lat(),
-                     maxX = strictBounds.getNorthEast().lng(),
-                     maxY = strictBounds.getNorthEast().lat(),
-                     minX = strictBounds.getSouthWest().lng(),
-                     minY = strictBounds.getSouthWest().lat();
-
-                 if (x < minX) x = minX;
-                 if (x > maxX) x = maxX;
-                 if (y < minY) y = minY;
-                 if (y > maxY) y = maxY;
-
-                 self.map.setCenter(new google.maps.LatLng(y, x));
-               });
+                                    
+                    if (self.map.getZoom() < 7 ) {
+                        self.map.setZoom(7);
+                    }
+                });
             },
             markers: {
                 temp: [],
