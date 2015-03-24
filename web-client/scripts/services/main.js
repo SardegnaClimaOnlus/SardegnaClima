@@ -24,7 +24,7 @@ angular.module('sardegnaclima')
                     url : self.summaryUrl
                 }).
                     then(function(result) {
-                        for(var i = 0; i < 100000000; i++)var xx = i * 200 +100;
+
                         return result.data;
                     });
             }
