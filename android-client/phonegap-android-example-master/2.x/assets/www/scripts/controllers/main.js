@@ -16,6 +16,9 @@ angular.module('sardegnaclima')
             SardegnaClimaMap.cleanMap();
             SardegnaClimaMap.showMarkersByType(SardegnaClimaMap.settings.mode);
         }
+        $scope.go = function ( path ) {
+          $location.path( path );
+        };
 
         init();
 
@@ -26,6 +29,15 @@ angular.module('sardegnaclima')
             SardegnaClimaMap.showMarkersByType(mode);
             $location.path('/main/init');
 
-        }
+        };
+       // $rootScope.lastRefresh = "xxx";
+         $rootScope.manualRefresh = function(){
+            /* start spinning */
+            document.getElementById('refresh-icon').className = 'fa fa-lg fa-refresh fa-spin update-icon';
+            SardegnaClimaMap.refresh().then(function(){
+                /* stop spinning */ 
+                document.getElementById('refresh-icon').className = 'fa fa-lg fa-refresh update-icon';
+            }); 
+        };
         
     });

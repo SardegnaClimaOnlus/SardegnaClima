@@ -11,18 +11,22 @@
 
 angular.module('sardegnaclima')
     .factory('MainService', function ($http, App) {
+
         return {
-            //summaryUrl: "../server/Apps/WebServices/MapClient/cache/summary.json",
+           // summaryUrl: "../server/Apps/WebServices/MapClient/cache/summary.json",
+
             summaryUrl: "http://www.sardegna-clima.it/stazioni/server/public_html/index.php/v1/summary",
+
             getSummary: function(){
                 var self = this;
                 return $http({
                     method : "GET",
                     url : self.summaryUrl
-                }).then(function(result) {
-                    return result.data;
-                    
-                });
+                }).
+                    then(function(result) {
+
+                        return result.data;
+                    });
             }
         };
     }).factory('MapUtilities', function(){
@@ -273,6 +277,21 @@ angular.module('sardegnaclima')
             model: null,
             cleanModel: function(){
                 this.model = null;
+            },
+            filterModel: function(model){
+                var stations = [];
+                for(var i =0; i < model.length; i++){
+                    console.log("--> MEASURE");
+                    console.log(moment(model[i].measure.date));
+                    console.log("---> yesterday");
+                    console.log(moment().subtract(1, 'day'));
+                    if(moment(model[i].measure.date) > moment().subtract(1, 'day') && moment(model[i].measure.date) < moment()) 
+                        stations.push(model[i]);
+                }
+                return stations;
+            },
+            setModel: function(model){
+                this.model = this.filterModel(model);
             }
         };
     })
@@ -280,7 +299,7 @@ angular.module('sardegnaclima')
     /*
      * Sardegna Clima Map Object
      */
-    .factory('SardegnaClimaMap', function(SardegnaClimaMarker,Stations2,App,MapUtilities , $rootScope){
+    .factory('SardegnaClimaMap', function(SardegnaClimaMarker,Stations2,App,MapUtilities , $rootScope,MainService){
         var defaultCenter= new google.maps.LatLng(40.026053, 9.101251),
             defaultZoom = 7,
             mapOptions = {
@@ -288,7 +307,8 @@ angular.module('sardegnaclima')
                 zoom: App.configurations.currentMapZoom,
                 disableDefaultUI: true,
                 mapTypeId: google.maps.MapTypeId.TERRAIN,
-                minZoom: defaultZoom
+                minZoom: defaultZoom,
+                maxZoom: 12
             };
         var SardegnaClimaMap = {
             map: null,
@@ -368,11 +388,27 @@ angular.module('sardegnaclima')
                 for(var i = 0; i < this.markerTypes.length; i++)
                     this.generateMarkersByType(this.markerTypes[i]);
             },
+            filterMaxDigits: function(num){
+                // GO AWAY!
+                var nn = (num+'').substring((1-1),(4-1));if(nn.substr(nn.length - 1) == '.')nn=nn.split('.')[0];return nn;
+            },
             generateMarkersByType: function(type){
+                var self = this;
                 for(var i = 0; i < Stations2.model.length; i++)
                     this.markers[type].push(new SardegnaClimaMarker(Stations2.model[i], MapUtilities.getColorByTypeAndValue(type, Stations2.model[i].measure[type]), Stations2.model[i].measure[type]));
+            },
+            refresh: function(){
+                return MainService.getSummary().then(function(summary){
+                    Stations2.setModel(summary);
+                    SardegnaClimaMap.generateMarkers();
+                    SardegnaClimaMap.init();
+                    SardegnaClimaMap.cleanMap();
+                    SardegnaClimaMap.showMarkersByType(SardegnaClimaMap.settings.mode);
+                    $rootScope.lastRefreshTime = moment().format('HH:mm');
+                });
             }
         };
+
         SardegnaClimaMap.init();
 
         return SardegnaClimaMap;
@@ -385,16 +421,8 @@ angular.module('sardegnaclima')
         var fifteenMinutesInMilliseconds = 900000;
         var oneMinuteInMilliseconds = 60000;
         var refreshInterval = fifteenMinutesInMilliseconds;
-        function refreshMap(){
-            MainService.getSummary().then(function(summary){
-                Stations2.model = summary;
-                SardegnaClimaMap.generateMarkers();
-                SardegnaClimaMap.init();
-               // SardegnaClimaMap.resetPositionAndZoom();
-                SardegnaClimaMap.cleanMap();
-                SardegnaClimaMap.showMarkersByType(SardegnaClimaMap.settings.mode);
-            });
-        };
-        refreshMap();
-        setInterval(refreshMap, refreshInterval);
+        
+        SardegnaClimaMap.refresh();
+        setInterval(function(){SardegnaClimaMap.refresh()}, refreshInterval);
+
     });
