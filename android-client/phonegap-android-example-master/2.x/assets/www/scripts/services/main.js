@@ -13,9 +13,15 @@ angular.module('sardegnaclima')
     .factory('MainService', function ($http, App) {
 
         return {
+<<<<<<< HEAD
            // summaryUrl: "../server/Apps/WebServices/MapClient/cache/summary.json",
 
             summaryUrl: "http://www.sardegna-clima.it/stazioni/server/public_html/index.php/v1/summary",
+=======
+            //summaryUrl: "../server/Apps/WebServices/MapClient/cache/summary.json",
+
+           summaryUrl: "http://www.sardegna-clima.it/stazioni/server/public_html/index.php/v1/summary",
+>>>>>>> bb8274b7d92a0b4cfa1e73d11d0ec6808dd1694a
 
             getSummary: function(){
                 var self = this;
@@ -281,10 +287,14 @@ angular.module('sardegnaclima')
             filterModel: function(model){
                 var stations = [];
                 for(var i =0; i < model.length; i++){
+<<<<<<< HEAD
                     console.log("--> MEASURE");
                     console.log(moment(model[i].measure.date));
                     console.log("---> yesterday");
                     console.log(moment().subtract(1, 'day'));
+=======
+                    
+>>>>>>> bb8274b7d92a0b4cfa1e73d11d0ec6808dd1694a
                     if(moment(model[i].measure.date) > moment().subtract(1, 'day') && moment(model[i].measure.date) < moment()) 
                         stations.push(model[i]);
                 }
