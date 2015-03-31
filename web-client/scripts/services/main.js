@@ -82,7 +82,7 @@ angular.module('sardegnaclima')
                         return lookupTable[parseInt(temp)];
                     },
                     "rain": function(rain){
-                        console.log(rain);
+                        /*console.log(rain);*/
                         if(rain === null) return "#BFBFBF";
                         rain = parseFloat(rain);
                             if(rain == 0)
@@ -225,6 +225,101 @@ angular.module('sardegnaclima')
                             "36": "#5C0084"
                         };
                         return lookupTable[parseInt(tempmax)];                    
+                    },
+                    "hum": function(hum){
+                            hum = parseFloat(hum);
+                            if(hum == 0)
+                                return "#FFFFFF";
+                            else if( 0 >= hum && hum <= 30)
+                                return "#FFFFFF";
+                            else if(31 >= hum && hum <= 34)
+                                return "#FEFEA0";
+                            else if(35 >= hum && hum <= 38)
+                                return "#FEFE63";
+                            else if(39 >= hum && hum <= 42)
+                                return "#F4F46E";
+                            else if(43 >= hum && hum <= 46)
+                                return "#FFD223";
+                            else if(47 >= hum && hum <= 50)
+                                return "#FFA319";
+                            else if(51 >= hum && hum <= 54)
+                                return "#FF5919";
+                            else if(55 >= hum && hum <= 58)
+                                return "#E67A65";
+                            else if(59 >= hum && hum <= 62)
+                               return  "#ED917C";
+                            else if(63 >= hum && hum <= 66)
+                                return "#EFB292";
+                            else if(67 >= hum && hum <= 70)
+                                return  "#F8C7B2";
+                            else if(71 >= hum && hum <= 74)
+                                return "#D7E1FF";
+                            else if(75 >= hum && hum <= 78)
+                                return "#96D2FF";
+                            else if(79 >= hum && hum <= 82)
+                                return "#1EBD77"
+                            else if(83 >= hum && hum <= 86)
+                                return "#139FFF";
+                            else if(87 >= hum && hum <= 90)
+                                return "#096CF0";
+                            else if(91 >= hum && hum <= 94)
+                                return "#0B74FF";
+                            else if(95 >= hum && hum <= 98)
+                                return "#0968C8";
+                            else if(99 >= hum && hum <= 100)
+                                return "#00599F";                
+                    },
+                    "dp": function(dp){
+                        var lookupTable = {
+                            "-10": "#0000FF",
+                            "-9": "#001FFF",
+                            "-8": "#003EFF",
+                            "-7": "#005DFF",
+                            "-6": "#007CFF",
+                            "-5": "#009BFF",
+                            "-4": "#00B9FF",
+                            "-3": "#00D8FF",
+                            "-2": "#00F8FF",
+                            "-1": "#01F9E9",
+                            "0": "#02EFCC",
+                            "1": "#03E6AF",
+                            "2": "#04DC92",
+                            "3": "#05D16E",
+                            "4": "#06C850",
+                            "5": "#06BF33",
+                            "6": "#07B516",
+                            "7": "#1EBA0E",
+                            "8": "#3BC30C",
+                            "9": "#58CC09",
+                            "10": "#75D507",
+                            "11": "#92DD06",
+                            "12": "#AFE605",
+                            "13": "#CCEF03",
+                            "14": "#E9F901",
+                            "15": "#FFFC00",
+                            "16": "#FFF100",
+                            "17": "#FFE600",
+                            "18": "#FFBB00",
+                            "19": "#FFB000",
+                            "20": "#FFA500",
+                            "21": "#FF9100",
+                            "22": "#FF7D00",
+                            "23": "#FF6900",
+                            "24": "#FF5000",
+                            "25": "#FF3C00",
+                            "26": "#FF2800",
+                            "27": "#FF1300",
+                            "28": "#FF0000",
+                            "29": "#EC0010",
+                            "30": "#D60021",
+                            "31": "#C20031",
+                            "32": "#AE0042",
+                            "33": "#990052",
+                            "34": "#850063",
+                            "35": "#700073",
+                            "36": "#5C0084"
+                        };
+                        return lookupTable[parseInt(dp)];                    
                     }
                 };
                 return strategy[type](value);
@@ -344,10 +439,12 @@ angular.module('sardegnaclima')
                 temp: [],
                 tempmin: [],
                 tempmax: [],
-                rain: []
+                rain: [],
+                dp: [],
+                hum: []
             },
             settings:{ mode: "temp"},
-            markerTypes: ["temp", "tempmin", "tempmax", "rain"],
+            markerTypes: ["temp", "tempmin", "tempmax", "rain", "dp", "hum"],
             resetPositionAndZoom: function(){
                 //this.map.setZoom(defaultZoom);
                 //this.map.setCenter(defaultCenter);
